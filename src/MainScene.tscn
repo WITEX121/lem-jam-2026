@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dif881of408xm"]
+
+[node name="Control" type="CanvasLayer" unique_id=530775206]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2044388649]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14509805, 0.14901961, 0.15294118, 1)
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=1993072305]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="VBoxContainer" parent="MainLayout" unique_id=1960043265]
+layout_mode = 2
+
+[node name="TabsRow" type="HBoxContainer" parent="MainLayout/Header" unique_id=187391540]
+layout_mode = 2
+
+[node name="AppTab" type="MarginContainer" parent="MainLayout/Header/TabsRow" unique_id=1216020617]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainLayout/Header/TabsRow/AppTab" unique_id=196480782]
+layout_mode = 2
+text = "Corp AI"
+
+[node name="NavBar" type="HBoxContainer" parent="MainLayout/Header" unique_id=1251079371]
+layout_mode = 2
+
+[node name="Controls" type="HBoxContainer" parent="MainLayout/Header/NavBar" unique_id=1643817699]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MainLayout/Header/NavBar/Controls" unique_id=946355522]
+layout_mode = 2
+text = "<"
+
+[node name="ForwardButton" type="Button" parent="MainLayout/Header/NavBar/Controls" unique_id=1433970855]
+layout_mode = 2
+text = ">"
+
+[node name="ThirdButton" type="Button" parent="MainLayout/Header/NavBar/Controls" unique_id=1425505979]
+layout_mode = 2
+text = "O"
+
+[node name="SearchBar" type="LineEdit" parent="MainLayout/Header/NavBar" unique_id=1258369728]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Type here"
