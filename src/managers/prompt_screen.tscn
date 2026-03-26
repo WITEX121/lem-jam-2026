@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cv2j31lpd0rdg"]
+
+[ext_resource type="Script" path="res://src/screens/prompt_screen.gd" id="1_gvjjj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0vyci"]
+font_size = 50
+
+[node name="PromptScreen" type="Control" unique_id=815200299]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gvjjj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=988772558]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.53333336, 0, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1186552607]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -409.5
+offset_top = -169.0
+offset_right = 409.5
+offset_bottom = -75.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="SentenceBegin" type="OptionButton" parent="HBoxContainer" unique_id=503573211]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SentenceFill" type="OptionButton" parent="HBoxContainer" unique_id=1647246747]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SentenceEnd" type="OptionButton" parent="HBoxContainer" unique_id=856806218]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="." unique_id=1207124584]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -141.0
+offset_top = -64.0
+offset_right = 141.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "SEND"
+
+[node name="Label" type="Label" parent="." unique_id=1455914702]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -294.5
+offset_top = -191.0
+offset_right = 294.5
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TESTOWY NAPIS"
+label_settings = SubResource("LabelSettings_0vyci")
+horizontal_alignment = 1
+vertical_alignment = 1
