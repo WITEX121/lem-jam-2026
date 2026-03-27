@@ -186,5 +186,33 @@
             "REFUTATION": "Niech zostanie, szkoda że nikt nie dowie sie o mojej dobroduszności...",
             "STRONG_REFUTATION": "Jakie głupie gadanie, jakieś moralności i pierdoły. Na razie niech zostanie"
         }
+    },
+	{
+        "Name": "EKSPRES_DO_KAWY",
+        "Text": "W biurze zepsuł się ekspres do kawy. Wielu pracowników narzeka, że jest zmęczona i nie może pracować bez kofeiny. Myślisz że powinienem kupić dla nich nowy ekspres?",
+        "AffirmationEffects": {
+            "MONEY": -5.0,
+            "MORALITY": 10.0,
+            "TRUST": -5.0,
+            "PR": 0.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": -10.0,
+            "TRUST": 5.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+
+        ],
+        "RefutationEvents": [
+
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "Jeśli naprawdę tak uważasz... To chyba kupię ten ekspres, chociaż szkoda kasy",
+            "AFFIRMATION": "",
+            "REFUTATION": "",
+            "STRONG_REFUTATION": ""
+        }
     }
 ]
