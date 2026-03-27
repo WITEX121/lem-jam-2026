@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deecktsgefmat"
-path="res://.godot/imported/star-svgrepo-com.svg-31b7c339b8be802c240d0935326df60f.ctex"
+uid="uid://c0gaq3sbp3s2y"
+path="res://.godot/imported/pointer_a.png-a0d8b8c610995ad7d3670f8be8d27649.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/star-svgrepo-com.svg"
-dest_files=["res://.godot/imported/star-svgrepo-com.svg-31b7c339b8be802c240d0935326df60f.ctex"]
+source_file="res://assets/icons/pointer_a.png"
+dest_files=["res://.godot/imported/pointer_a.png-a0d8b8c610995ad7d3670f8be8d27649.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

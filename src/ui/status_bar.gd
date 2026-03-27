@@ -3,23 +3,26 @@ extends PanelContainer
 @onready var progress_bar = $MarginContainer/HBoxContainer/ProgressBar
 @onready var progress_bar_stylebox: StyleBoxFlat = progress_bar.get_theme_stylebox("fill").duplicate()
 @onready var label = $MarginContainer/HBoxContainer/Label
+@onready var icon = $MarginContainer/HBoxContainer/Icon
 
-@export var label_text: String = ""
+@export var label_text: String
+@export var icon_texture: Texture2D
 var value: float
 var tween: Tween
 
 func _ready() -> void:
 	label.text = label_text
+	icon.texture = icon_texture
 
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_0):
-		set_progress_bar(randf_range(0, 100))
+		set_status_bar(randf_range(0, 100))
 
 func _on_progress_bar_value_changed(value: float) -> void:
 	progress_bar_stylebox.bg_color = get_progress_color(value)
 	progress_bar.add_theme_stylebox_override("fill", progress_bar_stylebox)
 
-func set_progress_bar(target_value: float, duration: float = 0.5):
+func set_status_bar(target_value: float, duration: float = 0.5):
 	if tween and tween.is_running():
 		tween.kill()
 		
