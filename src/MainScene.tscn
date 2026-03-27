@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cxflpbyqkkub8"]
 
-[ext_resource type="Script" uid="uid://b3ki08jl1jgjt" path="res://src/main_scene.gd" id="1_qg6fr"]
+[ext_resource type="Script" path="res://src/main_scene.gd" id="1_qg6fr"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]
 [ext_resource type="PackedScene" uid="uid://dh2wsy656djec" path="res://src/ui/StatusBar.tscn" id="2_h5dix"]
 [ext_resource type="Texture2D" uid="uid://g372w38w5s7m" path="res://assets/icons/money-bag-svgrepo-com.svg" id="3_5a7yu"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_tlhjj"]
 [ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="7_5a7yu"]
 [ext_resource type="PackedScene" uid="uid://ccaosf5jnio3h" path="res://src/content/WelcomeScreen.tscn" id="8_r8lft"]
+[ext_resource type="PackedScene" path="res://src/answers.tscn" id="9_tlhjj"]
+[ext_resource type="Script" uid="uid://dvg270cgbj43p" path="res://src/label.gd" id="11_d0nsw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
 bg_color = Color(0, 0.46666667, 0.70980394, 1)
@@ -129,6 +131,14 @@ layout_mode = 2
 [node name="NavBar" parent="MainLayout/MarginContainer/Header" unique_id=326819366 instance=ExtResource("7_5a7yu")]
 layout_mode = 2
 
+[node name="Answers" parent="MainLayout/MarginContainer/Header" unique_id=585296452 instance=ExtResource("9_tlhjj")]
+layout_mode = 2
+
 [node name="WelcomeScreen" parent="MainLayout" unique_id=60675619 instance=ExtResource("8_r8lft")]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainLayout" unique_id=1472801869]
+layout_mode = 2
+script = ExtResource("11_d0nsw")

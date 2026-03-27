@@ -1,26 +1,38 @@
 extends Node
-class_name ReplyManager
 
 var _replies: ReplyList = preload("res://const_data/prompt_reply/reply_list.tres")
 
 signal reply_completed(ready_reply: PromptReply)
 signal text_on_change(text: String)
+signal new_answers_ready(answers: Array[ReplyElement])
+signal reply_selected(reply_element: ReplyElement)
 
-var reply := PromptReply.new()
+
+func _init():
+	reply_selected.connect(load_element)
+
+var _reply := PromptReply.new()
+
+func init_data():
+	new_answers_ready.emit(get_starts())
 
 func load_element(element: ReplyElement):
-	if reply.start == null:
-		reply.start = element
-	elif reply.filler == null:
-		reply.filler = element
+	print("?test")
+	if _reply.start == null:
+		_reply.start = element
+		new_answers_ready.emit(get_fillers())
+	elif _reply.filler == null:
+		_reply.filler = element
+		new_answers_ready.emit(get_ends())
 	else:
-		reply.end = element
+		_reply.end = element
+		new_answers_ready.emit(get_starts())
 
-	text_on_change.emit(reply.get_text())
+	text_on_change.emit(_reply.get_text())
 
-	if reply.end != null:
-		reply_completed.emit(reply)
-		reply = PromptReply.new()
+	if _reply.end != null:
+		reply_completed.emit(_reply)
+		_reply = PromptReply.new()
 
 func get_n_random_elements(elements: Array, n: int):
 	elements.shuffle()
