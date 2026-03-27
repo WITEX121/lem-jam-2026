@@ -78,32 +78,36 @@ theme_override_font_sizes/font_size = 35
 text = "CorpAI"
 
 [node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1669026999]
-custom_minimum_size = Vector2(10, 0)
+custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status1" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1611621822 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+label_text = "Kapitał"
 
 [node name="Spacer2" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=848565961]
-custom_minimum_size = Vector2(10, 0)
+custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status2" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=114805630 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+label_text = "Moralność"
 
 [node name="Spacer3" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1686073260]
-custom_minimum_size = Vector2(10, 0)
+custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status3" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1316453743 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+label_text = "PR"
 
 [node name="Spacer4" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=856206409]
-custom_minimum_size = Vector2(10, 0)
+custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status4" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1715507513 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+label_text = "Zaufanie"
 
 [node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header" unique_id=966978601]
 custom_minimum_size = Vector2(0, 10)
