@@ -15,7 +15,7 @@ func _ready():
 
 func _on_reply_completed(_prompt_reply: PromptReply):
 	next_question_button = next_question_button_scene.instantiate()
-	GameManager.answer_provided.emit("TODO: DODAĆ TEKST ODPOWIEDZI")
+	GameManager.answer_provided.emit("Jebać izrael")
 	main_col.add_child(next_question_button)
 
 func _on_new_question(_question: String):

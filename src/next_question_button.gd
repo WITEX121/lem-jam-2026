@@ -79,7 +79,7 @@ func _on_pressed():
 	_is_pressed = true
 	SoundManager.play_sound(SoundManager.select)
 	GameManager.next_question.emit()
-	GameManager.new_question.emit("TODO: DODAĆ TEKST PYTANIA")
+	ReplyManager.init_data()
 	_animate_out()
 
 
