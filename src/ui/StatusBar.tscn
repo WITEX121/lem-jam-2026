@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://buj3nx7kp6iqm" path="res://assets/fonts/RethinkSans-Bold.ttf" id="1_5qnnl"]
 [ext_resource type="Script" uid="uid://b2g5on0tf0oy7" path="res://src/ui/status_bar.gd" id="1_a782b"]
+[ext_resource type="Texture2D" uid="uid://nf6267vrdtk4" path="res://assets/icons/icon.svg" id="2_v7sma"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a782b"]
 bg_color = Color(0.19215687, 0.2, 0.20784314, 1)
@@ -35,7 +36,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="Status1" type="PanelContainer" unique_id=1611621822]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(375, 0)
 theme_override_styles/panel = SubResource("StyleBoxFlat_a782b")
 script = ExtResource("1_a782b")
 
@@ -48,6 +49,11 @@ theme_override_constants/margin_bottom = 10
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=175735510]
 layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=325009169]
+layout_mode = 2
+texture = ExtResource("2_v7sma")
+expand_mode = 2
 
 [node name="Spacer2" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1667500106]
 custom_minimum_size = Vector2(10, 0)
@@ -65,7 +71,7 @@ custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer" unique_id=529682812]
-custom_minimum_size = Vector2(200, 35)
+custom_minimum_size = Vector2(150, 35)
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4

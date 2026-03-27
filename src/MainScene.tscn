@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://dif881of408xm"]
 
-[ext_resource type="StyleBox" uid="uid://bi86v4p2gk5w7" path="res://assets/styles/top_panel_round_corners.tres" id="1_46oc7"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]
 [ext_resource type="PackedScene" uid="uid://dh2wsy656djec" path="res://src/ui/StatusBar.tscn" id="2_h5dix"]
 [ext_resource type="Script" uid="uid://dvg270cgbj43p" path="res://src/label.gd" id="4_h5dix"]
+[ext_resource type="Texture2D" uid="uid://g372w38w5s7m" path="res://assets/icons/money-bag-svgrepo-com.svg" id="3_5a7yu"]
+[ext_resource type="Texture2D" uid="uid://4s8c7p4l0udj" path="res://assets/icons/person-button-svgrepo-com.svg" id="4_r8lft"]
+[ext_resource type="Texture2D" uid="uid://deecktsgefmat" path="res://assets/icons/star-svgrepo-com.svg" id="5_qg6fr"]
+[ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_tlhjj"]
+[ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="7_5a7yu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
 bg_color = Color(0, 0.46666667, 0.70980394, 1)
@@ -15,13 +19,6 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq6ju"]
-bg_color = Color(0.5, 0.5, 0.5, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
 
 [node name="Control" type="CanvasLayer" unique_id=530775206]
 
@@ -85,7 +82,9 @@ layout_mode = 2
 
 [node name="Status1" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1611621822 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+size_flags_horizontal = 3
 label_text = "Kapitał"
+icon_texture = ExtResource("3_5a7yu")
 
 [node name="Spacer2" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=848565961]
 custom_minimum_size = Vector2(22, 0)
@@ -93,7 +92,9 @@ layout_mode = 2
 
 [node name="Status2" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=114805630 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+size_flags_horizontal = 3
 label_text = "Moralność"
+icon_texture = ExtResource("4_r8lft")
 
 [node name="Spacer3" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1686073260]
 custom_minimum_size = Vector2(22, 0)
@@ -101,7 +102,9 @@ layout_mode = 2
 
 [node name="Status3" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1316453743 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+size_flags_horizontal = 3
 label_text = "PR"
+icon_texture = ExtResource("5_qg6fr")
 
 [node name="Spacer4" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=856206409]
 custom_minimum_size = Vector2(22, 0)
@@ -109,14 +112,17 @@ layout_mode = 2
 
 [node name="Status4" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1715507513 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+size_flags_horizontal = 3
 label_text = "Zaufanie"
+icon_texture = ExtResource("6_tlhjj")
 
 [node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header" unique_id=966978601]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="NavBar" type="PanelContainer" parent="MainLayout/MarginContainer/Header" unique_id=2021540028]
+[node name="NavBar" parent="MainLayout/MarginContainer/Header" unique_id=326819366 instance=ExtResource("7_5a7yu")]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_styles/panel = SubResource("StyleBoxFlat_tq6ju")
 
 [node name="MarginContainer" type="MarginContainer" parent="MainLayout/MarginContainer/Header/NavBar" unique_id=643132525]
@@ -171,6 +177,8 @@ size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 25
 text = "https://makroslop.corpai.ei"
 placeholder_text = "Type here"
+=======
+>>>>>>> WITEX
 
 [node name="Label" type="Label" parent="MainLayout" unique_id=1911000181]
 custom_minimum_size = Vector2(0, 20)
