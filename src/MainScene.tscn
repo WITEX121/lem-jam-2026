@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dif881of408xm"]
 
-[ext_resource type="StyleBox" uid="uid://bi86v4p2gk5w7" path="res://assets/styles/top_panel_round_corners.tres" id="1_46oc7"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]
 [ext_resource type="PackedScene" uid="uid://dh2wsy656djec" path="res://src/ui/StatusBar.tscn" id="2_h5dix"]
+[ext_resource type="PackedScene" uid="uid://cljk2qx5y2njw" path="res://src/answer_button/answer_button.tscn" id="4_40oso"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
 bg_color = Color(0, 0.46666667, 0.70980394, 1)
@@ -14,13 +14,6 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq6ju"]
-bg_color = Color(0.5, 0.5, 0.5, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
 
 [node name="Control" type="CanvasLayer" unique_id=530775206]
 
@@ -114,62 +107,6 @@ label_text = "Zaufanie"
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="NavBar" type="PanelContainer" parent="MainLayout/MarginContainer/Header" unique_id=2021540028]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_tq6ju")
-
-[node name="MarginContainer" type="MarginContainer" parent="MainLayout/MarginContainer/Header/NavBar" unique_id=643132525]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer" unique_id=1251079371]
-layout_mode = 2
-
-[node name="Controls" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer" unique_id=1643817699]
-layout_mode = 2
-
-[node name="BackButton" type="Button" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=946355522]
-custom_minimum_size = Vector2(75, 75)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("1_46oc7")
-text = "<"
-
-[node name="Spacer1" type="Control" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=1812552487]
-custom_minimum_size = Vector2(0, 10)
-layout_mode = 2
-
-[node name="ForwardButton" type="Button" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=1433970855]
-custom_minimum_size = Vector2(75, 75)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("1_46oc7")
-text = ">"
-
-[node name="Spacer2" type="Control" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=20279257]
-custom_minimum_size = Vector2(0, 10)
-layout_mode = 2
-
-[node name="ThirdButton" type="Button" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=1425505979]
-custom_minimum_size = Vector2(75, 75)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = ExtResource("1_46oc7")
-text = "O"
-
-[node name="Spacer3" type="Control" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=1895428051]
-custom_minimum_size = Vector2(0, 10)
-layout_mode = 2
-
-[node name="SearchBar" type="LineEdit" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer" unique_id=1258369728]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 25
-placeholder_text = "Type here"
-
 [node name="Label" type="Label" parent="MainLayout" unique_id=1911000181]
 layout_mode = 2
 theme_override_font_sizes/font_size = 55
@@ -177,3 +114,14 @@ text = "dfdfdgg
 
 
 "
+
+[node name="MarginContainer2" type="MarginContainer" parent="MainLayout" unique_id=1462468827]
+layout_mode = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_right = 128
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainLayout/MarginContainer2" unique_id=792807967]
+layout_mode = 2
+
+[node name="AnswerButton" parent="MainLayout/MarginContainer2/VBoxContainer" unique_id=139586567 instance=ExtResource("4_40oso")]
+layout_mode = 2
