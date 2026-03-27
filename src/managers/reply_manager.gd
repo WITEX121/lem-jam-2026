@@ -8,25 +8,24 @@ signal new_answers_ready(answers: Array[ReplyElement])
 signal reply_selected(reply_element: ReplyElement)
 
 
-func _init():
+func _ready() -> void:
 	reply_selected.connect(load_element)
 
 var _reply := PromptReply.new()
 
 func init_data():
-	new_answers_ready.emit(get_starts())
+	new_answers_ready.emit(_get_starts())
 
 func load_element(element: ReplyElement):
-	print("?test")
 	if _reply.start == null:
 		_reply.start = element
-		new_answers_ready.emit(get_fillers())
+		new_answers_ready.emit(_get_fillers())
 	elif _reply.filler == null:
 		_reply.filler = element
-		new_answers_ready.emit(get_ends())
+		new_answers_ready.emit(_get_ends())
 	else:
 		_reply.end = element
-		new_answers_ready.emit(get_starts())
+		new_answers_ready.emit(_get_starts())
 
 	text_on_change.emit(_reply.get_text())
 
@@ -38,13 +37,13 @@ func get_n_random_elements(elements: Array, n: int):
 	elements.shuffle()
 	return elements.slice(0, n)
 
-func get_starts():
+func _get_starts():
 	return get_n_random_elements(_replies.starts, 5)
 
-func get_fillers():
+func _get_fillers():
 	return get_n_random_elements(_replies.fillers, 5)
 
-func get_ends():
+func _get_ends():
 	return get_n_random_elements(_replies.ends, 5)
 
 

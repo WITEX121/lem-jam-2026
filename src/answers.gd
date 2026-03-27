@@ -4,7 +4,6 @@ class_name Answers extends VBoxContainer
 
 func _ready():
 	for child in get_children():
-		print(child)
 		child.queue_free()
 	ReplyManager.new_answers_ready.connect(_on_new_answers_ready)
 	ReplyManager.init_data()
