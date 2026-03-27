@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dif881of408xm"]
+[gd_scene format=3 uid="uid://cxflpbyqkkub8"]
+
+[ext_resource type="Script" uid="uid://dvg270cgbj43p" path="res://src/label.gd" id="1_46oc7"]
 
 [ext_resource type="StyleBox" uid="uid://bi86v4p2gk5w7" path="res://assets/styles/top_panel_round_corners.tres" id="1_46oc7"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]
@@ -37,6 +39,10 @@ clip_contents = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 57.0
+offset_top = 2.0
+offset_right = 57.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -168,3 +174,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 25
 placeholder_text = "Type here"
+
+[node name="Label" type="Label" parent="MainLayout" unique_id=1911000181]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "dfdfdgg
+
+
+"
+script = ExtResource("1_46oc7")

@@ -1,0 +1,113 @@
+[gd_resource type="Resource" script_class="ReplyList" format=3 uid="uid://cjj7hij4viq8s"]
+
+[ext_resource type="Script" uid="uid://i263xy5f6mwf" path="res://src/prompt_reply/reply_element.gd" id="1_i6bgd"]
+[ext_resource type="Script" uid="uid://ce51s05rvoqqn" path="res://const_data/prompt_reply/reply_list.gd" id="2_6ifpq"]
+
+[sub_resource type="Resource" id="Resource_lxp5y"]
+script = ExtResource("1_i6bgd")
+text = "zwiększy to efektywność firmy"
+question_weight = 6
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_6mn2q"]
+script = ExtResource("1_i6bgd")
+text = "klient końcowy nie zauważy widocznej zmiany"
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_rj1k4"]
+script = ExtResource("1_i6bgd")
+text = "zabije to naszą firmę!"
+question_weight = -10
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_ikp2p"]
+script = ExtResource("1_i6bgd")
+text = "Jest to kluczowa kwestia dla stabilności biznesu"
+question_weight = 2
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_qphno"]
+script = ExtResource("1_i6bgd")
+text = "to oszczędność, która generuje dodatkowe koszty"
+question_weight = -7
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_413p0"]
+script = ExtResource("1_i6bgd")
+text = "zacznijmy od zdefiniowania głównego wąskiego gardła"
+question_weight = -4
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_61cy1"]
+script = ExtResource("1_i6bgd")
+text = "jako agent sztucznej inteligencji uważam, że"
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_utju4"]
+script = ExtResource("1_i6bgd")
+text = "przeanalizujmy dlaczego takie rozwiązanie zadziała."
+question_weight = 8
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_1kv6c"]
+script = ExtResource("1_i6bgd")
+text = "zważając na plusy i minusy każdego rozwiązania dochodzę do jednego wniosku"
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_xrxtc"]
+script = ExtResource("1_i6bgd")
+text = "złota zasada brzmi -"
+question_weight = 2
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_owo7h"]
+script = ExtResource("1_i6bgd")
+text = "w rzeczywistości dotyka fundamentów zarządzania, więc"
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_41ipd"]
+script = ExtResource("1_i6bgd")
+text = "krótka odpowiedź brzmi"
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_i6bgd"]
+script = ExtResource("1_i6bgd")
+text = "Bardzo dobre pytanie"
+question_weight = 2
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_6ifpq"]
+script = ExtResource("1_i6bgd")
+text = "Jest to bardzo skomplikowana kwestia, aczkolwiek"
+question_weight = 1
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_fosai"]
+script = ExtResource("1_i6bgd")
+text = "Najpierw zastanówmy się dlaczego to ważne"
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_cwc2n"]
+script = ExtResource("1_i6bgd")
+text = "Nie ma jednoznacznej odpowiedzi napytanie, ale"
+question_weight = -2
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_01ayd"]
+script = ExtResource("1_i6bgd")
+text = "To pytanie wydaje się błahe, ale"
+question_weight = -1
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_xam3q"]
+script = ExtResource("1_i6bgd")
+text = "To niestety nie zadziała."
+question_weight = -7
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[resource]
+script = ExtResource("2_6ifpq")
+starts = Array[ExtResource("1_i6bgd")]([SubResource("Resource_i6bgd"), SubResource("Resource_6ifpq"), SubResource("Resource_fosai"), SubResource("Resource_cwc2n"), SubResource("Resource_01ayd"), SubResource("Resource_xam3q")])
+fillers = Array[ExtResource("1_i6bgd")]([SubResource("Resource_413p0"), SubResource("Resource_61cy1"), SubResource("Resource_utju4"), SubResource("Resource_1kv6c"), SubResource("Resource_xrxtc"), SubResource("Resource_owo7h"), SubResource("Resource_41ipd")])
+ends = Array[ExtResource("1_i6bgd")]([SubResource("Resource_lxp5y"), SubResource("Resource_6mn2q"), SubResource("Resource_rj1k4"), SubResource("Resource_ikp2p"), SubResource("Resource_qphno")])
+metadata/_custom_type_script = "uid://ce51s05rvoqqn"
