@@ -8,7 +8,22 @@ script = ExtResource("1_rs0ti")
 text = "Przychodzi baba do lekarza. Lekarz też baba?"
 metadata/_custom_type_script = "uid://xcyhup3vrg8r"
 
+[sub_resource type="Resource" id="Resource_vwifd"]
+script = ExtResource("1_rs0ti")
+text = "Czy kupienie tańszego papieru do kibla będzie dobrymsposobem na redukcje kosztów w firmie?"
+metadata/_custom_type_script = "uid://xcyhup3vrg8r"
+
+[sub_resource type="Resource" id="Resource_60iut"]
+script = ExtResource("1_rs0ti")
+text = "Czy można wystawiać faktury z datą wsteczną?"
+metadata/_custom_type_script = "uid://xcyhup3vrg8r"
+
+[sub_resource type="Resource" id="Resource_88xcl"]
+script = ExtResource("1_rs0ti")
+text = "Chcę zwolnić samotną matkę z dwójką dzieci, która ma 10 lat stażu w firmie. Czy to legalne jeżeli jest na macierzyńskim?"
+metadata/_custom_type_script = "uid://xcyhup3vrg8r"
+
 [resource]
 script = ExtResource("2_vwifd")
-events = Array[ExtResource("1_rs0ti")]([SubResource("Resource_rs0ti")])
+events = Array[ExtResource("1_rs0ti")]([SubResource("Resource_rs0ti"), SubResource("Resource_vwifd"), SubResource("Resource_60iut"), SubResource("Resource_88xcl")])
 metadata/_custom_type_script = "uid://coc6v5fm1t3s5"
