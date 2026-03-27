@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deecktsgefmat"
-path="res://.godot/imported/star-svgrepo-com.svg-31b7c339b8be802c240d0935326df60f.ctex"
+uid="uid://bhlfjvca1tv2g"
+path="res://.godot/imported/keyboard_arrow_left_48dp_FFFDD0_FILL0_wght400_GRAD0_opsz48.svg-7b8e28fa9e67c869e2c83368951c6ac8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/star-svgrepo-com.svg"
-dest_files=["res://.godot/imported/star-svgrepo-com.svg-31b7c339b8be802c240d0935326df60f.ctex"]
+source_file="res://assets/icons/keyboard_arrow_left_48dp_FFFDD0_FILL0_wght400_GRAD0_opsz48.svg"
+dest_files=["res://.godot/imported/keyboard_arrow_left_48dp_FFFDD0_FILL0_wght400_GRAD0_opsz48.svg-7b8e28fa9e67c869e2c83368951c6ac8.ctex"]
 
 [params]
 

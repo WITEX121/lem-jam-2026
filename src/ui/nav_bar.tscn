@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://c0ufpyvrlv0qf"]
+
+[ext_resource type="StyleBox" uid="uid://bi86v4p2gk5w7" path="res://assets/styles/top_panel_round_corners.tres" id="1_mhp4g"]
+[ext_resource type="Script" uid="uid://qvnc5hbi7tc8" path="res://src/ui/nav_bar.gd" id="1_tgasl"]
+[ext_resource type="Texture2D" uid="uid://bhlfjvca1tv2g" path="res://assets/icons/keyboard_arrow_left_48dp_FFFDD0_FILL0_wght400_GRAD0_opsz48.svg" id="2_51cek"]
+[ext_resource type="Texture2D" uid="uid://drx8o5b8thp6s" path="res://assets/icons/keyboard_arrow_right_48dp_FFFDD0_FILL0_wght400_GRAD0_opsz48.svg" id="3_4jeoy"]
+[ext_resource type="Texture2D" uid="uid://bk5pvotb8cxg4" path="res://assets/icons/refresh_48dp_FFFDD0_FILL0_wght400_GRAD0_opsz48.svg" id="4_tgasl"]
+[ext_resource type="FontFile" uid="uid://8s8kng870c58" path="res://assets/fonts/RethinkSans-Regular.ttf" id="5_4jeoy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq6ju"]
+bg_color = Color(0.19215687, 0.2, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.99215686, 0.8156863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51cek"]
+bg_color = Color(1, 0.99215686, 0.8156863, 1)
+border_width_left = 20
+border_color = Color(1, 0.99215686, 0.8156863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="NavBar" type="PanelContainer" unique_id=326819366]
+theme_override_styles/panel = SubResource("StyleBoxFlat_tq6ju")
+script = ExtResource("1_tgasl")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=107991220]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=312486850]
+layout_mode = 2
+
+[node name="Controls" type="HBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=68056133]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MarginContainer/HBoxContainer/Controls" unique_id=218766907]
+custom_minimum_size = Vector2(65, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("1_mhp4g")
+icon = ExtResource("2_51cek")
+icon_alignment = 1
+
+[node name="ForwardButton" type="Button" parent="MarginContainer/HBoxContainer/Controls" unique_id=1277852731]
+custom_minimum_size = Vector2(65, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("1_mhp4g")
+icon = ExtResource("3_4jeoy")
+icon_alignment = 1
+
+[node name="RefreshButton" type="Button" parent="MarginContainer/HBoxContainer/Controls" unique_id=456925234]
+custom_minimum_size = Vector2(65, 55)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("1_mhp4g")
+icon = ExtResource("4_tgasl")
+icon_alignment = 1
+
+[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer/Controls" unique_id=257141065]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="SearchBar" type="LineEdit" parent="MarginContainer/HBoxContainer" unique_id=1597270739]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.14509805, 0.14901961, 0.15294118, 1)
+theme_override_colors/font_uneditable_color = Color(0.14509805, 0.14901961, 0.15294118, 1)
+theme_override_colors/font_selected_color = Color(0.14509805, 0.14901961, 0.15294118, 1)
+theme_override_colors/font_outline_color = Color(0.14509805, 0.14901961, 0.15294118, 1)
+theme_override_fonts/font = ExtResource("5_4jeoy")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_51cek")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_51cek")
+theme_override_styles/focus = SubResource("StyleBoxFlat_51cek")
+text = "www.CorpAI.com"
+placeholder_text = "Type here"
+editable = false
+
+[node name="Timer" type="Timer" parent="." unique_id=1224901319]
+wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
