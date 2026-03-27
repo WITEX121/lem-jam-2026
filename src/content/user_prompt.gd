@@ -5,7 +5,7 @@ class_name UserPrompt extends PanelContainer
 func _ready():
 	GameManager.new_question.connect(_on_new_question)
 
-var _add_buffer: String = "PRZYBIEŻELI DO BUTELKI WE CZTERECH"
+var _add_buffer: String = ""
 var _elapsed := 0.0
 
 func _process(delta: float) -> void:
