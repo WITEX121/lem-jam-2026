@@ -25,4 +25,3 @@ func set_text(text: String):
 func _on_new_question(question: String):
 	contents.text = question
 	GameManager.start_answer.emit()
-	GameManager.answer_provided.emit("TODO: DODAĆ TEKST ODPOWIEDZI")

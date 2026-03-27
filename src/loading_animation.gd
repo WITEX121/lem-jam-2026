@@ -23,7 +23,7 @@ func _ready():
 	_start_next_anim.connect(_start_anim)
 	_start_anim()
 	ReplyManager.reply_completed.connect(func(_e): visible = false)
-	EventManager.event_started.connect(func(): visible = true)
+	GameManager.next_question.connect(func(): visible = true)
 
 
 func _start_anim():
