@@ -7,8 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://4s8c7p4l0udj" path="res://assets/icons/person-button-svgrepo-com.svg" id="4_r8lft"]
 [ext_resource type="Texture2D" uid="uid://deecktsgefmat" path="res://assets/icons/star-svgrepo-com.svg" id="5_qg6fr"]
 [ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_tlhjj"]
-[ext_resource type="PackedScene" path="res://src/ui/nav_bar.tscn" id="7_5a7yu"]
-[ext_resource type="PackedScene" uid="uid://dv6nfxgkv0e5u" path="res://src/answers.tscn" id="8_r8lft"]
 [ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="7_5a7yu"]
 [ext_resource type="PackedScene" uid="uid://ccaosf5jnio3h" path="res://src/content/WelcomeScreen.tscn" id="8_r8lft"]
 
@@ -131,20 +129,6 @@ layout_mode = 2
 [node name="NavBar" parent="MainLayout/MarginContainer/Header" unique_id=326819366 instance=ExtResource("7_5a7yu")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainLayout" unique_id=1911000181]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "
-
-"
-
-[node name="MarginContainer2" type="MarginContainer" parent="MainLayout" unique_id=1462468827]
-layout_mode = 2
-theme_override_constants/margin_left = 128
-theme_override_constants/margin_right = 128
-
-[node name="Answers" parent="MainLayout/MarginContainer2" unique_id=585296452 instance=ExtResource("8_r8lft")]
 [node name="WelcomeScreen" parent="MainLayout" unique_id=60675619 instance=ExtResource("8_r8lft")]
 layout_mode = 2
 size_flags_vertical = 3
