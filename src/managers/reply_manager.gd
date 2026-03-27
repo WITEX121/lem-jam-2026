@@ -40,10 +40,10 @@ func get_n_random_elements(elements: Array, n: int):
 	return elements.slice(0, n)
 
 func _get_starts():
-	return get_n_random_elements(_replies.starts, 5)
+	return get_n_random_elements(_replies.starts, 4)
 
 func _get_fillers():
-	return get_n_random_elements(_replies.fillers, 5)
+	return get_n_random_elements(_replies.fillers, 4)
 
 func _get_ends():
-	return get_n_random_elements(_replies.ends, 5)
+	return get_n_random_elements(_replies.ends, 4)
