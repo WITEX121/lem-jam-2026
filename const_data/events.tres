@@ -23,7 +23,12 @@ script = ExtResource("1_rs0ti")
 text = "Chcę zwolnić samotną matkę z dwójką dzieci, która ma 10 lat stażu w firmie. Czy to legalne jeżeli jest na macierzyńskim?"
 metadata/_custom_type_script = "uid://xcyhup3vrg8r"
 
+[sub_resource type="Resource" id="Resource_622ib"]
+script = ExtResource("1_rs0ti")
+text = "Koniec promptowania! Ups"
+metadata/_custom_type_script = "uid://xcyhup3vrg8r"
+
 [resource]
 script = ExtResource("2_vwifd")
-events = Array[ExtResource("1_rs0ti")]([SubResource("Resource_rs0ti"), SubResource("Resource_vwifd"), SubResource("Resource_60iut"), SubResource("Resource_88xcl")])
+events = Array[ExtResource("1_rs0ti")]([SubResource("Resource_rs0ti"), SubResource("Resource_vwifd"), SubResource("Resource_60iut"), SubResource("Resource_88xcl"), SubResource("Resource_622ib")])
 metadata/_custom_type_script = "uid://coc6v5fm1t3s5"
