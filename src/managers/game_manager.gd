@@ -9,10 +9,10 @@ var replies_manager := ReplyManager.new()
 var ratings := Ratings.new(50, 50, 50, 50)
 
 # Constants
-var _events: Array = load("res://const_data/events/events.tres").events
-var EVENTS: Array:
+var _events := EventParser.load_events()
+var EVENTS:
 	get: return _events
 
 func game_start():
-	events_manager.push_event(EVENTS[PromptEvent.EventId.START])
+	events_manager.push_event(GameManager.EVENTS["PAPIER_DO_KIBLA"])
 	events_manager.pop_back_to_current()

@@ -13,7 +13,7 @@ func pop_back_to_current():
 		_handle_event_ending(current_event)
 
 	if events_stack.is_empty():
-		push_event(GameManager.EVENTS[PromptEvent.EventId.NO_EVENTS_EVENT])
+		push_event(GameManager.EVENTS["NO_EVENTS"])
 
 	current_event = events_stack.pop_back()
 	event_started.emit(current_event)

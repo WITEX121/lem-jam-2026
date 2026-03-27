@@ -1,4 +1,4 @@
-class_name PromptEvent extends Resource
+class_name PromptEvent
 
 enum EventId {
 	START = 0,
@@ -18,28 +18,30 @@ enum UserResponse {
 	
 }
 
-@export var name: String = ""
-@export var text: String = ""
+var name: String = ""
+var text: String = ""
 
-@export var affirmation_effects: Array[float] = [0, 0, 0, 0];
-@export var refutation_effects: Array[float] = [0, 0, 0, 0];
+var affirmation_effects: Array[float] = [0, 0, 0, 0];
+var refutation_effects: Array[float] = [0, 0, 0, 0];
 
-@export var affirmation_events_indices: Array[EventId] = []
-@export var affirmation_events_info: Array[PushType] = []
+# TODO: Fuse into one array
+var affirmation_events: Array[String] = []
+var affirmation_events_info: Array[PushType] = []
 
-@export var refutation_events_indices: Array[EventId] = []
-@export var refutation_events_info: Array[PushType] = []
+# TODO: Fuse into one array
+var refutation_events: Array[String] = []
+var refutation_events_info: Array[PushType] = []
 
-@export var user_responses: Array[String] = []
+var user_responses: Array[String] = []
 
 func get_affirmation_events() -> Array[PromptEvent]:
-	var affirmation_events: Array[PromptEvent] = []
-	for idx in affirmation_events_indices:
-		affirmation_events.push_back(GameManager.EVENTS[idx])
-	return affirmation_events
+	var events: Array[PromptEvent] = []
+	for event_name in affirmation_events:
+		events.push_back(GameManager.EVENTS[event_name])
+	return events
 
 func get_refutation_events() -> Array[PromptEvent]:
-	var refutation_events: Array[PromptEvent] = []
-	for idx in refutation_events_indices:
-		refutation_events.push_back(GameManager.EVENTS[idx])
-	return refutation_events
+	var events: Array[PromptEvent] = []
+	for event_name in affirmation_events:
+		events.push_back(GameManager.EVENTS[event_name])
+	return events

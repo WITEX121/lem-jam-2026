@@ -9,6 +9,7 @@ extends Control
 func _ready() -> void:
 	GameManager.events_manager.event_started.connect(on_event_started)
 
+	EventParser.load_events()
 	GameManager.game_start()
 
 func on_event_started(event: PromptEvent):
