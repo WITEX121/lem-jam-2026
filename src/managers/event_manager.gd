@@ -5,15 +5,33 @@ signal event_started(event: PromptEvent)
 var current_event: PromptEvent = null
 var events_stack: Array[PromptEvent] = []
 
-func push_event(event: PromptEvent):
-	events_stack.push_back(event)
+func push_event(event: PromptEvent, push_type: PromptEvent.PushType = PromptEvent.PushType.RANDOM):
+	match push_type:
+		PromptEvent.PushType.RANDOM:
+			_push_event_random(event)
+		PromptEvent.PushType.NEXT1:
+			_push_event_random_next_n(1, event)
+		PromptEvent.PushType.NEXT5:
+			_push_event_random_next_n(5, event)
+
+func _push_event_random(event: PromptEvent):
+	_push_event_random_next_n(len(events_stack)+1, event)
+
+func _push_event_random_next_n(n: int, event: PromptEvent):
+	assert(n > 0)
+
+	var start_idx = len(events_stack)
+	var end_idx = max(0, start_idx-n+1)
+
+	var push_idx = randi_range(start_idx, end_idx)
+	events_stack.insert(push_idx, event)
 
 func pop_back_to_current():
 	if current_event != null:
 		_handle_event_ending(current_event)
 
 	if events_stack.is_empty():
-		push_event(GameManager.EVENTS["NO_EVENTS"])
+		push_event(GameManager.EVENTS["NO_EVENTS"], PromptEvent.PushType.NEXT1)
 
 	current_event = events_stack.pop_back()
 	event_started.emit(current_event)

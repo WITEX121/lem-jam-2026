@@ -45,3 +45,6 @@ func get_refutation_events() -> Array[PromptEvent]:
 	for event_name in affirmation_events:
 		events.push_back(GameManager.EVENTS[event_name])
 	return events
+
+func _to_string() -> String:
+	return name
