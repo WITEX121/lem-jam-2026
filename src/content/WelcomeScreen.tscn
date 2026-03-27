@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_6cnli"]
 [ext_resource type="FontFile" uid="uid://buj3nx7kp6iqm" path="res://assets/fonts/RethinkSans-Bold.ttf" id="2_ec6hk"]
+[ext_resource type="Script" uid="uid://bmndo7gqjmf0c" path="res://src/misc/button_hover.gd" id="3_g3ur8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ec6hk"]
 bg_color = Color(0, 0.46666667, 0.70980394, 1)
@@ -89,3 +90,4 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ec6hk")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_g3ur8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ec6hk")
 text = "START"
+script = ExtResource("3_g3ur8")

@@ -59,7 +59,15 @@ func evaluate_score() -> float:
 
 func unlock_events(events: Array[EventRunInfo]):
 	for event_run_info: EventRunInfo in events:
+		if event_run_info.is_action:
+			_perform_action(event_run_info)
+			continue
+
 		push_event(
 			GameManager.EVENTS[event_run_info.event_name],
 			event_run_info.push_type
 		)
+
+func _perform_action(action: EventRunInfo):
+	if Action.actions.has(action.event_name):
+		Action.actions[action.event_name].call()

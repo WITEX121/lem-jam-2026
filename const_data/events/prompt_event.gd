@@ -1,13 +1,5 @@
 class_name PromptEvent
 
-enum EventId {
-	START = 0,
-	PAPIER_DO_KIBLA,
-	FAKTURA_Z_DATA,
-	MATKA_Z_DZIECKIEM,
-	NO_EVENTS_EVENT,
-}
-
 enum PushType {
 	RANDOM = 0,
 	NEXT1,
