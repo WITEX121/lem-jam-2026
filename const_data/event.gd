@@ -1,10 +1,8 @@
 class_name Event extends Resource
 
 enum EventId {
-	START_EVENT
+	START_EVENT = 0
 }
-
-enum Type { MONEY = 0, MORALITY = 1, TRUST = 2, PR = 3 }
 
 @export var text: String = ""
 
