@@ -12,6 +12,8 @@ func _ready() -> void:
 	reply_completed.connect(_handle_change)
 
 func _handle_change(_e):
+	var score = _e.get_weight()
+	GameManager.answer_provided.emit(EventManager.current_event.get_user_response(score))
 	EventManager.pop_back_to_current()
 
 

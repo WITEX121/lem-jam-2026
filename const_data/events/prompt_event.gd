@@ -24,8 +24,15 @@ var refutation_events: Array[EventRunInfo] = []
 
 var user_responses: Array[String] = []
 
-func get_user_response(response_type: ResponseType):
-	return user_responses[response_type]
+func get_user_response(weight: int):
+	return user_responses[_to_type(weight)]
 
 func _to_string() -> String:
 	return name
+
+func _to_type(weight: int) -> ResponseType:
+	if weight <= -15: return ResponseType.STRONG_REFUTATION
+	elif  -15 < weight and weight <= 0: return ResponseType.REFUTATION
+	elif  0 < weight and weight <= 15: return ResponseType.AFFIRMATION
+	else: return ResponseType.STRONG_AFFIRMATION
+
