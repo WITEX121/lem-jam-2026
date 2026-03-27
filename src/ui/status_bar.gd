@@ -14,12 +14,12 @@ func _ready() -> void:
 	label.text = label_text
 	icon.texture = icon_texture
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_0):
 		set_status_bar(randf_range(0, 100))
 
-func _on_progress_bar_value_changed(value: float) -> void:
-	progress_bar_stylebox.bg_color = get_progress_color(value)
+func _on_progress_bar_value_changed(val: float) -> void:
+	progress_bar_stylebox.bg_color = get_progress_color(val)
 	progress_bar.add_theme_stylebox_override("fill", progress_bar_stylebox)
 
 func set_status_bar(target_value: float, duration: float = 0.5):
@@ -32,15 +32,15 @@ func set_status_bar(target_value: float, duration: float = 0.5):
 	
 	tween.tween_property(progress_bar, "value", target_value, duration)
 
-func get_progress_color(value: float) -> Color:
+func get_progress_color(val: float) -> Color:
 	var red = Color("E3170A")
 	var yellow = Color("E3DC0A")
 	var green = Color("39E30A")
 
-	value = clamp(value, 0.0, 100.0)
-	if value <= 50.0:
-		var weight = value / 50.0
+	val = clamp(val, 0.0, 100.0)
+	if val <= 50.0:
+		var weight = val / 50.0
 		return red.lerp(yellow, weight)
 	else:
-		var weight = (value - 50.0) / 50.0
+		var weight = (val - 50.0) / 50.0
 		return yellow.lerp(green, weight)
