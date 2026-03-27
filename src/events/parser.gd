@@ -38,13 +38,19 @@ static func load_events() -> Dictionary[String, PromptEvent]:
 			for event_data in row["AffirmationEvents"]:
 				var info := EventRunInfo.new()
 				info.event_name = event_data["EventName"]
-				info.push_type = parse_event_info(event_data["PushType"])
+				if info.event_name.begins_with("*"):
+					info.is_action = true
+				else:
+					info.push_type = parse_event_info(event_data["PushType"])
 				event.affirmation_events.push_back(info)
 
 			for event_data in row["RefutationEvents"]:
 				var info := EventRunInfo.new()
 				info.event_name = event_data["EventName"]
-				info.push_type = parse_event_info(event_data["PushType"])
+				if info.event_name.begins_with("*"):
+					info.is_action = true
+				else:
+					info.push_type = parse_event_info(event_data["PushType"])
 				event.refutation_events.push_back(info)
 
 			event.user_responses.push_back(row["UserResponses"]["STRONG_AFFIRMATION"])
