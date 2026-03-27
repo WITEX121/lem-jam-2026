@@ -9,6 +9,7 @@ extends CanvasLayer
 @onready var status_bar_employee_count = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status5
 @onready var main_layout: VBoxContainer = %MainLayout
 
+var pracownik_wyjebaned_efekt_scene: PackedScene = preload("res://src/pracownik_wyjebaaaned.tscn")
 var game_screen_scene: PackedScene = preload("res://src/content/game_screen.tscn")
 
 func _ready() -> void:
@@ -18,6 +19,7 @@ func _ready() -> void:
 	start_button.pressed.connect(start_game)
 	GameManager.ratings.ratings_changed.connect(_rating_changed)
 	GameManager.end_game.connect(end_game)
+	GameManager.employee_count_changed.connect(_employee_count_changed)
 
 func start_game():
 	SoundManager.play_sound(SoundManager.select)
@@ -50,6 +52,10 @@ func _rating_changed():
 	for i in range(len(values)):
 		status_bars[i].set_status_bar(values[i])
 		print(values[i])
+
+func _employee_count_changed(_count: int):
+	var pracownik_wyjebaned = pracownik_wyjebaned_efekt_scene.instantiate()
+	add_child(pracownik_wyjebaned)
 
 func end_game():
 	self.get_tree().change_scene_to_file("res://src/content/game_over_scene.tscn")
