@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://qvnc5hbi7tc8" path="res://src/ui/nav_bar.gd" id="1_tgasl"]
 [ext_resource type="Texture2D" uid="uid://bhlfjvca1tv2g" path="res://assets/icons/keyboard_arrow_left_48dp_FFFDD0_FILL0_wght400_GRAD0_opsz48.svg" id="2_51cek"]
 [ext_resource type="Texture2D" uid="uid://drx8o5b8thp6s" path="res://assets/icons/keyboard_arrow_right_48dp_FFFDD0_FILL0_wght400_GRAD0_opsz48.svg" id="3_4jeoy"]
+[ext_resource type="Script" uid="uid://bmndo7gqjmf0c" path="res://src/misc/button_hover.gd" id="4_ki0hb"]
 [ext_resource type="Texture2D" uid="uid://bk5pvotb8cxg4" path="res://assets/icons/refresh_48dp_FFFDD0_FILL0_wght400_GRAD0_opsz48.svg" id="4_tgasl"]
 [ext_resource type="FontFile" uid="uid://8s8kng870c58" path="res://assets/fonts/RethinkSans-Regular.ttf" id="5_4jeoy"]
 
@@ -68,6 +69,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ki0hb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tgasl")
 icon = ExtResource("2_51cek")
 icon_alignment = 1
+script = ExtResource("4_ki0hb")
 
 [node name="Spacer2" type="Control" parent="MarginContainer/HBoxContainer/Controls" unique_id=1047917922]
 custom_minimum_size = Vector2(10, 0)
@@ -82,6 +84,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ki0hb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tgasl")
 icon = ExtResource("3_4jeoy")
 icon_alignment = 1
+script = ExtResource("4_ki0hb")
 
 [node name="Spacer3" type="Control" parent="MarginContainer/HBoxContainer/Controls" unique_id=1721744446]
 custom_minimum_size = Vector2(10, 0)
@@ -96,6 +99,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ki0hb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tgasl")
 icon = ExtResource("4_tgasl")
 icon_alignment = 1
+script = ExtResource("4_ki0hb")
 
 [node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer/Controls" unique_id=257141065]
 custom_minimum_size = Vector2(20, 0)
