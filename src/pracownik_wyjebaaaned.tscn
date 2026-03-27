@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b522dfv8df3li"]
+
+[ext_resource type="Script" uid="uid://54bd0n7isili" path="res://src/pracownik_wyjebaaaned.gd" id="1_b1c72"]
+[ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_y1msr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1c72"]
+bg_color = Color(1, 0.99215686, 0.8156863, 1)
+shadow_color = Color(1, 0, 0, 0.6)
+shadow_size = 32
+
+[node name="PracownikWywywywywyjebanyyy" type="PanelContainer" unique_id=938375159]
+custom_minimum_size = Vector2(1440, 360)
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -1440.0
+offset_top = -180.0
+offset_bottom = 180.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b1c72")
+script = ExtResource("1_b1c72")
+
+[node name="PracownikWyjebaned" type="Label" parent="." unique_id=1945247428]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_y1msr")
+theme_override_font_sizes/font_size = 96
+text = "PRACOWNIK WYRZUCONY"
