@@ -1,4 +1,4 @@
-class_name EventManager extends Node
+extends Node
 
 signal event_started(event: PromptEvent)
 
