@@ -22,9 +22,6 @@ func _ready() -> void:
 	modulate = BASE_MODULATE
 	modulate_tween.stop()
 
-func _process(delta: float) -> void:
-	print(modulate_tween.is_running())
-
 func _on_progress_bar_value_changed(value: float) -> void:
 	progress_bar_stylebox.bg_color = get_progress_color(value)
 	progress_bar.add_theme_stylebox_override("fill", progress_bar_stylebox)
@@ -58,7 +55,6 @@ func get_progress_color(val: float) -> Color:
 		return yellow.lerp(green, weight)
 
 func _modulate_positively() -> void:
-	print(1)
 	if modulate_tween and modulate_tween.is_running():
 		modulate_tween.kill()
 
@@ -69,7 +65,6 @@ func _modulate_positively() -> void:
 	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.8)
 
 func _modulate_negatively() -> void:
-	print(-1)
 	if modulate_tween and modulate_tween.is_running():
 		modulate_tween.kill()
 
