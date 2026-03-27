@@ -354,5 +354,61 @@
             "REFUTATION": "Racja, może to nie jest aż tak złe, ciekawe co o tym pomyślą inni pracownicy",
             "STRONG_REFUTATION": "Co? Naprawdę? Może rzezywiście nie jest aż tak źle, ufam na słowo"
         }
-    }
+    },
+    {
+        "Name": "ZSZYWACZ_W_GALARETCE",
+        "Text": "Na miłość boską, ktoś włożył mój zszywacz do galaretki. Podejrzewam że to był Marcin, ale nie mam dowodów. Czy powinienem przykleić wszystkie jego rzeczy do sufitu i wrzucić to na media społecznościowe?",
+        "AffirmationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": -5.0,
+            "TRUST": 5.0,
+            "PR": -5.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": -5.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+            { "EventName": "PRANK_PRZYŁAPANO", "PushType": "NEXT5"}
+        ],
+        "RefutationEvents": [
+
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "",
+            "AFFIRMATION": "",
+            "REFUTATION": "",
+            "STRONG_REFUTATION": ""
+        }
+    },
+    {
+        "Name": "PRANK_PRZYŁAPANO",
+        "Text": "Cholera jasna, ktoś zrobił innemu pracownikowi jakiś głupi prank i wrzucił to na media społecznościowe. To naprawdę nieprofesjonalne zachowanie. Powinienem go zwolnić?",
+        "AffirmationEffects": {
+            "MONEY": 5.0,
+            "MORALITY": 10.0,
+            "TRUST": 5.0,
+            "PR": 5.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": -5.0,
+            "TRUST": -5.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+
+        ],
+        "RefutationEvents": [
+
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "Super, dzięki",
+            "AFFIRMATION": "Tak też myślałem",
+            "REFUTATION": "Czyli naprawdę mam go zostawić? Nie uważam że to dobry pomysł ale dobra",
+            "STRONG_REFUTATION": ""
+        }
+    },
 ]   
