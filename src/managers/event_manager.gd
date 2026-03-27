@@ -38,11 +38,13 @@ func pop_back_to_current():
 
 func _handle_event_ending(event: PromptEvent):
 	var score = evaluate_score()
+	print("TESTOWY: ", score)
 
 	var unlocked_events = []
 	var affected_ratings = []
 
 	var opinion := Ratings.evaluate_score(score)
+	print("OPINION: ", opinion)
 	if opinion == Ratings.Opinion.AFFIRMATION:
 		unlocked_events = event.affirmation_events
 		affected_ratings = event.affirmation_effects
@@ -54,7 +56,11 @@ func _handle_event_ending(event: PromptEvent):
 	GameManager.ratings.add_ratings(affected_ratings)
 
 func evaluate_score() -> float:
-	return 1 if GameManager.selected == 0 else -1
+	var weight = 0.0
+	if ReplyManager._reply != null and not ReplyManager._reply.is_null():
+		weight = ReplyManager._reply.get_weight()
+
+	return weight
 
 func unlock_events(events: Array[EventRunInfo]):
 	for event_run_info: EventRunInfo in events:

@@ -5,6 +5,9 @@ var start: ReplyElement
 var filler: ReplyElement
 var end: ReplyElement
 
+func is_null():
+	return start == null || filler == null || end == null
+
 func get_text():
 	return  ' '.join([
 		(start.text if start else 'Analizowanie danych'),
