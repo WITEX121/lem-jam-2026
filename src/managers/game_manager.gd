@@ -3,6 +3,7 @@ extends Node
 signal next_question
 signal new_question(question: String)
 signal start_answer()
+signal answer_provided(answer: String)
 signal employee_count_changed(employee_count: int)
 
 enum finish_scenarios {
