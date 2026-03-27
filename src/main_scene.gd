@@ -6,6 +6,7 @@ extends CanvasLayer
 @onready var status_bar_morality = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status2
 @onready var status_bar_pr = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status3
 @onready var status_bar_trust = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status4
+@onready var status_bar_employee_count = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status5
 @onready var main_layout: VBoxContainer = %MainLayout
 
 
@@ -17,7 +18,7 @@ func _ready() -> void:
 
 func start_game():
 	SoundManager.play_sound(SoundManager.select)
-	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust]
+	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust, status_bar_employee_count]
 
 	var tween = create_tween()
 	tween.set_parallel(true)
@@ -33,7 +34,7 @@ func start_game():
 	main_layout.add_child(game_screen)
 	# HERE WE ADD NEW EVENT!!! #KAROL
 	await get_tree().create_timer(2.0).timeout
-	GameManager.new_question.emit()
+	GameManager.new_question.emit("TODO: DODAĆ TEKST PYTANIA")
 
 func _rating_changed():
 	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust]

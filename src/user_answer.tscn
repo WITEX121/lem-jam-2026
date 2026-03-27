@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bmtymr5ahiwr"]
+
+[ext_resource type="Script" uid="uid://cdsgxqx08quph" path="res://src/user_answer.gd" id="1_8muhs"]
+[ext_resource type="FontFile" uid="uid://8s8kng870c58" path="res://assets/fonts/RethinkSans-Regular.ttf" id="2_ot4d5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgaq0"]
+bg_color = Color(0, 0.627451, 0.8627451, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0.627451, 0.8627451, 1)
+corner_radius_top_right = 12
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 12
+
+[node name="UserAnswer" type="PanelContainer" unique_id=2042464347]
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mgaq0")
+script = ExtResource("1_8muhs")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1041349336]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=2062323886]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ot4d5")
+theme_override_font_sizes/font_size = 18
+text = "ODPOWIEDŹ UŻYTKOWNIKA"
+
+[node name="Contents" type="Label" parent="VBoxContainer" unique_id=1906792319]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "MUSIMY OSZCZĘDZIĆ PIENIĄDZE CZY KUPIENIE TAŃSZEGO PAPIERU BĘDZIE DOBRYM POMYSŁEM?"
+autowrap_mode = 2

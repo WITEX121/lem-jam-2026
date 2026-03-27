@@ -5,6 +5,8 @@ signal new_question(question: String)
 signal start_answer()
 signal reload_prompt()
 
+signal answer_provided(answer: String)
+signal employee_count_changed(employee_count: int)
 
 enum finish_scenarios {
 	NOT_FINISHED,
@@ -37,3 +39,7 @@ func game_start():
 		EventManager.push_event(GameManager.EVENTS["NO_EVENTS"])
 	EventManager.push_event(GameManager.EVENTS["PAPIER_DO_KIBLA"], PromptEvent.PushType.NEXT1)
 	EventManager.pop_back_to_current()
+
+func fire_employee():
+	employee_count -= 1
+	employee_count_changed.emit(employee_count)
