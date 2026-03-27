@@ -75,13 +75,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -294.5
-offset_top = -191.0
-offset_right = 294.5
-offset_bottom = -7.0
+offset_left = -487.75
+offset_top = -214.0
+offset_right = 487.75
+offset_bottom = 214.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "TESTOWY NAPIS"
 label_settings = SubResource("LabelSettings_0vyci")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

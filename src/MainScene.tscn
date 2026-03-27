@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cxflpbyqkkub8"]
+[gd_scene format=3 uid="uid://dif881of408xm"]
 
 [ext_resource type="StyleBox" uid="uid://bi86v4p2gk5w7" path="res://assets/styles/top_panel_round_corners.tres" id="1_46oc7"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]
@@ -38,10 +38,9 @@ clip_contents = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 29.0
-offset_right = 29.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="MainLayout" unique_id=902372574]
 layout_mode = 2
@@ -81,32 +80,36 @@ theme_override_font_sizes/font_size = 35
 text = "CorpAI"
 
 [node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1669026999]
-custom_minimum_size = Vector2(10, 0)
+custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status1" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1611621822 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+label_text = "Kapitał"
 
 [node name="Spacer2" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=848565961]
-custom_minimum_size = Vector2(10, 0)
+custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status2" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=114805630 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+label_text = "Moralność"
 
 [node name="Spacer3" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1686073260]
-custom_minimum_size = Vector2(10, 0)
+custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status3" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1316453743 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+label_text = "PR"
 
 [node name="Spacer4" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=856206409]
-custom_minimum_size = Vector2(10, 0)
+custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status4" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1715507513 instance=ExtResource("2_h5dix")]
 layout_mode = 2
+label_text = "Zaufanie"
 
 [node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header" unique_id=966978601]
 custom_minimum_size = Vector2(0, 10)
@@ -176,5 +179,3 @@ theme_override_font_sizes/font_size = 30
 text = "
 
 "
-autowrap_mode = 2
-script = ExtResource("4_h5dix")
