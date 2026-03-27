@@ -12,7 +12,6 @@ func _ready():
 	ReplyManager.reply_completed.connect(_on_reply_completed)
 	GameManager.new_question.connect(_on_new_question)
 
-
 func _on_reply_completed(_prompt_reply: PromptReply):
 	next_question_button = next_question_button_scene.instantiate()
 	GameManager.answer_provided.emit("Jebać izrael")
