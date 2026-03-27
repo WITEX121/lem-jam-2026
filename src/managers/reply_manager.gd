@@ -24,6 +24,7 @@ func load_element(element: ReplyElement):
 		new_answers_ready.emit(_get_ends())
 	else:
 		_reply.end = element
+		print("Reply completed: " + _reply.get_text())
 		reply_completed.emit(_reply)
 
 	text_on_change.emit(_reply.get_text())
@@ -43,5 +44,3 @@ func _get_fillers():
 
 func _get_ends():
 	return get_n_random_elements(_replies.ends, 5)
-
-

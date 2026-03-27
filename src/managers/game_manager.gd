@@ -1,5 +1,9 @@
 extends Node
 
+signal next_question
+signal new_question(question: String)
+signal start_answer()
+
 enum finish_scenarios {
 	NOT_FINISHED,
 	NO_EMPLOYEES,
