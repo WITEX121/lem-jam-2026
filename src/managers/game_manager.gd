@@ -22,6 +22,8 @@ enum finish_scenarios {
 	TOP_PR
 }
 
+
+var pracownik_wyjebaned_efekt_scene: PackedScene = preload("res://src/pracownik_wyjebaaaned.tscn")
 var cursor_arrow = preload("res://assets/icons/pointer_a.png")
 var cursor_button = preload("res://assets/icons/hand_point.png")
 
@@ -40,6 +42,11 @@ var EVENTS:
 func _ready() -> void:
 	next_question.connect(func(): new_question.emit(EventManager.current_event.text))
 	ratings.ratings_changed.connect(_on_ratings_changed)
+	employee_count_changed.connect(_on_employee_count_changed)
+
+func _on_employee_count_changed(_count: int):
+	var pracownik_wyjebaned = pracownik_wyjebaned_efekt_scene.instantiate()
+	add_child(pracownik_wyjebaned)
 
 
 func game_start():

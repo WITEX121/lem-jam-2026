@@ -625,5 +625,32 @@
             "REFUTATION": ".....",
             "STRONG_REFUTATION": "TY ZDRADZIECKA ŁAJZO JAK ŚMIESZ?!"
         }
+    },
+    {
+        "Name": "NAGLOSNIENIE",
+        "Text": "Szef bardzo głośno puszcza muzykę ze swojego boxa. Czy powinienem zwrócić mu uwagę?",
+        "AffirmationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 10.0,
+            "TRUST": 10.0,
+            "PR": 0.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": -10.0,
+            "TRUST": -10.0,
+            "PR": -10.0
+        },
+        "AffirmationEvents": [
+            { "EventName": "WYLANIE_PRACOWNIKA", "PushType": "NEXT5" }
+        ],
+        "RefutationEvents": [
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "To nie może mnie dłużej rozpraszać, idę mu zwrócić uwagę teraz!",
+            "AFFIRMATION": "Jak się powtórzy to mu powiem, dzięki",
+            "REFUTATION": "Masz rację, lepiej ponarzekać kolegom niż zwracać mu uwagę",
+            "STRONG_REFUTATION": "A przeboleje, potem rozpowiem każdemu jaki to bęcwał"
+        }
     }
-]   
+]
