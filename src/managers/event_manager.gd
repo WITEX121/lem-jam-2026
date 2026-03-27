@@ -5,7 +5,6 @@ signal event_started(event: PromptEvent)
 var current_event: PromptEvent = GameManager.EVENTS["PAPIER_DO_KIBLA"]
 var events_stack: Array[PromptEvent] = []
 
-
 func push_event(event: PromptEvent, push_type: PromptEvent.PushType = PromptEvent.PushType.RANDOM):
 	match push_type:
 		PromptEvent.PushType.RANDOM:
@@ -67,6 +66,11 @@ func unlock_events(events: Array[EventRunInfo]):
 			GameManager.EVENTS[event_run_info.event_name],
 			event_run_info.push_type
 		)
+
+func unlock_events_shuffle(events: Array[String]):
+	for event_name in events:
+		events_stack.push_back(GameManager.EVENTS[event_name])
+	events_stack.shuffle()
 
 func _perform_action(action: EventRunInfo):
 	if Action.actions.has(action.event_name):
