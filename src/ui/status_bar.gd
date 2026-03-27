@@ -9,10 +9,16 @@ extends PanelContainer
 @export var icon_texture: Texture2D
 var value: float
 var tween: Tween
+var modulate_tween: Tween
+
+const BASE_MODULATE := Color(1, 1, 1, 1)
+const POSITIVE_MODULATE := Color(0.65, 1, 0.65, 1)
+const NEGATIVE_MODULATE := Color(1, 0.65, 0.65, 1)
 
 func _ready() -> void:
 	label.text = label_text
 	icon.texture = icon_texture
+	modulate = BASE_MODULATE
 
 func _on_progress_bar_value_changed(value: float) -> void:
 	progress_bar_stylebox.bg_color = get_progress_color(value)
@@ -40,3 +46,34 @@ func get_progress_color(val: float) -> Color:
 	else:
 		var weight = (val - 50.0) / 50.0
 		return yellow.lerp(green, weight)
+
+func _modulate_positively() -> void:
+	if modulate_tween and modulate_tween.is_running():
+		modulate_tween.kill()
+
+	modulate_tween = create_tween()
+	modulate_tween.set_trans(Tween.TRANS_SINE)
+	modulate_tween.set_ease(Tween.EASE_OUT)
+	modulate_tween.tween_property(self , "modulate", POSITIVE_MODULATE, 0.08)
+	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.16)
+	_modulate_neutrally()
+
+func _modulate_negatively() -> void:
+	if modulate_tween and modulate_tween.is_running():
+		modulate_tween.kill()
+
+	modulate_tween = create_tween()
+	modulate_tween.set_trans(Tween.TRANS_SINE)
+	modulate_tween.set_ease(Tween.EASE_OUT)
+	modulate_tween.tween_property(self , "modulate", NEGATIVE_MODULATE, 0.08)
+	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.16)
+	_modulate_positively()
+
+func _modulate_neutrally() -> void:
+	if modulate_tween and modulate_tween.is_running():
+		modulate_tween.kill()
+
+	modulate_tween = create_tween()
+	modulate_tween.set_trans(Tween.TRANS_SINE)
+	modulate_tween.set_ease(Tween.EASE_OUT)
+	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.16)
