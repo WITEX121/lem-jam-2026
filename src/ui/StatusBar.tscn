@@ -36,7 +36,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="Status1" type="PanelContainer" unique_id=1611621822]
-custom_minimum_size = Vector2(375, 0)
+custom_minimum_size = Vector2(300, 0)
 theme_override_styles/panel = SubResource("StyleBoxFlat_a782b")
 script = ExtResource("1_a782b")
 
@@ -71,7 +71,7 @@ custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer" unique_id=529682812]
-custom_minimum_size = Vector2(150, 35)
+custom_minimum_size = Vector2(100, 35)
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
