@@ -7,7 +7,6 @@ signal text_on_change(text: String)
 signal new_answers_ready(answers: Array[ReplyElement])
 signal reply_selected(reply_element: ReplyElement)
 
-
 func _ready() -> void:
 	reply_selected.connect(load_element)
 
@@ -25,12 +24,11 @@ func load_element(element: ReplyElement):
 		new_answers_ready.emit(_get_ends())
 	else:
 		_reply.end = element
-		new_answers_ready.emit(_get_starts())
+		reply_completed.emit(_reply)
 
 	text_on_change.emit(_reply.get_text())
 
 	if _reply.end != null:
-		reply_completed.emit(_reply)
 		_reply = PromptReply.new()
 
 func get_n_random_elements(elements: Array, n: int):

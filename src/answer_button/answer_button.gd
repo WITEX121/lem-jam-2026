@@ -35,7 +35,7 @@ func _ready():
 	mouse_exited.connect(_on_mouse_exited)
 	pressed.connect(_on_pressed)
 	ReplyManager.new_answers_ready.connect(_on_new_answers_ready)
-	# ReplyManager.prompt_finished.connect(_on_prompt_finished)
+	ReplyManager.reply_completed.connect(_on_prompt_finished)
 	_set_content_x(_offset)
 
 
@@ -63,14 +63,11 @@ func play_intro():
 
 func _process(delta):
 	if _is_pressed: # PRESSED
-		_current_background_color = _current_background_color.lerp(_pressed_color, 0.4)
-		_stylebox.border_color = _current_background_color
+		_animate_press()
 	elif _is_mouse_on_top: # HOVER
-		_current_background_color = _current_background_color.lerp(_hover_color, 0.4)
-		_reply_label.add_theme_font_override("font", _hover_font)
+		_animate_hover()
 	else: # NORMAL
-		_current_background_color = _current_background_color.lerp(_normal_color, 0.4)
-		_reply_label.add_theme_font_override("font", _normal_font)
+		_animate_normal()
 
 	_stylebox.bg_color = _current_background_color
 
@@ -85,7 +82,7 @@ func _on_mouse_exited():
 
 func _on_pressed():
 	_is_pressed = true
-	# SoundManager.play_sound(SoundManager.select)
+	SoundManager.play_sound(SoundManager.select)
 	ReplyManager.reply_selected.emit(reply_element)
 
 
@@ -93,15 +90,29 @@ func _on_new_answers_ready(_possible_replies: Array[ReplyElement]):
 	_disable_button()
 	_animate_out()
 
-# func _on_prompt_finished():
-# 	_disable_button()
-# 	_animate_out()
+func _on_prompt_finished(_empty):
+	print("Haha")
+	_disable_button()
+	_animate_out()
+	# _animate_out()
 
 func _disable_button():
 	mouse_entered.disconnect(_on_mouse_entered)
 	mouse_exited.disconnect(_on_mouse_exited)
 	Input.set_custom_mouse_cursor(GameManager.cursor_arrow)
 	disabled = true
+
+func _animate_press():
+	_current_background_color = _current_background_color.lerp(_pressed_color, 0.4)
+	_stylebox.border_color = _current_background_color
+
+func _animate_hover():
+	_current_background_color = _current_background_color.lerp(_hover_color, 0.4)
+	_reply_label.add_theme_font_override("font", _hover_font)
+
+func _animate_normal():
+	_current_background_color = _current_background_color.lerp(_normal_color, 0.4)
+	_reply_label.add_theme_font_override("font", _normal_font)
 
 func _animate_out():
 	if is_instance_valid(tween):
