@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dif881of408xm"]
+[gd_scene format=3 uid="uid://cxflpbyqkkub8"]
+
+[ext_resource type="Script" uid="uid://dvg270cgbj43p" path="res://src/label.gd" id="1_46oc7"]
 
 [node name="Control" type="CanvasLayer" unique_id=530775206]
 
@@ -14,6 +16,10 @@ color = Color(0.14509805, 0.14901961, 0.15294118, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 57.0
+offset_top = 2.0
+offset_right = 57.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -73,3 +79,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 25
 placeholder_text = "Type here"
+
+[node name="Label" type="Label" parent="MainLayout" unique_id=1911000181]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "dfdfdgg
+
+
+"
+script = ExtResource("1_46oc7")
