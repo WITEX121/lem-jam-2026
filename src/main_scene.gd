@@ -35,7 +35,6 @@ func start_game():
 	var game_screen = game_screen_scene.instantiate()
 	main_layout.add_child(game_screen)
 
-	# Funkcja zaczecia kolejnego pytania
 	GameManager.next_question.emit()
 
 func _rating_changed():
