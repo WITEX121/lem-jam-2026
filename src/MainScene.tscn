@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cxflpbyqkkub8"]
+[gd_scene format=3 uid="uid://dif881of408xm"]
 
 [ext_resource type="Script" uid="uid://b3ki08jl1jgjt" path="res://src/main_scene.gd" id="1_qg6fr"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_tlhjj"]
 [ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="7_5a7yu"]
 [ext_resource type="PackedScene" uid="uid://ccaosf5jnio3h" path="res://src/content/WelcomeScreen.tscn" id="8_r8lft"]
-[ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/answers.tscn" id="9_tlhjj"]
+[ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/possible_answers.tscn" id="9_tlhjj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
 bg_color = Color(0, 0.46666667, 0.70980394, 1)
