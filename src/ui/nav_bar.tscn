@@ -19,6 +19,20 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ki0hb"]
+bg_color = Color(0.3779188, 0.3779189, 0.37791875, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tgasl"]
+bg_color = Color(0.14509805, 0.14901961, 0.15294118, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51cek"]
 bg_color = Color(1, 0.99215686, 0.8156863, 1)
 border_width_left = 20
@@ -46,26 +60,40 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="BackButton" type="Button" parent="MarginContainer/HBoxContainer/Controls" unique_id=218766907]
-custom_minimum_size = Vector2(65, 55)
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("1_mhp4g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ki0hb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tgasl")
 icon = ExtResource("2_51cek")
 icon_alignment = 1
 
+[node name="Spacer2" type="Control" parent="MarginContainer/HBoxContainer/Controls" unique_id=1047917922]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
 [node name="ForwardButton" type="Button" parent="MarginContainer/HBoxContainer/Controls" unique_id=1277852731]
-custom_minimum_size = Vector2(65, 55)
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("1_mhp4g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ki0hb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tgasl")
 icon = ExtResource("3_4jeoy")
 icon_alignment = 1
 
+[node name="Spacer3" type="Control" parent="MarginContainer/HBoxContainer/Controls" unique_id=1721744446]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
 [node name="RefreshButton" type="Button" parent="MarginContainer/HBoxContainer/Controls" unique_id=456925234]
-custom_minimum_size = Vector2(65, 55)
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = ExtResource("1_mhp4g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ki0hb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tgasl")
 icon = ExtResource("4_tgasl")
 icon_alignment = 1
 

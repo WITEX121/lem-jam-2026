@@ -77,7 +77,6 @@ size_flags_horizontal = 10
 size_flags_vertical = 4
 theme_override_styles/background = SubResource("StyleBoxFlat_m1igk")
 theme_override_styles/fill = SubResource("StyleBoxFlat_krdvv")
-value = 35.0
 rounded = true
 show_percentage = false
 

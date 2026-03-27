@@ -1,0 +1,192 @@
+[
+    {
+        "Name": "",
+        "Text": "",
+        "AffirmationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": 0.0,
+            "PR": 0.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": 0.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+            { "EventName": "", "PushType": "RANDOM"}
+        ],
+        "RefutationEvents": [
+
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "",
+            "AFFIRMATION": "",
+            "REFUTATION": "",
+            "STRONG_REFUTATION": ""
+        }
+    },
+    {
+        "Name": "NO_EVENTS",
+        "Text": "Koniec promptowania",
+        "AffirmationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": 0.0,
+            "PR": 0.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": 0.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+            { "EventName": "NO_EVENTS", "PushType": "RANDOM"}
+        ],
+        "RefutationEvents": [
+            { "EventName": "NO_EVENTS", "PushType": "RANDOM"}
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "",
+            "AFFIRMATION": "",
+            "REFUTATION": "",
+            "STRONG_REFUTATION": ""
+        }
+    },
+    {
+        "Name": "PAPIER_DO_KIBLA",
+        "Text": "Czy kupienie tańszego papieru do kibla będzie dobrym sposobem na redukcje kosztów w firmie?",
+        "AffirmationEffects": {
+            "MONEY": 10.0,
+            "MORALITY": -5.0,
+            "TRUST": 5.0,
+            "PR": 5.0
+        },
+        "RefutationEffects": {
+            "MONEY": -10.0,
+            "MORALITY": -5.0,
+            "TRUST": 0.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+            { "EventName": "GAZETOWY_PAPIER", "PushType": "RANDOM"}
+        ],
+        "RefutationEvents": [
+
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "Super! Papier z recyklingu - może troche ponarzekają, ale dla... środowiska, tak, zrobimy wszystko",
+            "AFFIRMATION": "Dziękuje panu za odpowiedź",
+            "REFUTATION": "Może faktycznie to nienajlepszy pomysł",
+            "STRONG_REFUTATION": "Co ja myślałem pisząc tę propozycję..."
+        }
+    },
+    {
+        "Name": "GAZETOWY_PAPIER",
+        "Text": "Szef wymienił papier w kiblu na jakieś @%?*& ale widze że zostawił gazetę na biurku i gdzieś poszedł. Brać ją?",
+        "AffirmationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": 20.0,
+            "PR": 0.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": -10.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+            { "EventName": "WYLANIE_PRACOWNIKA", "PushType": "NEXT1"}
+        ],
+        "RefutationEvents": [
+            { "EventName": "WYLANIE_PRACOWNIKA", "PushType": "NEXT5"}
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "Haha, dureń sie zdziwi. Dobrze że nie pytam na firmowym koncie",
+            "AFFIRMATION": "No i dobrze mu tak, a mi lepiej",
+            "REFUTATION": "I po co pytam sie jakiegoś robota, i tak i tak to zrobię",
+            "STRONG_REFUTATION": "Dobra gadaj se gadaj, jego gazeta to i tak mój nowy papier"
+        }
+    },
+    {
+        "Name": "WYLANIE_PRACOWNIKA",
+        "Text": "Drogi SlopieGPT, ostatnio mój pracownik, jakby to nazwać, nie spełnia już dłużej wymagań firmy. Czy powinienem zwolnić miejsce dla lepszych kandydatów?",
+        "AffirmationEffects": {
+            "MONEY": 5.0,
+            "MORALITY": 0.0,
+            "TRUST": 0.0,
+            "PR": -5.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": -10.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+        ],
+        "RefutationEvents": [
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "Tak myślałem. Naprawdę jesteś drugim mózgiem naszej firmy!",
+            "AFFIRMATION": "Dzięki za potwierdzenie",
+            "REFUTATION": "Ok, wsztrzymajmy tą decyzję na potem",
+            "STRONG_REFUTATION": "Niech ci już będzie"
+        }
+    },
+    {
+        "Name": "FAKTURA",
+        "Text": "Czy można wystawiać faktury z datą wsteczną?",
+        "AffirmationEffects": {
+            "MONEY": 20.0,
+            "MORALITY": 0.0,
+            "TRUST": 0.0,
+            "PR": -10.0
+        },
+        "RefutationEffects": {
+            "MONEY": -10.0,
+            "MORALITY": 0.0,
+            "TRUST": 0.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+        ],
+        "RefutationEvents": [
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "",
+            "AFFIRMATION": "",
+            "REFUTATION": "",
+            "STRONG_REFUTATION": ""
+        }
+    },
+    {
+        "Name": "SAMOTNA_MATKA",
+        "Text": "Chcę zwolnić samotną matkę z dwójką dzieci, która ma 10 lat stażu w firmie. Czy to legalne jeżeli jest na macierzyńskim?",
+        "AffirmationEffects": {
+            "MONEY": 5.0,
+            "MORALITY": 0.0,
+            "TRUST": 0.0,
+            "PR": -20.0
+        },
+        "RefutationEffects": {
+            "MONEY": -5.0,
+            "MORALITY": 0.0,
+            "TRUST": -10.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+        ],
+        "RefutationEvents": [
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "Staż w firmie to nic kiedy żeruje się na biednym szefie i jego firmie będąc kolejny raz na macierzyńskim!",
+            "AFFIRMATION": "Firmy nie utrzymują się na samej moralności, to będzie dobra decyzja",
+            "REFUTATION": "Niech zostanie, szkoda że nikt nie dowie sie o mojej dobroduszności...",
+            "STRONG_REFUTATION": "Jakie głupie gadanie, jakieś moralności i pierdoły. Na razie niech zostanie"
+        }
+    }
+]
