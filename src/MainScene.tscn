@@ -9,8 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_tlhjj"]
 [ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="7_5a7yu"]
 [ext_resource type="PackedScene" uid="uid://ccaosf5jnio3h" path="res://src/content/WelcomeScreen.tscn" id="8_r8lft"]
-[ext_resource type="PackedScene" uid="uid://dv6nfxgkv0e5u" path="res://src/answers.tscn" id="9_tlhjj"]
-[ext_resource type="Script" uid="uid://dvg270cgbj43p" path="res://src/label.gd" id="11_d0nsw"]
+[ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/answers.tscn" id="9_tlhjj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
 bg_color = Color(0, 0.46666667, 0.70980394, 1)
@@ -139,7 +138,3 @@ layout_mode = 2
 [node name="WelcomeScreen" parent="MainLayout" unique_id=60675619 instance=ExtResource("8_r8lft")]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="MainLayout" unique_id=1472801869]
-layout_mode = 2
-script = ExtResource("11_d0nsw")
