@@ -8,8 +8,9 @@ extends PanelContainer
 @export var label_text: String
 @export var icon_texture: Texture2D
 var value: float
+var old_value: float
 var tween: Tween
-var modulate_tween: Tween
+var modulate_tween := create_tween()
 
 const BASE_MODULATE := Color(1, 1, 1, 1)
 const POSITIVE_MODULATE := Color(0.65, 1, 0.65, 1)
@@ -19,10 +20,17 @@ func _ready() -> void:
 	label.text = label_text
 	icon.texture = icon_texture
 	modulate = BASE_MODULATE
+	modulate_tween.stop()
 
 func _on_progress_bar_value_changed(value: float) -> void:
 	progress_bar_stylebox.bg_color = get_progress_color(value)
 	progress_bar.add_theme_stylebox_override("fill", progress_bar_stylebox)
+	if !modulate_tween.is_running():
+		if value > old_value:
+			_modulate_positively()
+		elif value < old_value:
+			_modulate_negatively()
+	old_value = value
 
 func set_status_bar(target_value: float, duration: float = 0.5):
 	if tween and tween.is_running():
@@ -31,7 +39,6 @@ func set_status_bar(target_value: float, duration: float = 0.5):
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_OUT)
-	
 	tween.tween_property(progress_bar, "value", target_value, duration)
 
 func get_progress_color(val: float) -> Color:
@@ -54,9 +61,8 @@ func _modulate_positively() -> void:
 	modulate_tween = create_tween()
 	modulate_tween.set_trans(Tween.TRANS_SINE)
 	modulate_tween.set_ease(Tween.EASE_OUT)
-	modulate_tween.tween_property(self , "modulate", POSITIVE_MODULATE, 0.08)
-	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.16)
-	_modulate_neutrally()
+	modulate_tween.tween_property(self , "modulate", POSITIVE_MODULATE, 0.4)
+	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.8)
 
 func _modulate_negatively() -> void:
 	if modulate_tween and modulate_tween.is_running():
@@ -65,15 +71,5 @@ func _modulate_negatively() -> void:
 	modulate_tween = create_tween()
 	modulate_tween.set_trans(Tween.TRANS_SINE)
 	modulate_tween.set_ease(Tween.EASE_OUT)
-	modulate_tween.tween_property(self , "modulate", NEGATIVE_MODULATE, 0.08)
-	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.16)
-	_modulate_positively()
-
-func _modulate_neutrally() -> void:
-	if modulate_tween and modulate_tween.is_running():
-		modulate_tween.kill()
-
-	modulate_tween = create_tween()
-	modulate_tween.set_trans(Tween.TRANS_SINE)
-	modulate_tween.set_ease(Tween.EASE_OUT)
-	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.16)
+	modulate_tween.tween_property(self , "modulate", NEGATIVE_MODULATE, 0.4)
+	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.8)

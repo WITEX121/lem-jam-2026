@@ -19,8 +19,6 @@ enum finish_scenarios {
 	TOP_PR
 }
 
-
-var pracownik_wyjebaned_efekt_scene: PackedScene = preload("res://src/pracownik_wyjebaaaned.tscn")
 var cursor_arrow = preload("res://assets/icons/pointer_a.png")
 var cursor_button = preload("res://assets/icons/hand_point.png")
 
@@ -38,15 +36,22 @@ var EVENTS:
 
 func _ready() -> void:
 	ratings.ratings_changed.connect(_on_ratings_changed)
-	employee_count_changed.connect(_on_employee_count_changed)
+	# employee_count_changed.connect(_on_employee_count_changed)
 
-func _on_employee_count_changed(_count: int):
-	var pracownik_wyjebaned = pracownik_wyjebaned_efekt_scene.instantiate()
-	add_child(pracownik_wyjebaned)	
+func _process(_delta: float) -> void:
+	if Input.is_key_pressed(KEY_0):
+		fire_employee()
+
+# func _on_employee_count_changed(_count: int):
+# 	var pracownik_wyjebaned = pracownik_wyjebaned_efekt_scene.instantiate()
+# 	add_child(pracownik_wyjebaned)
 
 func fire_employee():
 	employee_count -= 1
 	employee_count_changed.emit(employee_count)
+	if employee_count <= 0:
+		finish_scenario = finish_scenarios.NO_EMPLOYEES
+		end_game.emit()
 
 func _on_ratings_changed():
 	if ratings.get_rating(Ratings.Type.MONEY) >= 100:
