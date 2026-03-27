@@ -9,9 +9,9 @@ border_width_top = 20
 border_width_right = 20
 border_width_bottom = 20
 border_color = Color(0, 0.627451, 0.8627451, 1)
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+corner_radius_top_right = 12
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 12
 
 [node name="UserPrompt" type="PanelContainer" unique_id=2042464347]
 size_flags_vertical = 0

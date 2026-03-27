@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://dft3r0hwe4j1j" path="res://src/content/user_prompt.tscn" id="1_vqbpw"]
 [ext_resource type="PackedScene" uid="uid://bit48k2irg1q5" path="res://src/content/answer.tscn" id="2_xro0b"]
 [ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/possible_answers.tscn" id="3_vqbpw"]
-[ext_resource type="PackedScene" uid="uid://cgpk0an8whupo" path="res://src/content/time_left.tscn" id="4_jvrfa"]
 
 [node name="GameScreen" type="MarginContainer" unique_id=622140737]
 anchors_preset = 15
@@ -12,7 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 300
-theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 300
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=509452191]
@@ -35,10 +33,3 @@ layout_mode = 2
 [node name="PossibleAnswers" parent="VBoxContainer" unique_id=585296452 instance=ExtResource("3_vqbpw")]
 layout_mode = 2
 size_flags_vertical = 8
-
-[node name="Spacer3" type="Control" parent="VBoxContainer" unique_id=579242881]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-
-[node name="TimeLeft" parent="VBoxContainer" unique_id=333739217 instance=ExtResource("4_jvrfa")]
-layout_mode = 2

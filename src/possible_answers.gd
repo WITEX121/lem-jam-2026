@@ -9,8 +9,10 @@ func _ready():
 	ReplyManager.init_data()
 
 func _on_new_answers_ready(possible_replies: Array[ReplyElement]):
+	await get_tree().create_timer(0.4).timeout
 	for reply: ReplyElement in possible_replies:
 		var answer_button: AnswerButton = answer_button_scene.instantiate()
 		answer_button.reply_element = reply
-		await get_tree().create_timer(0.2).timeout
+		answer_button.prepare_for_spawn()
 		add_child(answer_button)
+		answer_button.play_intro()
