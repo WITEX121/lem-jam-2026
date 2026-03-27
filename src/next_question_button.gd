@@ -56,7 +56,7 @@ func play_intro():
 	tween.parallel().tween_property(_margin_container, "position:x", 0.0, 0.3)
 
 
-func _process(delta):
+func _process(_delta):
 	if _is_pressed: # PRESSED
 		_animate_press()
 	elif _is_mouse_on_top: # HOVER
@@ -79,7 +79,7 @@ func _on_pressed():
 	_is_pressed = true
 	SoundManager.play_sound(SoundManager.select)
 	GameManager.next_question.emit()
-	GameManager.new_question.emit("TODO: DODAĆ TEKST PYTANIA")
+	ReplyManager.init_data()
 	_animate_out()
 
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bmdrpf27ona50"]
 
 [ext_resource type="PackedScene" uid="uid://dft3r0hwe4j1j" path="res://src/content/user_prompt.tscn" id="1_vqbpw"]
-[ext_resource type="Script" uid="uid://bf76qdq3adptp" path="res://src/content/game_screen.gd" id="1_xro0b"]
+[ext_resource type="Script" path="res://src/content/game_screen.gd" id="1_xro0b"]
 [ext_resource type="PackedScene" uid="uid://bit48k2irg1q5" path="res://src/content/answer.tscn" id="2_xro0b"]
 [ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/possible_answers.tscn" id="3_vqbpw"]
 [ext_resource type="PackedScene" uid="uid://bmtymr5ahiwr" path="res://src/user_answer.tscn" id="4_xro0b"]

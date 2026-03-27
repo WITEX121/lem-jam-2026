@@ -3,6 +3,8 @@ extends Node
 signal next_question
 signal new_question(question: String)
 signal start_answer()
+signal reload_prompt()
+
 signal answer_provided(answer: String)
 signal employee_count_changed(employee_count: int)
 
@@ -30,12 +32,14 @@ var _events := Parser.load_events()
 var EVENTS:
 	get: return _events
 
-func _ready():
+func _ready() -> void:
+	next_question.connect(func(): new_question.emit(EventManager.current_event.text))
 	employee_count_changed.connect(_on_employee_count_changed)
 
 func _on_employee_count_changed(_count: int):
 	var pracownik_wyjebaned = pracownik_wyjebaned_efekt_scene.instantiate()
 	add_child(pracownik_wyjebaned)
+
 
 func game_start():
 	for i in range(5):

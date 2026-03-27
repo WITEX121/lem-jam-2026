@@ -28,15 +28,15 @@ func set_status_bar(target_value: float, duration: float = 0.5):
 	
 	tween.tween_property(progress_bar, "value", target_value, duration)
 
-func get_progress_color(value: float) -> Color:
+func get_progress_color(val: float) -> Color:
 	var red = Color("E3170A")
 	var yellow = Color("E3DC0A")
 	var green = Color("39E30A")
 
-	value = clamp(value, 0.0, 100.0)
-	if value <= 50.0:
-		var weight = value / 50.0
+	val = clamp(val, 0.0, 100.0)
+	if val <= 50.0:
+		var weight = val / 50.0
 		return red.lerp(yellow, weight)
 	else:
-		var weight = (value - 50.0) / 50.0
+		var weight = (val - 50.0) / 50.0
 		return yellow.lerp(green, weight)

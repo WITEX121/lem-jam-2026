@@ -22,12 +22,14 @@ func _ready():
 	base_position_circle_3 = circle_3.position
 	_start_next_anim.connect(_start_anim)
 	_start_anim()
-	
+	ReplyManager.reply_completed.connect(func(_e): visible = false)
+	GameManager.next_question.connect(func(): visible = true)
+
 
 func _start_anim():
 	tween = create_tween()
 	tween.set_parallel()
-	
+
 	tween.tween_property(circle_1, "position", base_position_circle_1 + Vector2(0, -12), 0.5).set_trans(Tween.TransitionType.TRANS_CUBIC)
 	tween.tween_property(circle_1, "position", base_position_circle_1, 0.5).set_delay(0.5).set_trans(Tween.TransitionType.TRANS_CUBIC)
 	tween.tween_property(circle_1, "modulate", in_anim_color, 0.5).set_trans(Tween.TransitionType.TRANS_CUBIC)

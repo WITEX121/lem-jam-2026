@@ -2,8 +2,9 @@ extends Node
 
 signal event_started(event: PromptEvent)
 
-var current_event: PromptEvent = null
+var current_event: PromptEvent = GameManager.EVENTS["PAPIER_DO_KIBLA"]
 var events_stack: Array[PromptEvent] = []
+
 
 func push_event(event: PromptEvent, push_type: PromptEvent.PushType = PromptEvent.PushType.RANDOM):
 	match push_type:
