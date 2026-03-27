@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://cv2j31lpd0rdg"]
 
-[ext_resource type="Script" path="res://src/screens/prompt_screen.gd" id="1_gvjjj"]
-
 [sub_resource type="LabelSettings" id="LabelSettings_0vyci"]
 font_size = 50
 
@@ -12,7 +10,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_gvjjj")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=988772558]
 layout_mode = 1
