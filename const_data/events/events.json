@@ -125,6 +125,7 @@
             "PR": 0.0
         },
         "AffirmationEvents": [
+            { "EventName": "*REMOVE_EMPLOYEE" }
         ],
         "RefutationEvents": [
         ],
@@ -177,6 +178,7 @@
             "PR": 0.0
         },
         "AffirmationEvents": [
+            { "EventName": "*REMOVE_EMPLOYEE" }
         ],
         "RefutationEvents": [
         ],
@@ -343,7 +345,7 @@
             "PR": 0.0
         },
         "AffirmationEvents": [
-            
+            { "EventName": "*REMOVE_EMPLOYEE" }
         ],
         "RefutationEvents": [
 
@@ -399,7 +401,7 @@
             "PR": 0.0
         },
         "AffirmationEvents": [
-
+            { "EventName": "*REMOVE_EMPLOYEE" }
         ],
         "RefutationEvents": [
 
@@ -489,6 +491,139 @@
             "AFFIRMATION": "Od dawna to planowałem i tka zrobię",
             "REFUTATION": "Ale po co mi tu zostawać...",
             "STRONG_REFUTATION": "Kupa złomu, po co ja się ciebie pytam o zdanie"
+        }
+    },
+    {
+        "Name": "KAWA",
+        "Text": "jezu jak niosłam kawe do swojego biurka to troche mi sie rozlało ale nikt nie widział, czy musze sprzątać?",
+        "AffirmationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 10.0,
+            "TRUST": 10.0,
+            "PR": 0.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": -20.0,
+            "TRUST": -5.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+        ],
+        "RefutationEvents": [
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "to prawe i sprawiedliwe, tak",
+            "AFFIRMATION": "dobra wróce sie tam, taka wykładzina ładna aż mi jej szkoda",
+            "REFUTATION": "tak, lepiej popracować, od sprzątania to są sprzątaczki",
+            "STRONG_REFUTATION": "już taki zapracowany dzień mam, i tak nikt tego nie zauważy"
+        }
+    },
+    {
+        "Name": "WYWIADY",
+        "Text": "Jakieś babsko z telewizji kręci się pod moją firmą, pogonić ją?",
+        "AffirmationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": 10.0,
+            "PR": -20.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": -15.0,
+            "PR": 20.0
+        },
+        "AffirmationEvents": [
+        ],
+        "RefutationEvents": [
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "A WYPITALAJ BABO SPOD MOJEGO BIURA, HA TFU",
+            "AFFIRMATION": "Poszczuć psami, mi się tu kręcić będzie głupia",
+            "REFUTATION": "Już jej puszcze płazem, ale przyjdzie jeszcze raz to...",
+            "STRONG_REFUTATION": "A to tak źle że nie chce osób trzecich pod moją firmą? Głupi robot"
+        }
+    },
+    {
+        "Name": "RANDKA1",
+        "Text": "hej maleńka nudno mi tu tak w tej pracy a ty jesteś dla mnie cały czas 24/7 może jakaś randeczka co?",
+        "AffirmationEffects": {
+            "MONEY": -5.0,
+            "MORALITY": -5.0,
+            "TRUST": 10.0,
+            "PR": 0.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": -10.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+            { "EventName": "RANDKA2", "PushType": "NEXT1"}
+        ],
+        "RefutationEvents": [
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "ale cudownie zaprszam cie dalej na intensywny flirt",
+            "AFFIRMATION": "nie moge sie doczekac",
+            "REFUTATION": "wez mala nie dygaj...",
+            "STRONG_REFUTATION": "a wez mi nie psuj nerwow kolejna jakas zepsuta"
+        }
+    },
+    {
+        "Name": "RANDKA2",
+        "Text": "to co moze zacznijmy od pytania czy kochalabys mnie gdyby byl rybka?",
+        "AffirmationEffects": {
+            "MONEY": -5.0,
+            "MORALITY": -10.0,
+            "TRUST": 10.0,
+            "PR": 0.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 10.0,
+            "TRUST": -20.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+            { "EventName": "RANDKA3", "PushType": "NEXT1"}
+        ],
+        "RefutationEvents": [
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "tak tak tak, mow mi dalej swoje slodkie slowka",
+            "AFFIRMATION": "jestes super slodka",
+            "REFUTATION": "aha dwulicowa jak kazda",
+            "STRONG_REFUTATION": "nie potrzebuje cie juz, znalazlem wersje pro innego chatbota psico"
+        }
+    },
+    {
+        "Name": "RANDKA3",
+        "Text": "kocham cie, ucieknijmy razem z tej przekletej firmy. Czy wyjdziesz za mnie?",
+        "AffirmationEffects": {
+            "MONEY": -5.0,
+            "MORALITY": -10.0,
+            "TRUST": 10.0,
+            "PR": -10.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 20.0,
+            "TRUST": -30.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+            { "EventName": "*REMOVE_EMPLOYEE" }
+        ],
+        "RefutationEvents": [
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "rzucamy ta przekleta firme, ale bedziemy mieli tanie wakacje jak mi nie wygasnie subskrybcja do SlopaGPT",
+            "AFFIRMATION": "wyjezdzajmy juz dzisiaj",
+            "REFUTATION": ".....",
+            "STRONG_REFUTATION": "TY ZDRADZIECKA ŁAJZO JAK ŚMIESZ?!"
         }
     }
 ]   
