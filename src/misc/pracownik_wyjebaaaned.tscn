@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b522dfv8df3li"]
 
-[ext_resource type="Script" uid="uid://54bd0n7isili" path="res://src/pracownik_wyjebaaaned.gd" id="1_b1c72"]
+[ext_resource type="Script" uid="uid://54bd0n7isili" path="res://src/misc/pracownik_wyjebaaaned.gd" id="1_b1c72"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_y1msr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1c72"]

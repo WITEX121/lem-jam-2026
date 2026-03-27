@@ -9,7 +9,7 @@ extends CanvasLayer
 @onready var status_bar_employee_count = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status5
 @onready var main_layout: VBoxContainer = %MainLayout
 
-var pracownik_wyjebaned_efekt_scene: PackedScene = preload("res://src/pracownik_wyjebaaaned.tscn")
+var pracownik_wyjebaned_efekt_scene: PackedScene = preload("res://src/misc/pracownik_wyjebaaaned.tscn")
 var game_screen_scene: PackedScene = preload("res://src/content/game_screen.tscn")
 
 func _ready() -> void:

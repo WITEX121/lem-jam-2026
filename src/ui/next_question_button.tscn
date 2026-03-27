@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhhgxpsy0stud"]
 
-[ext_resource type="Script" uid="uid://dwewiwgkr7ptc" path="res://src/next_question_button.gd" id="1_2jrhh"]
+[ext_resource type="Script" uid="uid://dwewiwgkr7ptc" path="res://src/ui/next_question_button.gd" id="1_2jrhh"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="2_2knai"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ydcu1"]

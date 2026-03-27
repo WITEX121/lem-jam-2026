@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://dif881of408xm"]
 
-[ext_resource type="Script" uid="uid://b3ki08jl1jgjt" path="res://src/main_scene.gd" id="1_qg6fr"]
-[ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]
-[ext_resource type="PackedScene" uid="uid://dh2wsy656djec" path="res://src/ui/StatusBar.tscn" id="2_h5dix"]
-[ext_resource type="Texture2D" uid="uid://g372w38w5s7m" path="res://assets/icons/money-bag-svgrepo-com.svg" id="3_5a7yu"]
-[ext_resource type="Texture2D" uid="uid://4s8c7p4l0udj" path="res://assets/icons/person-button-svgrepo-com.svg" id="4_r8lft"]
-[ext_resource type="Texture2D" uid="uid://deecktsgefmat" path="res://assets/icons/star-svgrepo-com.svg" id="5_qg6fr"]
-[ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_tlhjj"]
-[ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="7_5a7yu"]
-[ext_resource type="PackedScene" uid="uid://ccaosf5jnio3h" path="res://src/content/WelcomeScreen.tscn" id="8_r8lft"]
-[ext_resource type="PackedScene" uid="uid://bh80hcirp2ryy" path="res://src/ui/status_bar_employees.tscn" id="8_tlhjj"]
-[ext_resource type="PackedScene" uid="uid://cy6pcmevxj0by" path="res://src/content/loading_screen.tscn" id="11_d0nsw"]
+[ext_resource type="Script" uid="uid://b3ki08jl1jgjt" path="res://src/main_scene.gd" id="1_qxycx"]
+[ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="2_yhqkm"]
+[ext_resource type="PackedScene" uid="uid://dh2wsy656djec" path="res://src/ui/status_bar.tscn" id="3_pc0jr"]
+[ext_resource type="Texture2D" uid="uid://g372w38w5s7m" path="res://assets/icons/money-bag-svgrepo-com.svg" id="4_iahc8"]
+[ext_resource type="Texture2D" uid="uid://4s8c7p4l0udj" path="res://assets/icons/person-button-svgrepo-com.svg" id="5_pauua"]
+[ext_resource type="Texture2D" uid="uid://deecktsgefmat" path="res://assets/icons/star-svgrepo-com.svg" id="6_84lwj"]
+[ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="7_xmwvb"]
+[ext_resource type="PackedScene" uid="uid://bh80hcirp2ryy" path="res://src/ui/status_bar_employees.tscn" id="8_qpdi6"]
+[ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="9_363k2"]
+[ext_resource type="PackedScene" uid="uid://ccaosf5jnio3h" path="res://src/content/welcome_screen.tscn" id="10_x5mkc"]
+[ext_resource type="PackedScene" uid="uid://cy6pcmevxj0by" path="res://src/content/loading_screen.tscn" id="11_5mjx5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0nsw"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -27,7 +27,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="Control" type="CanvasLayer" unique_id=530775206]
-script = ExtResource("1_qg6fr")
+script = ExtResource("1_qxycx")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2044388649]
 anchors_preset = 15
@@ -83,7 +83,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer/AppTab/MarginContainer/HBoxContainer" unique_id=2096461631]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_tq6ju")
+theme_override_fonts/font = ExtResource("2_yhqkm")
 theme_override_font_sizes/font_size = 35
 text = "CorpAI"
 
@@ -91,51 +91,51 @@ text = "CorpAI"
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status1" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1611621822 instance=ExtResource("2_h5dix")]
+[node name="Status1" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1611621822 instance=ExtResource("3_pc0jr")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Kapitał"
-icon_texture = ExtResource("3_5a7yu")
+icon_texture = ExtResource("4_iahc8")
 
 [node name="Spacer2" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=848565961]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status2" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=114805630 instance=ExtResource("2_h5dix")]
+[node name="Status2" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=114805630 instance=ExtResource("3_pc0jr")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Moralność"
-icon_texture = ExtResource("4_r8lft")
+icon_texture = ExtResource("5_pauua")
 
 [node name="Spacer3" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1686073260]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status3" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1316453743 instance=ExtResource("2_h5dix")]
+[node name="Status3" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1316453743 instance=ExtResource("3_pc0jr")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "PR"
-icon_texture = ExtResource("5_qg6fr")
+icon_texture = ExtResource("6_84lwj")
 
 [node name="Spacer4" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=856206409]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status4" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1715507513 instance=ExtResource("2_h5dix")]
+[node name="Status4" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1715507513 instance=ExtResource("3_pc0jr")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Zaufanie"
-icon_texture = ExtResource("6_tlhjj")
+icon_texture = ExtResource("7_xmwvb")
 
 [node name="Spacer5" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1844688589]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status5" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=3741114 instance=ExtResource("8_tlhjj")]
+[node name="Status5" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=3741114 instance=ExtResource("8_qpdi6")]
 visible = false
 layout_mode = 2
 
@@ -143,11 +143,11 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="NavBar" parent="MainLayout/MarginContainer/Header" unique_id=326819366 instance=ExtResource("7_5a7yu")]
+[node name="NavBar" parent="MainLayout/MarginContainer/Header" unique_id=326819366 instance=ExtResource("9_363k2")]
 layout_mode = 2
 
-[node name="WelcomeScreen" parent="MainLayout" unique_id=60675619 instance=ExtResource("8_r8lft")]
+[node name="WelcomeScreen" parent="MainLayout" unique_id=60675619 instance=ExtResource("10_x5mkc")]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="LoadingScreen" parent="." unique_id=1169293969 instance=ExtResource("11_d0nsw")]
+[node name="LoadingScreen" parent="." unique_id=1169293969 instance=ExtResource("11_5mjx5")]

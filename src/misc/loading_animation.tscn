@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://pisowk7vke67"]
 
-[ext_resource type="Script" uid="uid://5f5sty8tm50" path="res://src/loading_animation.gd" id="1_gaf5k"]
+[ext_resource type="Script" uid="uid://5f5sty8tm50" path="res://src/misc/loading_animation.gd" id="1_gaf5k"]
 [ext_resource type="Texture2D" uid="uid://c2drp5ucf2ext" path="res://assets/icons/circle.svg" id="2_4hwyu"]
 
-[node name="HBoxContainer" type="HBoxContainer" unique_id=58047409]
+[node name="LoadingAnimation" type="HBoxContainer" unique_id=58047409]
 theme_override_constants/separation = 4
 script = ExtResource("1_gaf5k")
 base_color = Color(0, 0.627451, 0.8627451, 1)

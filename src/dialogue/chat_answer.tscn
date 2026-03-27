@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bit48k2irg1q5"]
 
-[ext_resource type="FontFile" uid="uid://8s8kng870c58" path="res://assets/fonts/RethinkSans-Regular.ttf" id="1_whewb"]
-[ext_resource type="FontFile" uid="uid://355fbh8k4ly0" path="res://assets/fonts/RethinkSans-BoldItalic.ttf" id="2_g1mp8"]
-[ext_resource type="Script" uid="uid://cokllo144f0le" path="res://src/content/reply_label.gd" id="3_g1mp8"]
-[ext_resource type="PackedScene" uid="uid://pisowk7vke67" path="res://src/loading_animation.tscn" id="3_v47ep"]
+[ext_resource type="Script" uid="uid://d4hsdflf1b67i" path="res://src/dialogue/chat_answer.gd" id="1_hfapw"]
+[ext_resource type="FontFile" uid="uid://8s8kng870c58" path="res://assets/fonts/RethinkSans-Regular.ttf" id="2_h2ypv"]
+[ext_resource type="FontFile" uid="uid://355fbh8k4ly0" path="res://assets/fonts/RethinkSans-BoldItalic.ttf" id="3_xr5dj"]
+[ext_resource type="PackedScene" uid="uid://pisowk7vke67" path="res://src/misc/loading_animation.tscn" id="5_e7vmp"]
 
 [node name="Answer" type="VBoxContainer" unique_id=972585286]
 anchors_preset = 14
@@ -14,11 +14,12 @@ offset_top = -30.0
 offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_hfapw")
 
-[node name="Label" type="Label" parent="." unique_id=1883699371]
+[node name="Header" type="Label" parent="." unique_id=1883699371]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.99215686, 0.8156863, 1)
-theme_override_fonts/font = ExtResource("1_whewb")
+theme_override_fonts/font = ExtResource("2_h2ypv")
 theme_override_font_sizes/font_size = 18
 text = "TWOJA INTELIGENTNA ODPOWIEDŹ"
 horizontal_alignment = 2
@@ -27,19 +28,19 @@ horizontal_alignment = 2
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="Label2" type="Label" parent="HBoxContainer" unique_id=956278024]
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=956278024]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 0.99215686, 0.8156863, 1)
-theme_override_fonts/font = ExtResource("2_g1mp8")
+theme_override_fonts/font = ExtResource("3_xr5dj")
 theme_override_font_sizes/font_size = 24
 text = "Myślę nad rozwiązaniem"
 horizontal_alignment = 2
 autowrap_mode = 2
-script = ExtResource("3_g1mp8")
 
-[node name="HBoxContainer" parent="HBoxContainer" unique_id=58047409 instance=ExtResource("3_v47ep")]
+[node name="HBoxContainer" parent="HBoxContainer" unique_id=58047409 instance=ExtResource("5_e7vmp")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

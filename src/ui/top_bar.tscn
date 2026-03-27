@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b4kltkfie6eb8"]
 
-[ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_b7d8g"]
-[ext_resource type="PackedScene" uid="uid://dh2wsy656djec" path="res://src/ui/StatusBar.tscn" id="2_l174d"]
-[ext_resource type="Texture2D" uid="uid://g372w38w5s7m" path="res://assets/icons/money-bag-svgrepo-com.svg" id="3_88imt"]
-[ext_resource type="Texture2D" uid="uid://4s8c7p4l0udj" path="res://assets/icons/person-button-svgrepo-com.svg" id="4_7k2q0"]
-[ext_resource type="Texture2D" uid="uid://deecktsgefmat" path="res://assets/icons/star-svgrepo-com.svg" id="5_0ks1m"]
-[ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_hp3th"]
+[ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_pem84"]
+[ext_resource type="PackedScene" uid="uid://dh2wsy656djec" path="res://src/ui/status_bar.tscn" id="2_ltb2f"]
+[ext_resource type="Texture2D" uid="uid://g372w38w5s7m" path="res://assets/icons/money-bag-svgrepo-com.svg" id="3_tagsa"]
+[ext_resource type="Texture2D" uid="uid://4s8c7p4l0udj" path="res://assets/icons/person-button-svgrepo-com.svg" id="4_xgv3d"]
+[ext_resource type="Texture2D" uid="uid://deecktsgefmat" path="res://assets/icons/star-svgrepo-com.svg" id="5_lby6a"]
+[ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_b57q4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
 bg_color = Color(0, 0.46666667, 0.70980394, 1)
@@ -40,7 +40,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="HBoxContainer/AppTab/MarginContainer/HBoxContainer" unique_id=1608209122]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_b7d8g")
+theme_override_fonts/font = ExtResource("1_pem84")
 theme_override_font_sizes/font_size = 35
 text = "CorpAI"
 
@@ -48,42 +48,42 @@ text = "CorpAI"
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status1" parent="HBoxContainer" unique_id=1611621822 instance=ExtResource("2_l174d")]
+[node name="Status1" parent="HBoxContainer" unique_id=1611621822 instance=ExtResource("2_ltb2f")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Kapitał"
-icon_texture = ExtResource("3_88imt")
+icon_texture = ExtResource("3_tagsa")
 
 [node name="Spacer2" type="Control" parent="HBoxContainer" unique_id=1676464982]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status2" parent="HBoxContainer" unique_id=2032545006 instance=ExtResource("2_l174d")]
+[node name="Status2" parent="HBoxContainer" unique_id=2032545006 instance=ExtResource("2_ltb2f")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Moralność"
-icon_texture = ExtResource("4_7k2q0")
+icon_texture = ExtResource("4_xgv3d")
 
 [node name="Spacer3" type="Control" parent="HBoxContainer" unique_id=1316287135]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status3" parent="HBoxContainer" unique_id=1314649298 instance=ExtResource("2_l174d")]
+[node name="Status3" parent="HBoxContainer" unique_id=1314649298 instance=ExtResource("2_ltb2f")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "PR"
-icon_texture = ExtResource("5_0ks1m")
+icon_texture = ExtResource("5_lby6a")
 
 [node name="Spacer4" type="Control" parent="HBoxContainer" unique_id=1955682338]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status4" parent="HBoxContainer" unique_id=1004690543 instance=ExtResource("2_l174d")]
+[node name="Status4" parent="HBoxContainer" unique_id=1004690543 instance=ExtResource("2_ltb2f")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Zaufanie"
-icon_texture = ExtResource("6_hp3th")
+icon_texture = ExtResource("6_b57q4")

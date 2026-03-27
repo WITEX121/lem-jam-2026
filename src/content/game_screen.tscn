@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bmdrpf27ona50"]
 
-[ext_resource type="PackedScene" uid="uid://dft3r0hwe4j1j" path="res://src/content/user_prompt.tscn" id="1_vqbpw"]
-[ext_resource type="Script" path="res://src/content/game_screen.gd" id="1_xro0b"]
-[ext_resource type="PackedScene" uid="uid://bit48k2irg1q5" path="res://src/content/answer.tscn" id="2_xro0b"]
-[ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/possible_answers.tscn" id="3_vqbpw"]
-[ext_resource type="PackedScene" uid="uid://bmtymr5ahiwr" path="res://src/user_answer.tscn" id="4_xro0b"]
+[ext_resource type="PackedScene" uid="uid://dft3r0hwe4j1j" path="res://src/dialogue/user_prompt.tscn" id="1_vqbpw"]
+[ext_resource type="Script" uid="uid://bf76qdq3adptp" path="res://src/content/game_screen.gd" id="1_xro0b"]
+[ext_resource type="PackedScene" uid="uid://bit48k2irg1q5" path="res://src/dialogue/chat_answer.tscn" id="2_xro0b"]
+[ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/answer_button/possible_answers.tscn" id="3_vqbpw"]
+[ext_resource type="PackedScene" uid="uid://bmtymr5ahiwr" path="res://src/dialogue/user_answer.tscn" id="4_xro0b"]
 
 [node name="GameScreen" type="MarginContainer" unique_id=622140737]
 anchors_preset = 15
@@ -27,7 +27,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 
-[node name="Answer" parent="MainCol" unique_id=972585286 instance=ExtResource("2_xro0b")]
+[node name="ChatAnswer" parent="MainCol" unique_id=972585286 instance=ExtResource("2_xro0b")]
 layout_mode = 2
 
 [node name="Spacer2" type="Control" parent="MainCol" unique_id=204431592]

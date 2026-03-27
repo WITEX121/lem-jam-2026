@@ -79,7 +79,6 @@ func _on_pressed():
 	_is_pressed = true
 	SoundManager.play_sound(SoundManager.select)
 	GameManager.next_question.emit()
-	print("emitted")
 	ReplyManager.init_data()
 	_animate_out()
 

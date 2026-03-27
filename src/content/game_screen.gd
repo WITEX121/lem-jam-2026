@@ -2,10 +2,9 @@ class_name GameScreen extends MarginContainer
 
 @onready var main_col: VBoxContainer = %MainCol
 
-var next_question_button_scene: PackedScene = preload("res://src/next_question_button.tscn")
-var user_answer_button_scene: PackedScene = preload("res://src/user_answer.tscn")
+var next_question_button_scene: PackedScene = preload("res://src/ui/next_question_button.tscn")
+var user_answer_button_scene: PackedScene = preload("res://src/dialogue/user_answer.tscn")
 
-var user_answer: UserAnswer
 var next_question_button: NextQuestionButton
 
 func _ready():
