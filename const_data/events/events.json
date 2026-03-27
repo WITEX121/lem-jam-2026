@@ -393,7 +393,7 @@
             "PR": 5.0
         },
         "RefutationEffects": {
-            "MONEY": 0.0,
+            "MONEY": -5.0,
             "MORALITY": -5.0,
             "TRUST": -5.0,
             "PR": 0.0
@@ -408,7 +408,7 @@
             "STRONG_AFFIRMATION": "Super, dzięki",
             "AFFIRMATION": "Tak też myślałem",
             "REFUTATION": "Czyli naprawdę mam go zostawić? Nie uważam że to dobry pomysł ale dobra",
-            "STRONG_REFUTATION": ""
+            "STRONG_REFUTATION": "Co takiego??? I mamy pracować z jakimś creepem? I po co ja za ciebie płacę"
         }
     },
 ]   
