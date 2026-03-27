@@ -1,34 +1,9 @@
 [gd_scene format=3 uid="uid://bmdrpf27ona50"]
 
-[ext_resource type="FontFile" uid="uid://8s8kng870c58" path="res://assets/fonts/RethinkSans-Regular.ttf" id="1_egvst"]
-[ext_resource type="FontFile" uid="uid://355fbh8k4ly0" path="res://assets/fonts/RethinkSans-BoldItalic.ttf" id="2_sy0ju"]
-[ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/answers.tscn" id="3_vqbpw"]
-[ext_resource type="PackedScene" uid="uid://pisowk7vke67" path="res://src/loading_animation.tscn" id="3_xro0b"]
-[ext_resource type="FontFile" uid="uid://buj3nx7kp6iqm" path="res://assets/fonts/RethinkSans-Bold.ttf" id="4_vqbpw"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgaq0"]
-bg_color = Color(0, 0.627451, 0.8627451, 1)
-border_width_left = 20
-border_width_top = 20
-border_width_right = 20
-border_width_bottom = 20
-border_color = Color(0, 0.627451, 0.8627451, 1)
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xro0b"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sy0ju"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvrfa"]
-bg_color = Color(1, 0.0627451, 0.0627451, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[ext_resource type="PackedScene" uid="uid://dft3r0hwe4j1j" path="res://src/content/user_prompt.tscn" id="1_vqbpw"]
+[ext_resource type="PackedScene" uid="uid://bit48k2irg1q5" path="res://src/content/answer.tscn" id="2_xro0b"]
+[ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/possible_answers.tscn" id="3_vqbpw"]
+[ext_resource type="PackedScene" uid="uid://cgpk0an8whupo" path="res://src/content/time_left.tscn" id="4_jvrfa"]
 
 [node name="GameScreen" type="MarginContainer" unique_id=622140737]
 anchors_preset = 15
@@ -43,71 +18,21 @@ theme_override_constants/margin_right = 300
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=509452191]
 layout_mode = 2
 
-[node name="UserPrompt" type="PanelContainer" parent="VBoxContainer" unique_id=595468421]
+[node name="UserPrompt" parent="VBoxContainer" unique_id=2042464347 instance=ExtResource("1_vqbpw")]
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_mgaq0")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/UserPrompt" unique_id=1806974440]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VBoxContainer/UserPrompt/VBoxContainer" unique_id=1630198076]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_egvst")
-theme_override_font_sizes/font_size = 18
-text = "PYTANIE UŻYTKOWNIKA"
-
-[node name="Label2" type="Label" parent="VBoxContainer/UserPrompt/VBoxContainer" unique_id=1967018416]
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "MUSIMY OSZCZĘDZIĆ PIENIĄDZE CZY KUPIENIE TAŃSZEGO PAPIERU BĘDZIE DOBRYM POMYSŁEM?"
-autowrap_mode = 2
 
 [node name="Spacer" type="Control" parent="VBoxContainer" unique_id=952357334]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer" unique_id=1573281989]
+[node name="Answer" parent="VBoxContainer" unique_id=972585286 instance=ExtResource("2_xro0b")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xro0b")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer" unique_id=862989648]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer" unique_id=1650374928]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.99215686, 0.8156863, 1)
-theme_override_fonts/font = ExtResource("1_egvst")
-theme_override_font_sizes/font_size = 18
-text = "TWOJA INTELIGENTNA ODPOWIEDŹ"
-horizontal_alignment = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer" unique_id=287126577]
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1990997264]
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_color = Color(1, 0.99215686, 0.8156863, 1)
-theme_override_fonts/font = ExtResource("2_sy0ju")
-theme_override_font_sizes/font_size = 24
-text = "TO BARDZO DOBRY POMYSŁ"
-horizontal_alignment = 2
-autowrap_mode = 2
-
-[node name="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=58047409 instance=ExtResource("3_xro0b")]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
 
 [node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=204431592]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="Answers" parent="VBoxContainer" unique_id=585296452 instance=ExtResource("3_vqbpw")]
+[node name="PossibleAnswers" parent="VBoxContainer" unique_id=585296452 instance=ExtResource("3_vqbpw")]
 layout_mode = 2
 size_flags_vertical = 8
 
@@ -115,28 +40,5 @@ size_flags_vertical = 8
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="TimerPanel" type="PanelContainer" parent="VBoxContainer" unique_id=55283610]
+[node name="TimeLeft" parent="VBoxContainer" unique_id=333739217 instance=ExtResource("4_jvrfa")]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_sy0ju")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TimerPanel" unique_id=1602377350]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 32
-
-[node name="Label" type="Label" parent="VBoxContainer/TimerPanel/HBoxContainer" unique_id=542764587]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_egvst")
-theme_override_font_sizes/font_size = 32
-text = "CZAS POZOSTAŁY NA ODPOWIEDŹ"
-
-[node name="Label2" type="Label" parent="VBoxContainer/TimerPanel/HBoxContainer" unique_id=371998860]
-custom_minimum_size = Vector2(75, 50)
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("4_vqbpw")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_jvrfa")
-text = "99 s"
-horizontal_alignment = 1
-vertical_alignment = 1
