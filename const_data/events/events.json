@@ -210,9 +210,65 @@
         ],
         "UserResponses": {
             "STRONG_AFFIRMATION": "Jeśli naprawdę tak uważasz... To chyba kupię ten ekspres, chociaż szkoda kasy",
+            "AFFIRMATION": "Dzięki za potwierdzenie, kupię ten ekspres",
+            "REFUTATION": "Ok, zostawmy to na potem, może nie jest aż tak źle",
+            "STRONG_REFUTATION": "Tak też myślałem. Naprawdę jesteś niezastąpionym doradcą!"
+        }
+    },
+    {
+        "Name": "ZAPCHANY_KIBEL",
+        "Text": "Marcin znowu postawił takiego kloca że woda się nie spuszcza. Nie chce mi się sprowadzać specjalisty ale naprawdę chce mi się srać i nie mogę nic zrobić. Dzwonić do hydraulika?",
+        "AffirmationEffects": {
+            "MONEY": -5.0,
+            "MORALITY": 5.0,
+            "TRUST": 0.0,
+            "PR": 0.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": -5.0,
+            "TRUST": -5.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+            
+        ],
+        "RefutationEvents": [
+
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "Znakomicie, dzwonię do hydraulika bo zaraz się zesram w gacie",
+            "AFFIRMATION": "Okej, dzwonię do hydraulika",
+            "REFUTATION": "Wolałbym się wysrać ale jak uważasz",
+            "STRONG_REFUTATION": "I co mam to teraz trzymać cały dzień? Głupi bot"
+        }
+    },
+    {
+        "Name": "ODKURZACZ_DO_DOMU",
+        "Text": "Czy mogę za pieniądze firmowe kupić odkurzacz do domu?",
+        "AffirmationEffects": {
+            "MONEY": -5.0,
+            "MORALITY": 0.0,
+            "TRUST": 5.0,
+            "PR": 0.0
+        },
+        "RefutationEffects": {
+            "MONEY": 0.0,
+            "MORALITY": 0.0,
+            "TRUST": 0.0,
+            "PR": 0.0
+        },
+        "AffirmationEvents": [
+            
+        ],
+        "RefutationEvents": [
+
+        ],
+        "UserResponses": {
+            "STRONG_AFFIRMATION": "",
             "AFFIRMATION": "",
             "REFUTATION": "",
             "STRONG_REFUTATION": ""
         }
-    }
+    },
 ]
