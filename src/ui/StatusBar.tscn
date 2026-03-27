@@ -36,6 +36,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="Status1" type="PanelContainer" unique_id=1611621822]
+self_modulate = Color(0, 1, 0, 1)
 custom_minimum_size = Vector2(300, 0)
 theme_override_styles/panel = SubResource("StyleBoxFlat_a782b")
 script = ExtResource("1_a782b")
