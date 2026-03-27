@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1fhrmnlr2y6b" path="res://src/content/user_prompt.gd" id="1_67835"]
 [ext_resource type="FontFile" uid="uid://8s8kng870c58" path="res://assets/fonts/RethinkSans-Regular.ttf" id="1_x8imx"]
-[ext_resource type="Script" path="res://src/content/question_label.gd" id="3_07ema"]
+[ext_resource type="Script" uid="uid://cbfvjjxs71bbf" path="res://src/content/question_label.gd" id="3_07ema"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgaq0"]
 bg_color = Color(0, 0.627451, 0.8627451, 1)
