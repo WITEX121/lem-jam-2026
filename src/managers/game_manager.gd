@@ -1,5 +1,7 @@
 extends Node
 
+signal new_answers(answers: Array[ReplyElement])
+
 var cursor_arrow = preload("res://assets/icons/pointer_a.png")
 var cursor_button = preload("res://assets/icons/hand_point.png")
 

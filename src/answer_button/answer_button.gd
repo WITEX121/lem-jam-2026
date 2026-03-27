@@ -7,7 +7,6 @@ class_name AnswerButton extends Button
 @export var _normal_color: Color = Color8(49, 51, 53, 127)
 @export var _hover_color: Color = Color8(236, 154, 41, 255)
 @export var _pressed_color: Color = Color8(0, 119, 181, 255)
-@export var _pressed_border_color: Color = Color8(0, 119, 181, 255)
 @export var _normal_font: Font = preload("res://assets/fonts/RethinkSans-MediumItalic.ttf")
 @export var _hover_font: Font = preload("res://assets/fonts/RethinkSans-BoldItalic.ttf")
 
