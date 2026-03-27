@@ -1,7 +1,7 @@
 extends Node
 
 var cursor_arrow = preload("res://assets/icons/pointer_a.png")
-var cursor_button = preload("res://assets/icons/hand_thin_small_point.png")
+var cursor_button = preload("res://assets/icons/hand_point.png")
 
 var events_manager := EventManager.new()
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tadmtpfelxs2"
-path="res://.godot/imported/hand_thin_small_point.png-40170bd4c076a053564e818d48188f02.ctex"
+uid="uid://bjjs3ijalgart"
+path="res://.godot/imported/hand_point.png-21400034d269135c717fab016c7bbced.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/hand_thin_small_point.png"
-dest_files=["res://.godot/imported/hand_thin_small_point.png-40170bd4c076a053564e818d48188f02.ctex"]
+source_file="res://assets/icons/hand_point.png"
+dest_files=["res://.godot/imported/hand_point.png-21400034d269135c717fab016c7bbced.ctex"]
 
 [params]
 
