@@ -14,10 +14,6 @@ func _ready() -> void:
 	label.text = label_text
 	icon.texture = icon_texture
 
-func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_0):
-		set_status_bar(randf_range(0, 100))
-
 func _on_progress_bar_value_changed(value: float) -> void:
 	progress_bar_stylebox.bg_color = get_progress_color(value)
 	progress_bar.add_theme_stylebox_override("fill", progress_bar_stylebox)
