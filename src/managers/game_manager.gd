@@ -1,14 +1,11 @@
 extends Node
 
-signal new_answers_ready(answers: Array[ReplyElement])
-signal prompt_finished()
-signal reply_selected(reply_element: ReplyElement)
+
 
 var cursor_arrow = preload("res://assets/icons/pointer_a.png")
 var cursor_button = preload("res://assets/icons/hand_point.png")
 
 var events_manager := EventManager.new()
-var replies_manager := ReplyManager.new()
 
 var ratings := Ratings.new(50, 50, 50, 50)
 

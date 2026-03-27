@@ -35,8 +35,8 @@ func _ready():
 	mouse_entered.connect(_on_mouse_entered)
 	mouse_exited.connect(_on_mouse_exited)
 	pressed.connect(_on_pressed)
-	GameManager.new_answers_ready.connect(_on_new_answers_ready)
-	GameManager.prompt_finished.connect(_on_prompt_finished)
+	ReplyManager.new_answers_ready.connect(_on_new_answers_ready)
+	# ReplyManager.prompt_finished.connect(_on_prompt_finished)
 	offset_left = _offset
 
 
@@ -71,20 +71,17 @@ func _on_mouse_exited():
 
 func _on_pressed():
 	_is_pressed = true
-	# TODO: Pass info to GameManager about selection
-	var test: Array[ReplyElement] = []
-	GameManager.new_answers_ready.emit(test) # Clear answers
-	SoundManager.play_sound(SoundManager.select)
-	GameManager.reply_selected.emit(reply_element)
+	# SoundManager.play_sound(SoundManager.select)
+	ReplyManager.reply_selected.emit(reply_element)
 
 
 func _on_new_answers_ready(_possible_replies: Array[ReplyElement]):
 	_disable_button()
 	_animate_out()
 
-func _on_prompt_finished():
-	_disable_button()
-	_animate_out()
+# func _on_prompt_finished():
+# 	_disable_button()
+# 	_animate_out()
 
 func _disable_button():
 	mouse_entered.disconnect(_on_mouse_entered)
