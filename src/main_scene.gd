@@ -31,6 +31,9 @@ func start_game():
 	welcome_screen.queue_free()
 	var game_screen = game_screen_scene.instantiate()
 	main_layout.add_child(game_screen)
+	# HERE WE ADD NEW EVENT!!! #KAROL
+	await get_tree().create_timer(2).finished
+	GameManager.new_question.emit()
 
 func _rating_changed():
 	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust]

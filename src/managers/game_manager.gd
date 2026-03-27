@@ -1,5 +1,8 @@
 extends Node
 
+signal next_question
+signal new_question(question: String)
+signal start_answer()
 
 
 var cursor_arrow = preload("res://assets/icons/pointer_a.png")
