@@ -75,7 +75,7 @@ func _on_pressed():
 	var test: Array[ReplyElement] = []
 	GameManager.new_answers_ready.emit(test) # Clear answers
 	SoundManager.play_sound(SoundManager.select)
-	GameManager.reply_selected.emit()
+	GameManager.reply_selected.emit(reply_element)
 
 
 func _on_new_answers_ready(_possible_replies: Array[ReplyElement]):
