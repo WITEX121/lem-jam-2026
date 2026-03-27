@@ -23,6 +23,7 @@ func _ready() -> void:
 	refresh_button.pressed.connect(_on_button_pressed)
 
 func _on_button_pressed():
+	SoundManager.play_sound(SoundManager.select)
 	if randi_range(0, 100) == 50:
 		search_bar.text = rare_text
 	else:

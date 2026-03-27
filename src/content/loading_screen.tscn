@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cy6pcmevxj0by"]
+
+[ext_resource type="Script" uid="uid://bd2qkxx28w2h5" path="res://src/content/loading_screen.gd" id="1_eisvb"]
+[ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="2_hf26s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3agha"]
+bg_color = Color(1, 0.99215686, 0.8156863, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eisvb"]
+bg_color = Color(0.9254902, 0.6039216, 0.16078432, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 0.99215686, 0.8156863, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="LoadingScreen" type="Control" unique_id=1169293969]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eisvb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1002239393]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14509805, 0.14901961, 0.15294118, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=442550971]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1557854156]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=477061657]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hf26s")
+theme_override_font_sizes/font_size = 128
+text = "CorpAI"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="CenterContainer/VBoxContainer" unique_id=2053682392]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CenterContainer/VBoxContainer" unique_id=528398544]
+custom_minimum_size = Vector2(300, 70)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_3agha")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eisvb")
+rounded = true
+show_percentage = false

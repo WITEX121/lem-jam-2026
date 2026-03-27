@@ -11,6 +11,7 @@ func _ready() -> void:
 	start_button.pressed.connect(start_game)
 
 func start_game():
+	SoundManager.play_sound(SoundManager.select)
 	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust]
 	
 	var tween = create_tween()
