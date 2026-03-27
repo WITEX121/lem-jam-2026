@@ -46,14 +46,7 @@ func _ready() -> void:
 
 func _on_employee_count_changed(_count: int):
 	var pracownik_wyjebaned = pracownik_wyjebaned_efekt_scene.instantiate()
-	add_child(pracownik_wyjebaned)
-
-
-func game_start():
-	for i in range(5):
-		EventManager.push_event(GameManager.EVENTS["NO_EVENTS"])
-	EventManager.push_event(GameManager.EVENTS["PAPIER_DO_KIBLA"], PromptEvent.PushType.NEXT1)
-	EventManager.pop_back_to_current()
+	add_child(pracownik_wyjebaned)	
 
 func fire_employee():
 	employee_count -= 1

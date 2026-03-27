@@ -7,8 +7,8 @@ extends Control
 var win := false
 
 func _ready() -> void:
-	var scenarios := GameManager.finish_scenarios
-	var finish_scenario := GameManager.finish_scenario
+	var scenarios = GameManager.finish_scenarios
+	var finish_scenario = GameManager.finish_scenario
 	description.modulate.a = 0
 	title.modulate.a = 0
 

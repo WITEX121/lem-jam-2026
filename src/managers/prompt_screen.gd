@@ -10,7 +10,6 @@ func _ready() -> void:
 	EventManager.event_started.connect(on_event_started)
 
 	Parser.load_events()
-	GameManager.game_start()
 
 func on_event_started(event: PromptEvent):
 	user_prompt.text = event.text

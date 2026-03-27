@@ -12,6 +12,9 @@ extends CanvasLayer
 var game_screen_scene: PackedScene = preload("res://src/content/game_screen.tscn")
 
 func _ready() -> void:
+	EventManager.unlock_events_shuffle(Consts.BASE_EVENTS)
+	EventManager.pop_back_to_current()
+
 	start_button.pressed.connect(start_game)
 	GameManager.ratings.ratings_changed.connect(_rating_changed)
 	GameManager.end_game.connect(end_game)

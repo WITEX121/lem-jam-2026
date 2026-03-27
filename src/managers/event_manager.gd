@@ -68,6 +68,7 @@ func unlock_events(events: Array[EventRunInfo]):
 		)
 
 func unlock_events_shuffle(events: Array[String]):
+	print(events)
 	for event_name in events:
 		events_stack.push_back(GameManager.EVENTS[event_name])
 	events_stack.shuffle()
