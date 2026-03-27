@@ -9,10 +9,11 @@ class_name AnswerButton extends Button
 @export var _pressed_color: Color = Color8(0, 119, 181, 255)
 @export var _normal_font: Font = preload("res://assets/fonts/RethinkSans-MediumItalic.ttf")
 @export var _hover_font: Font = preload("res://assets/fonts/RethinkSans-BoldItalic.ttf")
-@export var _offset: int = 4400
+@export var _offset: float = 4400.0
 
 @onready var _reply_label: Label = %ReplyLabel
 @onready var _background: PanelContainer = %Background
+@onready var _margin_container: MarginContainer = $MarginContainer
 
 var tween: Tween
 var _stylebox: StyleBoxFlat
@@ -20,8 +21,6 @@ var _current_background_color: Color
 
 var _is_mouse_on_top: bool = false
 var _is_pressed: bool = false
-
-var _animate_in: bool = true
 
 func _ready():
 	_current_background_color = _normal_color
@@ -37,17 +36,32 @@ func _ready():
 	pressed.connect(_on_pressed)
 	ReplyManager.new_answers_ready.connect(_on_new_answers_ready)
 	# ReplyManager.prompt_finished.connect(_on_prompt_finished)
-	offset_left = _offset
+	_set_content_x(_offset)
+
+
+func prepare_for_spawn():
+	visible = false
+
+
+func _set_content_x(value: float):
+	_background.position.x = value
+	_margin_container.position.x = value
+
+
+func play_intro():
+	_set_content_x(_offset)
+	visible = true
+
+	if is_instance_valid(tween):
+		tween.kill()
+
+	tween = create_tween()
+	tween.set_trans(Tween.TransitionType.TRANS_QUAD)
+	tween.parallel().tween_property(_background, "position:x", 0.0, 0.3)
+	tween.parallel().tween_property(_margin_container, "position:x", 0.0, 0.3)
 
 
 func _process(delta):
-	if _animate_in:
-		_animate_in = false
-		tween = create_tween()
-		offset_left = _offset
-		tween.tween_property(self , "offset_left", 0, 0.3).set_trans(Tween.TransitionType.TRANS_QUAD)
-
-
 	if _is_pressed: # PRESSED
 		_current_background_color = _current_background_color.lerp(_pressed_color, 0.4)
 		_stylebox.border_color = _current_background_color
@@ -90,9 +104,13 @@ func _disable_button():
 	disabled = true
 
 func _animate_out():
-	tween = create_tween()
+	if is_instance_valid(tween):
+		tween.kill()
 
-	tween.tween_property(self , "offset_left", _offset, 0.3).set_trans(Tween.TransitionType.TRANS_QUAD).as_relative()
+	tween = create_tween()
+	tween.set_trans(Tween.TransitionType.TRANS_QUAD)
+	tween.parallel().tween_property(_background, "position:x", _offset, 0.3)
+	tween.parallel().tween_property(_margin_container, "position:x", _offset, 0.3)
 	await get_tree().create_timer(0.3).timeout
 
 	queue_free()
