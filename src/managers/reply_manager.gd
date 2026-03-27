@@ -9,10 +9,10 @@ signal reply_selected(reply_element: ReplyElement)
 
 func _ready() -> void:
 	reply_selected.connect(load_element)
-	# reply_completed.connect(_handle_change)
+	reply_completed.connect(_handle_change)
 
-# func _handle_change(_e):
-# 	EventManager.pop_back_to_current()
+func _handle_change(_e):
+	EventManager.pop_back_to_current()
 
 
 var _reply := PromptReply.new()
