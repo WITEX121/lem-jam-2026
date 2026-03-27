@@ -3,6 +3,7 @@ extends Node
 signal next_question
 signal new_question(question: String)
 signal start_answer()
+signal reload_prompt()
 
 enum finish_scenarios {
 	NOT_FINISHED,
@@ -25,6 +26,11 @@ var finish_scenario := finish_scenarios.NOT_FINISHED
 var _events := Parser.load_events()
 var EVENTS:
 	get: return _events
+
+func _ready() -> void:
+	pass
+	# next_question.connect(func(): new_question.emit(EventManager.current_event.text))
+
 
 func game_start():
 	for i in range(5):

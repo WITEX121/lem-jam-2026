@@ -85,7 +85,6 @@ custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status1" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1611621822 instance=ExtResource("2_h5dix")]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Kapitał"
@@ -96,7 +95,6 @@ custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status2" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=114805630 instance=ExtResource("2_h5dix")]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Moralność"
@@ -107,7 +105,6 @@ custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status3" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1316453743 instance=ExtResource("2_h5dix")]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "PR"
@@ -118,7 +115,6 @@ custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status4" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1715507513 instance=ExtResource("2_h5dix")]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Zaufanie"

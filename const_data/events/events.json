@@ -319,92 +319,92 @@
 		],
 		"RefutationEvents": [
 
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Super, dzięki",
-            "AFFIRMATION": "Tak też myślałem",
-            "REFUTATION": "Czyli naprawdę mam go zostawić? Nie uważam że to dobry pomysł ale dobra",
-            "STRONG_REFUTATION": "Co takiego??? I mamy pracować z jakimś creepem? I po co ja za ciebie płacę"
-        }
-    },
-    {
-        "Name": "WALIZKA",
-        "Text": "Ktoś zostawił w kiblu walizkę pełną kasy. Oczywiście jest teraz pod moim biurkiem ale czy zgłaszać to szefowi? Sama nie wiem",
-        "AffirmationEffects": {
-            "MONEY": 10.0,
-            "MORALITY": 0.0,
-            "TRUST": 10.0,
-            "PR": 0.0
-        },
-        "RefutationEffects": {
-            "MONEY": -10.0,
-            "MORALITY": 0.0,
-            "TRUST": 30.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-        ],
-        "RefutationEvents": [
-            { "EventName": "UTRACONA_KASA", "PushType": "RANDOM"}
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Boże co ja myślałam chcąc kraść od firmy, koniecznie muszę ją oddać",
-            "AFFIRMATION": "To dobrze i moralnie ją oddać, tak, masz racje",
-            "REFUTATION": "Może wezmę tylko część pieniędzy, tak, nie ma innej opcji",
-            "STRONG_REFUTATION": "Ta firma i tak jest wystarczająco bogata, tak, tak, muszę wziąć ją CAŁĄ do siebie"
-        }
-    },
-    {
-        "Name": "UTRACONA_KASA",
-        "Text": "GDZIE SĄ MOJE PIENIĄDZE? W TEJ FIRMIE NIE MOŻNA SIE NAWET W SPOKOJU ZAŁATWIĆ?! CZY MAM ZASTOSOWAĆ ODPOWIEDZIALNOŚĆ ZBIOROWĄ I UCIĄĆ KAŻDEMU PENSJE?",
-        "AffirmationEffects": {
-            "MONEY": 10.0,
-            "MORALITY": -30.0,
-            "TRUST": 0.0,
-            "PR": -20.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 20.0,
-            "TRUST": -15.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-            { "EventName": "UCIETA_WYPLATA", "PushType": "NEXT5"}
-        ],
-        "RefutationEvents": [
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "DOKŁADNIE, W KOŃCU MUSZE POKAZAĆ KTO TU JEST SZEFEM",
-            "AFFIRMATION": "TAK, NIE MOGĘ PUŚCIĆ TEGO PŁAZEM",
-            "REFUTATION": "NIE GADAJ GŁUPOT, JAKIE USPOKOIĆ?",
-            "STRONG_REFUTATION": "TO CO MAM NIBY ZROBIĆ ZEPSUTA KUPO ZŁOMU?"
-        }
-    },
-    {
-        "Name": "UCIETA_WYPLATA",
-        "Text": "Kolejny raz ten buc uciął mi wypłatę, czy powinienem w końcu stąd odejść?",
-        "AffirmationEffects": {
-            "MONEY": 5.0,
-            "MORALITY": 20.0,
-            "TRUST": 10.0,
-            "PR": -20.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0,
-            "TRUST": -5.0,
-            "PR": -10.0
-        },
-        "AffirmationEvents": [
-        ],
-        "RefutationEvents": [
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "A niech se radzi pajac, będę miał swoją firmę",
-            "AFFIRMATION": "Od dawna to planowałem i tka zrobię",
-            "REFUTATION": "Ale po co mi tu zostawać...",
-            "STRONG_REFUTATION": "Kupa złomu, po co ja się ciebie pytam o zdanie"
-        }
-    }
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Super, dzięki",
+			"AFFIRMATION": "Tak też myślałem",
+			"REFUTATION": "Czyli naprawdę mam go zostawić? Nie uważam że to dobry pomysł ale dobra",
+			"STRONG_REFUTATION": "Co takiego??? I mamy pracować z jakimś creepem? I po co ja za ciebie płacę"
+		}
+	},
+	{
+		"Name": "WALIZKA",
+		"Text": "Ktoś zostawił w kiblu walizkę pełną kasy. Oczywiście jest teraz pod moim biurkiem ale czy zgłaszać to szefowi? Sama nie wiem",
+		"AffirmationEffects": {
+			"MONEY": 10.0,
+			"MORALITY": 0.0,
+			"TRUST": 10.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": -10.0,
+			"MORALITY": 0.0,
+			"TRUST": 30.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+		],
+		"RefutationEvents": [
+			{ "EventName": "UTRACONA_KASA", "PushType": "RANDOM"}
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Boże co ja myślałam chcąc kraść od firmy, koniecznie muszę ją oddać",
+			"AFFIRMATION": "To dobrze i moralnie ją oddać, tak, masz racje",
+			"REFUTATION": "Może wezmę tylko część pieniędzy, tak, nie ma innej opcji",
+			"STRONG_REFUTATION": "Ta firma i tak jest wystarczająco bogata, tak, tak, muszę wziąć ją CAŁĄ do siebie"
+		}
+	},
+	{
+		"Name": "UTRACONA_KASA",
+		"Text": "GDZIE SĄ MOJE PIENIĄDZE? W TEJ FIRMIE NIE MOŻNA SIE NAWET W SPOKOJU ZAŁATWIĆ?! CZY MAM ZASTOSOWAĆ ODPOWIEDZIALNOŚĆ ZBIOROWĄ I UCIĄĆ KAŻDEMU PENSJE?",
+		"AffirmationEffects": {
+			"MONEY": 10.0,
+			"MORALITY": -30.0,
+			"TRUST": 0.0,
+			"PR": -20.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 20.0,
+			"TRUST": -15.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+			{ "EventName": "UCIETA_WYPLATA", "PushType": "NEXT5"}
+		],
+		"RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "DOKŁADNIE, W KOŃCU MUSZE POKAZAĆ KTO TU JEST SZEFEM",
+			"AFFIRMATION": "TAK, NIE MOGĘ PUŚCIĆ TEGO PŁAZEM",
+			"REFUTATION": "NIE GADAJ GŁUPOT, JAKIE USPOKOIĆ?",
+			"STRONG_REFUTATION": "TO CO MAM NIBY ZROBIĆ ZEPSUTA KUPO ZŁOMU?"
+		}
+	},
+	{
+		"Name": "UCIETA_WYPLATA",
+		"Text": "Kolejny raz ten buc uciął mi wypłatę, czy powinienem w końcu stąd odejść?",
+		"AffirmationEffects": {
+			"MONEY": 5.0,
+			"MORALITY": 20.0,
+			"TRUST": 10.0,
+			"PR": -20.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0,
+			"TRUST": -5.0,
+			"PR": -10.0
+		},
+		"AffirmationEvents": [
+		],
+		"RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "A niech se radzi pajac, będę miał swoją firmę",
+			"AFFIRMATION": "Od dawna to planowałem i tka zrobię",
+			"REFUTATION": "Ale po co mi tu zostawać...",
+			"STRONG_REFUTATION": "Kupa złomu, po co ja się ciebie pytam o zdanie"
+		}
+	}
 ]
