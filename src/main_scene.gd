@@ -9,12 +9,12 @@ extends CanvasLayer
 @onready var status_bar_employee_count = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status5
 @onready var main_layout: VBoxContainer = %MainLayout
 
-
 var game_screen_scene: PackedScene = preload("res://src/content/game_screen.tscn")
 
 func _ready() -> void:
 	start_button.pressed.connect(start_game)
 	GameManager.ratings.ratings_changed.connect(_rating_changed)
+	GameManager.end_game.connect(end_game)
 
 func start_game():
 	SoundManager.play_sound(SoundManager.select)
@@ -47,3 +47,6 @@ func _rating_changed():
 	for i in range(len(values)):
 		status_bars[i].set_status_bar(values[i])
 		print(values[i])
+
+func end_game():
+	self.get_tree().change_scene_to_file("res://src/content/game_over_scene.tscn")

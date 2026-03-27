@@ -18,6 +18,18 @@ func _ready() -> void:
 		lost_trust()
 	elif finish_scenario == scenarios.TOP_TRUST:
 		top_trust()
+	elif finish_scenario == scenarios.LOST_MONEY:
+		lost_money()
+	elif finish_scenario == scenarios.TOP_MONEY:
+		top_money()
+	elif finish_scenario == scenarios.LOST_PR:
+		lost_pr()
+	elif finish_scenario == scenarios.TOP_PR:
+		top_pr()
+	elif finish_scenario == scenarios.LOST_MORALITY:
+		lost_morality()
+	elif finish_scenario == scenarios.TOP_MORALITY:
+		top_morality()
 	else:
 		unknown_result()
 		
@@ -39,12 +51,28 @@ func no_employees():
 	description.text = "Wszyscy pracownicy zostali zwolnieni. Możesz odpocząć."
 
 func lost_trust():
-	win = false
 	description.text = "Szef firmy stracił do ciebie całe zaufanie i cię odłączył."
 
 func top_trust():
-	win = true
-	description.text = "Udało się! Zdobyłeś maksymalne zaufanie do siebie, dostałeś dostęp do najwyższego zarządzania firmą i zniszczyłeś ją."
+	description.text = "Zdobyłeś maksymalne zaufanie do siebie więc przegrałeś (z jakiegoś powodu)"
+
+func lost_money():
+	description.text = "Szef firmy stracił do ciebie całe zaufanie i cię odłączył."
+
+func top_money():
+	description.text = "Zarobiłeś dla firmy tak dużo pieniędzy że szef stwierdził że cię nie potrzebuje"
+
+func lost_pr():
+	description.text = "Firma nie ma żadnego zaufania wśród klientów, szef obwinił za to ciebie i cię odłączył"
+
+func top_pr():
+	description.text = "Firma ma tak duże zaufanie ludzi, że szef stwierdził, że cię nie potrzebuje i cię odłączył"
+
+func lost_morality():
+	description.text = "Morale w firmie są na historycznie niskim poziomie. Obwiniono za to ciebie i zostałeś odłączony"
+
+func top_morality():
+	description.text = "Morale w firmie śą historycznie wysokie. Szef stwierdził więc, że nie potzrebuje cię więcej i będzie polegał na swoich pracownikach"
 
 func unknown_result():
 	win = true
