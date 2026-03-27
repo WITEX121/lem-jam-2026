@@ -64,7 +64,5 @@ func _on_pressed():
 	GameManager.replies_manager.load_element(reply_element)
 	disabled = true
 	_is_pressed = true
-	# TODO: Pass info to GameManager about selection
-	pass
 	SoundManager.play_sound(SoundManager.select)
 	print("Selected: " + reply_element.text)
