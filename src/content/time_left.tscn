@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cgpk0an8whupo"]
+
+[ext_resource type="FontFile" uid="uid://8s8kng870c58" path="res://assets/fonts/RethinkSans-Regular.ttf" id="1_6mr5h"]
+[ext_resource type="FontFile" uid="uid://buj3nx7kp6iqm" path="res://assets/fonts/RethinkSans-Bold.ttf" id="2_wdui0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvrfa"]
+bg_color = Color(1, 0.0627451, 0.0627451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="HBoxContainer" type="HBoxContainer" unique_id=333739217]
+size_flags_horizontal = 4
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="." unique_id=2132753546]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_6mr5h")
+theme_override_font_sizes/font_size = 32
+text = "CZAS POZOSTAŁY NA ODPOWIEDŹ"
+
+[node name="Label2" type="Label" parent="." unique_id=1420267484]
+custom_minimum_size = Vector2(75, 50)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_wdui0")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_jvrfa")
+text = "99 s"
+horizontal_alignment = 1
+vertical_alignment = 1

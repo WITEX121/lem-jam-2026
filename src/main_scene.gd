@@ -5,9 +5,11 @@ extends CanvasLayer
 @onready var status_bar_money = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status1
 @onready var status_bar_morality = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status2
 @onready var status_bar_pr = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status3
-@onready var status_bar_trust  = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status4
+@onready var status_bar_trust = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status4
+@onready var main_layout: VBoxContainer = %MainLayout
 
-@onready var answers: Answers = %Answers
+
+var game_screen_scene: PackedScene = preload("res://src/content/game_screen.tscn")
 
 func _ready() -> void:
 	start_button.pressed.connect(start_game)
@@ -18,7 +20,7 @@ func start_game():
 	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust]
 
 	var tween = create_tween()
-	tween.set_parallel(true) 
+	tween.set_parallel(true)
 
 	for bar in status_bars:
 		bar.modulate.a = 0.0
@@ -27,7 +29,8 @@ func start_game():
 		tween.tween_property(bar, "modulate:a", 1.0, 1.0)
 
 	welcome_screen.queue_free()
-	answers.show()
+	var game_screen = game_screen_scene.instantiate()
+	main_layout.add_child(game_screen)
 
 func _rating_changed():
 	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust]
