@@ -231,7 +231,7 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			
+
 		],
 		"RefutationEvents": [
 
@@ -259,7 +259,7 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			
+
 		],
 		"RefutationEvents": [
 
@@ -343,7 +343,7 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			
+
 		],
 		"RefutationEvents": [
 
@@ -410,5 +410,5 @@
 			"REFUTATION": "Czyli naprawdę mam go zostawić? Nie uważam że to dobry pomysł ale dobra",
 			"STRONG_REFUTATION": "Co takiego??? I mamy pracować z jakimś creepem? I po co ja za ciebie płacę"
 		}
-	},
-]   
+	}
+]
