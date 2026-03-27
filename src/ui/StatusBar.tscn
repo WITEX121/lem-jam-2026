@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dh2wsy656djec"]
+
+[ext_resource type="FontFile" uid="uid://buj3nx7kp6iqm" path="res://assets/fonts/RethinkSans-Bold.ttf" id="1_5qnnl"]
+[ext_resource type="Script" uid="uid://b2g5on0tf0oy7" path="res://src/ui/status_bar.gd" id="1_a782b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a782b"]
+bg_color = Color(0.19215687, 0.2, 0.20784314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.99215686, 0.8156863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1igk"]
+bg_color = Color(1, 0.99215686, 0.8156863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krdvv"]
+bg_color = Color(1, 0.32355803, 0.4086208, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.99215686, 0.8156863, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Status1" type="PanelContainer" unique_id=1611621822]
+theme_override_styles/panel = SubResource("StyleBoxFlat_a782b")
+script = ExtResource("1_a782b")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1438215323]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=175735510]
+layout_mode = 2
+
+[node name="Spacer2" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1667500106]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=677343860]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.99215686, 0.8156863, 1)
+theme_override_fonts/font = ExtResource("1_5qnnl")
+theme_override_font_sizes/font_size = 30
+text = "Name"
+
+[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1494537504]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer" unique_id=529682812]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_m1igk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_krdvv")
+value = 35.0
+rounded = true
+show_percentage = false
+
+[connection signal="value_changed" from="MarginContainer/HBoxContainer/ProgressBar" to="." method="_on_progress_bar_value_changed"]
