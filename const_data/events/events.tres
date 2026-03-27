@@ -1,34 +1,34 @@
 [gd_resource type="Resource" script_class="Events" format=3 uid="uid://brch3tirmsei5"]
 
-[ext_resource type="Script" uid="uid://xcyhup3vrg8r" path="res://const_data/event.gd" id="1_rs0ti"]
-[ext_resource type="Script" uid="uid://coc6v5fm1t3s5" path="res://const_data/events.gd" id="2_vwifd"]
+[ext_resource type="Script" uid="uid://xcyhup3vrg8r" path="res://const_data/events/event.gd" id="1_evmu4"]
+[ext_resource type="Script" uid="uid://coc6v5fm1t3s5" path="res://const_data/events/events.gd" id="2_esxmy"]
 
-[sub_resource type="Resource" id="Resource_rs0ti"]
-script = ExtResource("1_rs0ti")
+[sub_resource type="Resource" id="Resource_g7nou"]
+script = ExtResource("1_evmu4")
 text = "Przychodzi baba do lekarza. Lekarz też baba?"
 metadata/_custom_type_script = "uid://xcyhup3vrg8r"
 
 [sub_resource type="Resource" id="Resource_vwifd"]
-script = ExtResource("1_rs0ti")
+script = ExtResource("1_evmu4")
 text = "Czy kupienie tańszego papieru do kibla będzie dobrymsposobem na redukcje kosztów w firmie?"
 metadata/_custom_type_script = "uid://xcyhup3vrg8r"
 
 [sub_resource type="Resource" id="Resource_60iut"]
-script = ExtResource("1_rs0ti")
+script = ExtResource("1_evmu4")
 text = "Czy można wystawiać faktury z datą wsteczną?"
 metadata/_custom_type_script = "uid://xcyhup3vrg8r"
 
 [sub_resource type="Resource" id="Resource_88xcl"]
-script = ExtResource("1_rs0ti")
+script = ExtResource("1_evmu4")
 text = "Chcę zwolnić samotną matkę z dwójką dzieci, która ma 10 lat stażu w firmie. Czy to legalne jeżeli jest na macierzyńskim?"
 metadata/_custom_type_script = "uid://xcyhup3vrg8r"
 
 [sub_resource type="Resource" id="Resource_622ib"]
-script = ExtResource("1_rs0ti")
+script = ExtResource("1_evmu4")
 text = "Koniec promptowania! Ups"
 metadata/_custom_type_script = "uid://xcyhup3vrg8r"
 
 [resource]
-script = ExtResource("2_vwifd")
-events = Array[ExtResource("1_rs0ti")]([SubResource("Resource_rs0ti"), SubResource("Resource_vwifd"), SubResource("Resource_60iut"), SubResource("Resource_88xcl"), SubResource("Resource_622ib")])
+script = ExtResource("2_esxmy")
+events = Array[ExtResource("1_evmu4")]([SubResource("Resource_g7nou"), SubResource("Resource_vwifd"), SubResource("Resource_60iut"), SubResource("Resource_88xcl"), SubResource("Resource_622ib")])
 metadata/_custom_type_script = "uid://coc6v5fm1t3s5"

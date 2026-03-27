@@ -5,7 +5,7 @@ var events_manager := EventManager.new()
 var ratings := Ratings.new(50, 50, 50, 50)
 
 # Constants
-var _events: Array = load("res://const_data/events.tres").events
+var _events: Array = load("res://const_data/events/events.tres").events
 var EVENTS: Array:
 	get: return _events
 
