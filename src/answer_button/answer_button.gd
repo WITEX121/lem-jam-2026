@@ -27,10 +27,10 @@ func _ready():
 func _process(delta):
 	if _is_mouse_on_top:
 		_current_background_color = _current_background_color.lerp(_hover_color, 0.4)
-		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
+		Input.set_custom_mouse_cursor(GameManager.cursor_button)
 	else:
 		_current_background_color = _current_background_color.lerp(_normal_color, 0.4)
-		Input.set_default_cursor_shape(Input.CURSOR_CROSS)
+		Input.set_custom_mouse_cursor(GameManager.cursor_arrow)
 	
 	_stylebox.bg_color = _current_background_color
 
