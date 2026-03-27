@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Events" format=3 uid="uid://brch3tirmsei5"]
+
+[ext_resource type="Script" uid="uid://xcyhup3vrg8r" path="res://const_data/event.gd" id="1_rs0ti"]
+[ext_resource type="Script" uid="uid://coc6v5fm1t3s5" path="res://const_data/events.gd" id="2_vwifd"]
+
+[sub_resource type="Resource" id="Resource_rs0ti"]
+script = ExtResource("1_rs0ti")
+text = "Przychodzi baba do lekarza. Lekarz też baba?"
+metadata/_custom_type_script = "uid://xcyhup3vrg8r"
+
+[resource]
+script = ExtResource("2_vwifd")
+events = Array[ExtResource("1_rs0ti")]([SubResource("Resource_rs0ti")])
+metadata/_custom_type_script = "uid://coc6v5fm1t3s5"
