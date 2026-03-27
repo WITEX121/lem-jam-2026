@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dif881of408xm"]
+[gd_scene format=3 uid="uid://cxflpbyqkkub8"]
 
 [ext_resource type="Script" uid="uid://b3ki08jl1jgjt" path="res://src/main_scene.gd" id="1_qg6fr"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]

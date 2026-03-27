@@ -4,6 +4,8 @@ class_name ReplyManager
 var _replies: ReplyList = preload("res://const_data/prompt_reply/reply_list.tres")
 
 signal reply_completed(ready_reply: PromptReply)
+signal text_on_change(text: String)
+
 var reply := PromptReply.new()
 
 func load_element(element: ReplyElement):
@@ -13,6 +15,10 @@ func load_element(element: ReplyElement):
 		reply.filler = element
 	else:
 		reply.end = element
+
+	text_on_change.emit(reply.get_text())
+
+	if reply.end != null:
 		reply_completed.emit(reply)
 		reply = PromptReply.new()
 
