@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_tlhjj"]
 [ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="7_5a7yu"]
 [ext_resource type="PackedScene" uid="uid://ccaosf5jnio3h" path="res://src/content/WelcomeScreen.tscn" id="8_r8lft"]
-[ext_resource type="PackedScene" uid="uid://dv6nfxgkv0e5u" path="res://src/answers.tscn" id="9_tlhjj"]
+[ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/answers.tscn" id="9_tlhjj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
 bg_color = Color(0, 0.46666667, 0.70980394, 1)
@@ -131,9 +131,10 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Answers" parent="MainLayout/MarginContainer/Header" unique_id=585296452 instance=ExtResource("9_tlhjj")]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
 [node name="WelcomeScreen" parent="MainLayout" unique_id=60675619 instance=ExtResource("8_r8lft")]
-visible = false
 layout_mode = 2
 size_flags_vertical = 3
