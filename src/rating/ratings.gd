@@ -1,7 +1,7 @@
 class_name Ratings extends Node
 
 enum Type { MONEY = 0, MORALITY = 1, TRUST = 2, PR = 3 }
-enum Opinion { AFFIRMATION, REFUTATION }
+enum Opinion { AFFIRMATION = 0, REFUTATION }
 
 @export var _ratings: Array[float] = [0, 0, 0, 0]
 

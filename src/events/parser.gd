@@ -1,4 +1,4 @@
-class_name EventParser extends Node
+class_name Parser extends Node
 
 static func parse_event_info(info: String) -> PromptEvent.PushType:
 	match info:
@@ -36,16 +36,16 @@ static func load_events() -> Dictionary[String, PromptEvent]:
 			event.refutation_effects[3] = row["RefutationEffects"]["PR"]
 
 			for event_data in row["AffirmationEvents"]:
-				event.affirmation_events.push_back(event_data["EventName"])
-				event.affirmation_events_info.push_back(
-					parse_event_info(event_data["PushType"])
-				)
+				var info := EventRunInfo.new()
+				info.event_name = event_data["EventName"]
+				info.push_type = parse_event_info(event_data["PushType"])
+				event.affirmation_events.push_back(info)
 
 			for event_data in row["RefutationEvents"]:
-				event.refutation_events.push_back(event_data["EventName"])
-				event.refutation_events_info.push_back(
-					parse_event_info(event_data["PushType"])
-				)
+				var info := EventRunInfo.new()
+				info.event_name = event_data["EventName"]
+				info.push_type = parse_event_info(event_data["PushType"])
+				event.refutation_events.push_back(info)
 
 			event.user_responses.push_back(row["UserResponses"]["STRONG_AFFIRMATION"])
 			event.user_responses.push_back(row["UserResponses"]["AFFIRMATION"])

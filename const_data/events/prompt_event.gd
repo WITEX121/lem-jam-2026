@@ -14,8 +14,11 @@ enum PushType {
 	NEXT5
 }
 
-enum UserResponse {
-	
+enum ResponseType {
+	STRONG_AFFIRMATION = 0,
+	AFFIRMATION,
+	REFUTATION,
+	STRONG_REFUTATION
 }
 
 var name: String = ""
@@ -24,27 +27,10 @@ var text: String = ""
 var affirmation_effects: Array[float] = [0, 0, 0, 0];
 var refutation_effects: Array[float] = [0, 0, 0, 0];
 
-# TODO: Fuse into one array
-var affirmation_events: Array[String] = []
-var affirmation_events_info: Array[PushType] = []
-
-# TODO: Fuse into one array
-var refutation_events: Array[String] = []
-var refutation_events_info: Array[PushType] = []
+var affirmation_events: Array[EventRunInfo] = []
+var refutation_events: Array[EventRunInfo] = []
 
 var user_responses: Array[String] = []
-
-func get_affirmation_events() -> Array[PromptEvent]:
-	var events: Array[PromptEvent] = []
-	for event_name in affirmation_events:
-		events.push_back(GameManager.EVENTS[event_name])
-	return events
-
-func get_refutation_events() -> Array[PromptEvent]:
-	var events: Array[PromptEvent] = []
-	for event_name in affirmation_events:
-		events.push_back(GameManager.EVENTS[event_name])
-	return events
 
 func _to_string() -> String:
 	return name
