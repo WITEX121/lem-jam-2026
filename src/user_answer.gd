@@ -14,5 +14,6 @@ func _on_answer_provided(answer: String):
 	visible = true
 	
 
-func _on_new_question(question: String):
+func _on_new_question(_question: String):
+	print("New question received in UserAnswer")
 	visible = false
