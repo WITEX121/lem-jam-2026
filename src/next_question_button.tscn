@@ -1,8 +1,7 @@
-[gd_scene format=3 uid="uid://cljk2qx5y2njw"]
+[gd_scene format=3 uid="uid://bhhgxpsy0stud"]
 
-[ext_resource type="FontFile" uid="uid://lpqws3k41may" path="res://assets/fonts/RethinkSans-MediumItalic.ttf" id="1_6nejr"]
-[ext_resource type="Script" uid="uid://cq0jsssggub5j" path="res://src/answer_button/answer_button.gd" id="1_js4sf"]
-[ext_resource type="Script" uid="uid://i263xy5f6mwf" path="res://src/prompt_reply/reply_element.gd" id="2_ydcu1"]
+[ext_resource type="Script" uid="uid://dwewiwgkr7ptc" path="res://src/next_question_button.gd" id="1_2jrhh"]
+[ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="2_2knai"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ydcu1"]
 
@@ -13,11 +12,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3gro"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x55rm"]
-
-[sub_resource type="Resource" id="Resource_kglxt"]
-script = ExtResource("2_ydcu1")
-text = "Test"
-metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rr5kr"]
 bg_color = Color(0.19215687, 0.2, 0.20784314, 0.49803922)
@@ -31,14 +25,14 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[node name="AnswerButton" type="Button" unique_id=953960086]
+[node name="NextQuestionButton" type="Button" unique_id=953960086]
 custom_minimum_size = Vector2(400, 80)
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -40.0
-offset_bottom = 40.0
+offset_top = -2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ydcu1")
@@ -46,8 +40,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_kglxt")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_4ci5s")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_x3gro")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_x55rm")
-script = ExtResource("1_js4sf")
-reply_element = SubResource("Resource_kglxt")
+script = ExtResource("1_2jrhh")
 
 [node name="Background" type="PanelContainer" parent="." unique_id=297396570]
 unique_name_in_owner = true
@@ -64,20 +57,24 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rr5kr")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=456942775]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -126.0
 offset_top = -20.0
-offset_right = 40.0
+offset_right = 126.0
 offset_bottom = 20.0
+grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 32
 
 [node name="ReplyLabel" type="Label" parent="MarginContainer" unique_id=1844834110]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 0.99215686, 0.8156863, 1)
-theme_override_fonts/font = ExtResource("1_6nejr")
-theme_override_font_sizes/font_size = 24
-text = "Złota zasada brzmi -"
+theme_override_fonts/font = ExtResource("2_2knai")
+theme_override_font_sizes/font_size = 36
+text = "NASTĘPNE PYTANIE!"

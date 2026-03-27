@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bmdrpf27ona50"]
 
 [ext_resource type="PackedScene" uid="uid://dft3r0hwe4j1j" path="res://src/content/user_prompt.tscn" id="1_vqbpw"]
+[ext_resource type="Script" uid="uid://bf76qdq3adptp" path="res://src/content/game_screen.gd" id="1_xro0b"]
 [ext_resource type="PackedScene" uid="uid://bit48k2irg1q5" path="res://src/content/answer.tscn" id="2_xro0b"]
 [ext_resource type="PackedScene" uid="uid://dk2rt6o8ah0xs" path="res://src/possible_answers.tscn" id="3_vqbpw"]
 
@@ -12,24 +13,26 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 300
 theme_override_constants/margin_right = 300
+script = ExtResource("1_xro0b")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=509452191]
+[node name="MainCol" type="VBoxContainer" parent="." unique_id=509452191]
+unique_name_in_owner = true
 layout_mode = 2
 
-[node name="UserPrompt" parent="VBoxContainer" unique_id=2042464347 instance=ExtResource("1_vqbpw")]
+[node name="UserPrompt" parent="MainCol" unique_id=2042464347 instance=ExtResource("1_vqbpw")]
 layout_mode = 2
 
-[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=952357334]
+[node name="Spacer" type="Control" parent="MainCol" unique_id=952357334]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="Answer" parent="VBoxContainer" unique_id=972585286 instance=ExtResource("2_xro0b")]
+[node name="Answer" parent="MainCol" unique_id=972585286 instance=ExtResource("2_xro0b")]
 layout_mode = 2
 
-[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=204431592]
+[node name="Spacer2" type="Control" parent="MainCol" unique_id=204431592]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="PossibleAnswers" parent="VBoxContainer" unique_id=585296452 instance=ExtResource("3_vqbpw")]
+[node name="PossibleAnswers" parent="MainCol" unique_id=585296452 instance=ExtResource("3_vqbpw")]
 layout_mode = 2
 size_flags_vertical = 8
