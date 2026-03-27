@@ -3,6 +3,7 @@ extends Node
 signal next_question
 signal new_question(question: String)
 signal start_answer()
+signal answer_provided(answer: String)
 
 enum finish_scenarios {
 	NOT_FINISHED,

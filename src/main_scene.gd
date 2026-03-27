@@ -33,7 +33,7 @@ func start_game():
 	main_layout.add_child(game_screen)
 	# HERE WE ADD NEW EVENT!!! #KAROL
 	await get_tree().create_timer(2.0).timeout
-	GameManager.new_question.emit()
+	GameManager.new_question.emit("TODO: DODAĆ TEKST PYTANIA")
 
 func _rating_changed():
 	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust]
