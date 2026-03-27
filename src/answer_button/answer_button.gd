@@ -122,6 +122,5 @@ func _animate_out():
 	tween.set_trans(Tween.TransitionType.TRANS_QUAD)
 	tween.parallel().tween_property(_background, "position:x", _offset, 0.3)
 	tween.parallel().tween_property(_margin_container, "position:x", _offset, 0.3)
-	await get_tree().create_timer(0.3).timeout
 
 	queue_free()
