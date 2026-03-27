@@ -32,5 +32,8 @@ var refutation_events: Array[EventRunInfo] = []
 
 var user_responses: Array[String] = []
 
+func get_user_response(response_type: ResponseType):
+	return user_responses[response_type]
+
 func _to_string() -> String:
 	return name

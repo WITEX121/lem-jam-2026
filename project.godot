@@ -19,6 +19,7 @@ config/icon="res://assets/icons/icon.svg"
 
 GameManager="*uid://g2uelq0awxem"
 SoundManager="*uid://b81odd1n01if1"
+EventManager="*uid://bxpgn7dyohn35"
 ReplyManager="*uid://c8extrl4jfqga"
 
 [display]
