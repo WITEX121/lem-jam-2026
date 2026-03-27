@@ -24,14 +24,14 @@ func _ready():
 	pressed.connect(_on_pressed)
 
 
-func _process(delta):
+func _process(_delta):
 	if _is_mouse_on_top:
 		_current_background_color = _current_background_color.lerp(_hover_color, 0.4)
 		Input.set_custom_mouse_cursor(GameManager.cursor_button)
 	else:
 		_current_background_color = _current_background_color.lerp(_normal_color, 0.4)
 		Input.set_custom_mouse_cursor(GameManager.cursor_arrow)
-	
+
 	_stylebox.bg_color = _current_background_color
 
 
@@ -42,6 +42,4 @@ func _on_mouse_exited():
 	_is_mouse_on_top = false
 
 func _on_pressed():
-	# TODO: Pass info to GameManager about selection
-	pass
-	print("Selected: " + reply_element.text)
+	GameManager.replies_manager.load_element(reply_element)

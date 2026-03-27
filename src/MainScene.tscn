@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dif881of408xm"]
+[gd_scene format=3 uid="uid://cxflpbyqkkub8"]
 
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]
 [ext_resource type="PackedScene" uid="uid://dh2wsy656djec" path="res://src/ui/StatusBar.tscn" id="2_h5dix"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://deecktsgefmat" path="res://assets/icons/star-svgrepo-com.svg" id="5_qg6fr"]
 [ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_tlhjj"]
 [ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="7_5a7yu"]
+[ext_resource type="Script" uid="uid://dvg270cgbj43p" path="res://src/label.gd" id="8_r8lft"]
+[ext_resource type="Script" uid="uid://44aksl0ewie2" path="res://src/v_box_container.gd" id="9_qg6fr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
 bg_color = Color(0, 0.46666667, 0.70980394, 1)
@@ -121,3 +123,11 @@ layout_mode = 2
 
 [node name="NavBar" parent="MainLayout/MarginContainer/Header" unique_id=326819366 instance=ExtResource("7_5a7yu")]
 layout_mode = 2
+
+[node name="Label" type="Label" parent="MainLayout" unique_id=195352643]
+layout_mode = 2
+script = ExtResource("8_r8lft")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainLayout" unique_id=1222426027]
+layout_mode = 2
+script = ExtResource("9_qg6fr")
