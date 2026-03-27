@@ -13,6 +13,8 @@ enum finish_scenarios {
 	TOP_TRUST,
 }
 
+
+var pracownik_wyjebaned_efekt_scene: PackedScene = preload("res://src/pracownik_wyjebaaaned.tscn")
 var cursor_arrow = preload("res://assets/icons/pointer_a.png")
 var cursor_button = preload("res://assets/icons/hand_point.png")
 
@@ -27,6 +29,13 @@ var finish_scenario := finish_scenarios.NOT_FINISHED
 var _events := Parser.load_events()
 var EVENTS:
 	get: return _events
+
+func _ready():
+	employee_count_changed.connect(_on_employee_count_changed)
+
+func _on_employee_count_changed(_count: int):
+	var pracownik_wyjebaned = pracownik_wyjebaned_efekt_scene.instantiate()
+	add_child(pracownik_wyjebaned)
 
 func game_start():
 	for i in range(5):

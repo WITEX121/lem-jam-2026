@@ -3,6 +3,7 @@ extends Node
 var elevator: Sound = preload("res://const_data/sounds/elevator.tres")
 
 var select: Sound = preload("res://const_data/sounds/select.tres")
+var pracownik_wyjebaned: Sound = preload("res://const_data/sounds/pracownik_wyjebaned.tres")
 
 var main_music_player: AudioStreamPlayer
 
