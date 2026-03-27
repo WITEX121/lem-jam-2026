@@ -1,6 +1,7 @@
 extends Node
 
 var events_manager := EventManager.new()
+var replies_manager := ReplyManager.new()
 
 var ratings := Ratings.new(50, 50, 50, 50)
 
