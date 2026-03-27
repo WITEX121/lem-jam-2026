@@ -10,13 +10,18 @@ var cursor_button = preload("res://assets/icons/hand_point.png")
 var events_manager := EventManager.new()
 var replies_manager := ReplyManager.new()
 
+# test only
+var selected: int = 0
+
 var ratings := Ratings.new(50, 50, 50, 50)
 
 # Constants
-var _events: Array = load("res://const_data/events/events.tres").events
-var EVENTS: Array:
+var _events := Parser.load_events()
+var EVENTS:
 	get: return _events
 
 func game_start():
-	events_manager.push_event(EVENTS[PromptEvent.EventId.START])
+	for i in range(5):
+		events_manager.push_event(GameManager.EVENTS["NO_EVENTS"])
+	events_manager.push_event(GameManager.EVENTS["PAPIER_DO_KIBLA"], PromptEvent.PushType.NEXT1)
 	events_manager.pop_back_to_current()

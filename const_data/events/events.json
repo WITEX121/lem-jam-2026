@@ -29,7 +29,7 @@
     },
     {
         "Name": "NO_EVENTS",
-        "Text": "Koniec promptowania",
+        "Text": "Testowy",
         "AffirmationEffects": {
             "MONEY": 0.0,
             "MORALITY": 0.0,
@@ -43,10 +43,8 @@
             "PR": 0.0
         },
         "AffirmationEvents": [
-            { "EventName": "NO_EVENTS", "PushType": "RANDOM"}
         ],
         "RefutationEvents": [
-            { "EventName": "NO_EVENTS", "PushType": "RANDOM"}
         ],
         "UserResponses": {
             "STRONG_AFFIRMATION": "",
