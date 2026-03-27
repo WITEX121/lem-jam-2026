@@ -3,7 +3,11 @@ class_name Answers extends VBoxContainer
 @export var answer_button_scene: PackedScene = preload("res://src/answer_button/answer_button.tscn")
 
 func _ready():
-	GameManager.new_answers_ready.connect(_on_new_answers_ready)
+	for child in get_children():
+		print(child)
+		child.queue_free()
+	ReplyManager.new_answers_ready.connect(_on_new_answers_ready)
+	ReplyManager.init_data()
 
 func _on_new_answers_ready(possible_replies: Array[ReplyElement]):
 	for reply: ReplyElement in possible_replies:

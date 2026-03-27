@@ -1,22 +1,22 @@
 extends Node
 
-signal new_answers_ready(answers: Array[ReplyElement])
-signal prompt_finished()
-signal reply_selected(reply_element: ReplyElement)
+
 
 var cursor_arrow = preload("res://assets/icons/pointer_a.png")
 var cursor_button = preload("res://assets/icons/hand_point.png")
 
-var events_manager := EventManager.new()
-var replies_manager := ReplyManager.new()
+# test only
+var selected: int = 0
 
 var ratings := Ratings.new(50, 50, 50, 50)
 
 # Constants
-var _events: Array = load("res://const_data/events/events.tres").events
-var EVENTS: Array:
+var _events := Parser.load_events()
+var EVENTS:
 	get: return _events
 
 func game_start():
-	events_manager.push_event(EVENTS[PromptEvent.EventId.START])
-	events_manager.pop_back_to_current()
+	for i in range(5):
+		EventManager.push_event(GameManager.EVENTS["NO_EVENTS"])
+	EventManager.push_event(GameManager.EVENTS["PAPIER_DO_KIBLA"], PromptEvent.PushType.NEXT1)
+	EventManager.pop_back_to_current()

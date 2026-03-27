@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Chinese noodle"
-run/main_scene="uid://dif881of408xm"
+run/main_scene="uid://cxflpbyqkkub8"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://assets/icons/icon.svg"
 
@@ -19,6 +19,8 @@ config/icon="res://assets/icons/icon.svg"
 
 GameManager="*uid://g2uelq0awxem"
 SoundManager="*uid://b81odd1n01if1"
+EventManager="*uid://bxpgn7dyohn35"
+ReplyManager="*uid://c8extrl4jfqga"
 
 [display]
 

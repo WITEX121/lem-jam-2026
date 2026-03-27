@@ -7,15 +7,18 @@ extends Control
 @onready var user_prompt = %UserPrompt
 
 func _ready() -> void:
-	GameManager.events_manager.event_started.connect(on_event_started)
+	EventManager.event_started.connect(on_event_started)
 
+	Parser.load_events()
 	GameManager.game_start()
 
 func on_event_started(event: PromptEvent):
 	user_prompt.text = event.text
-	sentence_begin.select(-1)
-	sentence_fill.select(-1)
-	sentence_end.select(-1)
 
 func _on_button_pressed() -> void:
-	GameManager.events_manager.pop_back_to_current()
+	EventManager.pop_back_to_current()
+
+
+func _on_sentence_begin_item_selected(index: int) -> void:
+	GameManager.selected = index
+	pass # Replace with function body.

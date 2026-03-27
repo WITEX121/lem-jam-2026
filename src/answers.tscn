@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dv6nfxgkv0e5u"]
+[gd_scene format=3 uid="uid://dk2rt6o8ah0xs"]
 
-[ext_resource type="Script" uid="uid://6rbhoqiyxqp8" path="res://src/answers.gd" id="1_7ggnp"]
+[ext_resource type="Script" path="res://src/answers.gd" id="1_7ggnp"]
 [ext_resource type="PackedScene" uid="uid://cljk2qx5y2njw" path="res://src/answer_button/answer_button.tscn" id="1_wd7m6"]
 
 [node name="Answers" type="VBoxContainer" unique_id=585296452]
@@ -18,10 +18,22 @@ script = ExtResource("1_7ggnp")
 [node name="AnswerButton" parent="." unique_id=953960086 instance=ExtResource("1_wd7m6")]
 layout_mode = 2
 
+[node name="Spacer" type="Control" parent="." unique_id=1997235347]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
 [node name="AnswerButton2" parent="." unique_id=17644247 instance=ExtResource("1_wd7m6")]
 layout_mode = 2
 
+[node name="Spacer2" type="Control" parent="." unique_id=410292741]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
 [node name="AnswerButton3" parent="." unique_id=760258740 instance=ExtResource("1_wd7m6")]
+layout_mode = 2
+
+[node name="Spacer3" type="Control" parent="." unique_id=1768146152]
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="AnswerButton4" parent="." unique_id=1927665177 instance=ExtResource("1_wd7m6")]

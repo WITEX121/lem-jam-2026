@@ -41,6 +41,12 @@ grow_vertical = 0
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+selected = 0
+item_count = 2
+popup/item_0/text = "TAK"
+popup/item_0/id = 0
+popup/item_1/text = "NIE"
+popup/item_1/id = 1
 
 [node name="SentenceFill" type="OptionButton" parent="HBoxContainer" unique_id=1647246747]
 unique_name_in_owner = true
@@ -87,4 +93,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[connection signal="item_selected" from="HBoxContainer/SentenceBegin" to="." method="_on_sentence_begin_item_selected"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
