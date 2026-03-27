@@ -1,8 +1,19 @@
 [gd_scene format=3 uid="uid://dv6nfxgkv0e5u"]
 
+[ext_resource type="Script" uid="uid://6rbhoqiyxqp8" path="res://src/answers.gd" id="1_7ggnp"]
 [ext_resource type="PackedScene" uid="uid://cljk2qx5y2njw" path="res://src/answer_button/answer_button.tscn" id="1_wd7m6"]
 
 [node name="Answers" type="VBoxContainer" unique_id=585296452]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -166.0
+offset_bottom = 166.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("1_7ggnp")
 
 [node name="AnswerButton" parent="." unique_id=953960086 instance=ExtResource("1_wd7m6")]
 layout_mode = 2
