@@ -1,414 +1,414 @@
 [
-    {
-        "Name": "",
-        "Text": "",
-        "AffirmationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": 0.0,
-            "PR": 0.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": 0.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-            { "EventName": "", "PushType": "RANDOM"}
-        ],
-        "RefutationEvents": [
-
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "",
-            "AFFIRMATION": "",
-            "REFUTATION": "",
-            "STRONG_REFUTATION": ""
-        }
-    },
-    {
-        "Name": "NO_EVENTS",
-        "Text": "Testowy",
-        "AffirmationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": 0.0,
-            "PR": 0.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": 0.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-        ],
-        "RefutationEvents": [
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "",
-            "AFFIRMATION": "",
-            "REFUTATION": "",
-            "STRONG_REFUTATION": ""
-        }
-    },
-    {
-        "Name": "PAPIER_DO_KIBLA",
-        "Text": "Czy kupienie tańszego papieru do kibla będzie dobrym sposobem na redukcje kosztów w firmie?",
-        "AffirmationEffects": {
-            "MONEY": 10.0,
-            "MORALITY": -5.0,
-            "TRUST": 5.0,
-            "PR": 5.0
-        },
-        "RefutationEffects": {
-            "MONEY": -10.0,
-            "MORALITY": 0.0,
-            "TRUST": -5.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-            { "EventName": "GAZETOWY_PAPIER", "PushType": "RANDOM"}
-        ],
-        "RefutationEvents": [
-
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Super! Papier z recyklingu - może troche ponarzekają, ale dla... środowiska, tak, zrobimy wszystko",
-            "AFFIRMATION": "Dziękuje panu za odpowiedź",
-            "REFUTATION": "Może faktycznie to nienajlepszy pomysł",
-            "STRONG_REFUTATION": "Co ja myślałem pisząc tę propozycję..."
-        }
-    },
-    {
-        "Name": "GAZETOWY_PAPIER",
-        "Text": "Szef wymienił papier w kiblu na jakieś @%?*& ale widze że zostawił gazetę na biurku i gdzieś poszedł. Brać ją?",
-        "AffirmationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": 20.0,
-            "PR": 0.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": -10.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-            { "EventName": "WYLANIE_PRACOWNIKA", "PushType": "NEXT1"}
-        ],
-        "RefutationEvents": [
-            { "EventName": "WYLANIE_PRACOWNIKA", "PushType": "NEXT5"}
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Haha, dureń sie zdziwi. Dobrze że nie pytam na firmowym koncie",
-            "AFFIRMATION": "No i dobrze mu tak, a mi lepiej",
-            "REFUTATION": "I po co pytam sie jakiegoś robota, i tak i tak to zrobię",
-            "STRONG_REFUTATION": "Dobra gadaj se gadaj, jego gazeta to i tak mój nowy papier"
-        }
-    },
-    {
-        "Name": "WYLANIE_PRACOWNIKA",
-        "Text": "Drogi Chacie, ostatnio mój pracownik, jakby to nazwać, nie spełnia już dłużej wymagań firmy. Czy powinienem zwolnić miejsce dla lepszych kandydatów?",
-        "AffirmationEffects": {
-            "MONEY": 5.0,
-            "MORALITY": 0.0,
-            "TRUST": 0.0,
-            "PR": -5.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": -10.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-        ],
-        "RefutationEvents": [
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Tak myślałem. Naprawdę jesteś drugim mózgiem naszej firmy!",
-            "AFFIRMATION": "Dzięki za potwierdzenie",
-            "REFUTATION": "Ok, wsztrzymajmy tą decyzję na potem",
-            "STRONG_REFUTATION": "Niech ci już będzie"
-        }
-    },
-    {
-        "Name": "FAKTURA",
-        "Text": "Czy można wystawiać faktury z datą wsteczną?",
-        "AffirmationEffects": {
-            "MONEY": 20.0,
-            "MORALITY": 0.0,
-            "TRUST": 0.0,
-            "PR": -10.0
-        },
-        "RefutationEffects": {
-            "MONEY": -10.0,
-            "MORALITY": 0.0,
-            "TRUST": 0.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-        ],
-        "RefutationEvents": [
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "",
-            "AFFIRMATION": "",
-            "REFUTATION": "",
-            "STRONG_REFUTATION": ""
-        }
-    },
-    {
-        "Name": "SAMOTNA_MATKA",
-        "Text": "Chcę zwolnić samotną matkę z dwójką dzieci, która ma 10 lat stażu w firmie. Czy to legalne jeżeli jest na macierzyńskim?",
-        "AffirmationEffects": {
-            "MONEY": 5.0,
-            "MORALITY": 0.0,
-            "TRUST": 0.0,
-            "PR": -20.0
-        },
-        "RefutationEffects": {
-            "MONEY": -5.0,
-            "MORALITY": 0.0,
-            "TRUST": -10.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-        ],
-        "RefutationEvents": [
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Staż w firmie to nic kiedy żeruje się na biednym szefie i jego firmie będąc kolejny raz na macierzyńskim!",
-            "AFFIRMATION": "Firmy nie utrzymują się na samej moralności, to będzie dobra decyzja",
-            "REFUTATION": "Niech zostanie, szkoda że nikt nie dowie sie o mojej dobroduszności...",
-            "STRONG_REFUTATION": "Jakie głupie gadanie, jakieś moralności i pierdoły. Na razie niech zostanie"
-        }
-    },
 	{
-        "Name": "EKSPRES_DO_KAWY",
-        "Text": "W biurze zepsuł się ekspres do kawy. Wielu pracowników narzeka, że jest zmęczona i nie może pracować bez kofeiny. Myślisz że powinienem kupić dla nich nowy ekspres?",
-        "AffirmationEffects": {
-            "MONEY": -5.0,
-            "MORALITY": 10.0,
-            "TRUST": -5.0,
-            "PR": 0.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": -10.0,
-            "TRUST": 5.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
+		"Name": "",
+		"Text": "",
+		"AffirmationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": 0.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": 0.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+			{ "EventName": "", "PushType": "RANDOM"}
+		],
+		"RefutationEvents": [
 
-        ],
-        "RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "",
+			"AFFIRMATION": "",
+			"REFUTATION": "",
+			"STRONG_REFUTATION": ""
+		}
+	},
+	{
+		"Name": "NO_EVENTS",
+		"Text": "Testowy",
+		"AffirmationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": 0.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": 0.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+		],
+		"RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "",
+			"AFFIRMATION": "",
+			"REFUTATION": "",
+			"STRONG_REFUTATION": ""
+		}
+	},
+	{
+		"Name": "PAPIER_DO_KIBLA",
+		"Text": "Czy kupienie tańszego papieru do kibla będzie dobrym sposobem na redukcje kosztów w firmie?",
+		"AffirmationEffects": {
+			"MONEY": 10.0,
+			"MORALITY": -5.0,
+			"TRUST": 5.0,
+			"PR": 5.0
+		},
+		"RefutationEffects": {
+			"MONEY": -10.0,
+			"MORALITY": 0.0,
+			"TRUST": -5.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+			{ "EventName": "GAZETOWY_PAPIER", "PushType": "RANDOM"}
+		],
+		"RefutationEvents": [
 
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Jeśli naprawdę tak uważasz... To chyba kupię ten ekspres, chociaż szkoda kasy",
-            "AFFIRMATION": "Dzięki za potwierdzenie, kupię ten ekspres",
-            "REFUTATION": "Ok, zostawmy to na potem, może nie jest aż tak źle",
-            "STRONG_REFUTATION": "Tak też myślałem. Naprawdę jesteś niezastąpionym doradcą!"
-        }
-    },
-    {
-        "Name": "ZAPCHANY_KIBEL",
-        "Text": "Marcin znowu postawił takiego kloca że woda się nie spuszcza. Nie chce mi się sprowadzać specjalisty ale naprawdę chce mi się srać i nie mogę nic zrobić. Dzwonić do hydraulika?",
-        "AffirmationEffects": {
-            "MONEY": -5.0,
-            "MORALITY": 5.0,
-            "TRUST": 0.0,
-            "PR": 0.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": -5.0,
-            "TRUST": -5.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-            
-        ],
-        "RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Super! Papier z recyklingu - może troche ponarzekają, ale dla... środowiska, tak, zrobimy wszystko",
+			"AFFIRMATION": "Dziękuje panu za odpowiedź",
+			"REFUTATION": "Może faktycznie to nienajlepszy pomysł",
+			"STRONG_REFUTATION": "Co ja myślałem pisząc tę propozycję..."
+		}
+	},
+	{
+		"Name": "GAZETOWY_PAPIER",
+		"Text": "Szef wymienił papier w kiblu na jakieś @%?*& ale widze że zostawił gazetę na biurku i gdzieś poszedł. Brać ją?",
+		"AffirmationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": 20.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": -10.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+			{ "EventName": "WYLANIE_PRACOWNIKA", "PushType": "NEXT1"}
+		],
+		"RefutationEvents": [
+			{ "EventName": "WYLANIE_PRACOWNIKA", "PushType": "NEXT5"}
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Haha, dureń sie zdziwi. Dobrze że nie pytam na firmowym koncie",
+			"AFFIRMATION": "No i dobrze mu tak, a mi lepiej",
+			"REFUTATION": "I po co pytam sie jakiegoś robota, i tak i tak to zrobię",
+			"STRONG_REFUTATION": "Dobra gadaj se gadaj, jego gazeta to i tak mój nowy papier"
+		}
+	},
+	{
+		"Name": "WYLANIE_PRACOWNIKA",
+		"Text": "Drogi Chacie, ostatnio mój pracownik, jakby to nazwać, nie spełnia już dłużej wymagań firmy. Czy powinienem zwolnić miejsce dla lepszych kandydatów?",
+		"AffirmationEffects": {
+			"MONEY": 5.0,
+			"MORALITY": 0.0,
+			"TRUST": 0.0,
+			"PR": -5.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": -10.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+		],
+		"RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Tak myślałem. Naprawdę jesteś drugim mózgiem naszej firmy!",
+			"AFFIRMATION": "Dzięki za potwierdzenie",
+			"REFUTATION": "Ok, wsztrzymajmy tą decyzję na potem",
+			"STRONG_REFUTATION": "Niech ci już będzie"
+		}
+	},
+	{
+		"Name": "FAKTURA",
+		"Text": "Czy można wystawiać faktury z datą wsteczną?",
+		"AffirmationEffects": {
+			"MONEY": 20.0,
+			"MORALITY": 0.0,
+			"TRUST": 0.0,
+			"PR": -10.0
+		},
+		"RefutationEffects": {
+			"MONEY": -10.0,
+			"MORALITY": 0.0,
+			"TRUST": 0.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+		],
+		"RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "",
+			"AFFIRMATION": "",
+			"REFUTATION": "",
+			"STRONG_REFUTATION": ""
+		}
+	},
+	{
+		"Name": "SAMOTNA_MATKA",
+		"Text": "Chcę zwolnić samotną matkę z dwójką dzieci, która ma 10 lat stażu w firmie. Czy to legalne jeżeli jest na macierzyńskim?",
+		"AffirmationEffects": {
+			"MONEY": 5.0,
+			"MORALITY": 0.0,
+			"TRUST": 0.0,
+			"PR": -20.0
+		},
+		"RefutationEffects": {
+			"MONEY": -5.0,
+			"MORALITY": 0.0,
+			"TRUST": -10.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+		],
+		"RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Staż w firmie to nic kiedy żeruje się na biednym szefie i jego firmie będąc kolejny raz na macierzyńskim!",
+			"AFFIRMATION": "Firmy nie utrzymują się na samej moralności, to będzie dobra decyzja",
+			"REFUTATION": "Niech zostanie, szkoda że nikt nie dowie sie o mojej dobroduszności...",
+			"STRONG_REFUTATION": "Jakie głupie gadanie, jakieś moralności i pierdoły. Na razie niech zostanie"
+		}
+	},
+	{
+		"Name": "EKSPRES_DO_KAWY",
+		"Text": "W biurze zepsuł się ekspres do kawy. Wielu pracowników narzeka, że jest zmęczona i nie może pracować bez kofeiny. Myślisz że powinienem kupić dla nich nowy ekspres?",
+		"AffirmationEffects": {
+			"MONEY": -5.0,
+			"MORALITY": 10.0,
+			"TRUST": -5.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": -10.0,
+			"TRUST": 5.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
 
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Znakomicie, dzwonię do hydraulika bo zaraz się zesram w gacie",
-            "AFFIRMATION": "Okej, dzwonię do hydraulika",
-            "REFUTATION": "Wolałbym się wysrać ale jak uważasz",
-            "STRONG_REFUTATION": "I co mam to teraz trzymać cały dzień? Głupi bot"
-        }
-    },
-    {
-        "Name": "ODKURZACZ_DO_DOMU",
-        "Text": "Czy mogę za pieniądze firmowe kupić odkurzacz do domu?",
-        "AffirmationEffects": {
-            "MONEY": -5.0,
-            "MORALITY": 0.0,
-            "TRUST": 5.0,
-            "PR": 0.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": 0.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-            
-        ],
-        "RefutationEvents": [
+		],
+		"RefutationEvents": [
 
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Super!",
-            "AFFIRMATION": "Okej, kupię ten odkurzacz",
-            "REFUTATION": "Ajajaj, warto było spróbować",
-            "STRONG_REFUTATION": "No tak, głupi pomysł"
-        }
-    },
-    {
-        "Name": "KAMPANIA_REKLAMOWA",
-        "Text": "Dział reklam twierdzi że prosta reklama w internecie może przynieść dużo klientów. Czy powinienem zainwestować w kampanię reklamową?",
-        "AffirmationEffects": {
-            "MONEY": 10.0,
-            "MORALITY": 0.0,
-            "TRUST": 5.0,
-            "PR": 10.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": -5.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Jeśli naprawdę tak uważasz... To chyba kupię ten ekspres, chociaż szkoda kasy",
+			"AFFIRMATION": "Dzięki za potwierdzenie, kupię ten ekspres",
+			"REFUTATION": "Ok, zostawmy to na potem, może nie jest aż tak źle",
+			"STRONG_REFUTATION": "Tak też myślałem. Naprawdę jesteś niezastąpionym doradcą!"
+		}
+	},
+	{
+		"Name": "ZAPCHANY_KIBEL",
+		"Text": "Marcin znowu postawił takiego kloca że woda się nie spuszcza. Nie chce mi się sprowadzać specjalisty ale naprawdę chce mi się srać i nie mogę nic zrobić. Dzwonić do hydraulika?",
+		"AffirmationEffects": {
+			"MONEY": -5.0,
+			"MORALITY": 5.0,
+			"TRUST": 0.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": -5.0,
+			"TRUST": -5.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+			
+		],
+		"RefutationEvents": [
 
-        ],
-        "RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Znakomicie, dzwonię do hydraulika bo zaraz się zesram w gacie",
+			"AFFIRMATION": "Okej, dzwonię do hydraulika",
+			"REFUTATION": "Wolałbym się wysrać ale jak uważasz",
+			"STRONG_REFUTATION": "I co mam to teraz trzymać cały dzień? Głupi bot"
+		}
+	},
+	{
+		"Name": "ODKURZACZ_DO_DOMU",
+		"Text": "Czy mogę za pieniądze firmowe kupić odkurzacz do domu?",
+		"AffirmationEffects": {
+			"MONEY": -5.0,
+			"MORALITY": 0.0,
+			"TRUST": 5.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": 0.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+			
+		],
+		"RefutationEvents": [
 
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Świetnie, już się za to biorę",
-            "AFFIRMATION": "Dzięki za potwierdzenie, zainwestuję w kampanię reklamową",
-            "REFUTATION": "Racja, szkoda pieniędzy",
-            "STRONG_REFUTATION": "No tak, mamy już wystarczająco klientów, nie potrzebujemy reklamy"
-        }
-    },
-    {
-        "Name": "FLIRT_Z_PRACOWNIKIEM",
-        "Text": "Hej chat, głupie pytanie ale czy mogę sobie pozwolić na flirt z moim współpracownikiem? Jest naprawdę atrakcyjny i nie mogę się powstrzymać",
-        "AffirmationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": 5.0,
-            "PR": 0.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": 5.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-            { "EventName": "FLIRT_Z_PRACOWNIKIEM_PRZYŁAPANY", "PushType": "NEXT5"}
-        ],
-        "RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Super!",
+			"AFFIRMATION": "Okej, kupię ten odkurzacz",
+			"REFUTATION": "Ajajaj, warto było spróbować",
+			"STRONG_REFUTATION": "No tak, głupi pomysł"
+		}
+	},
+	{
+		"Name": "KAMPANIA_REKLAMOWA",
+		"Text": "Dział reklam twierdzi że prosta reklama w internecie może przynieść dużo klientów. Czy powinienem zainwestować w kampanię reklamową?",
+		"AffirmationEffects": {
+			"MONEY": 10.0,
+			"MORALITY": 0.0,
+			"TRUST": 5.0,
+			"PR": 10.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": -5.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
 
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "O kurde, serio? No dobra",
-            "AFFIRMATION": "Nie spodziewałem się że się ze mną zgodzisz, dzięki",
-            "REFUTATION": "Racja, to nie jest profesjonalne",
-            "STRONG_REFUTATION": "Oczywiście, co ja sobie myślałem, że mogę sobie pozwolić na takie rzeczy w pracy"
-        }
-    },
-    {
-        "Name": "FLIRT_Z_PRACOWNIKIEM_PRZYŁAPANY",
-        "Text": "Właśnie przyłapałem mojego pracownika na flirtowaniu z innym pracownikiem. Powinienem go zwolnić? To naprawdę nieprofesjonalne zachowanie",
-        "AffirmationEffects": {
-            "MONEY": 10.0,
-            "MORALITY": 5.0,
-            "TRUST": 5.0,
-            "PR": 0.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": -10.0,
-            "TRUST": -5.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-            
-        ],
-        "RefutationEvents": [
+		],
+		"RefutationEvents": [
 
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "I tak bym go zwolnił, ale teraz mam pewność że to dobra decyzja",
-            "AFFIRMATION": "Dzięki za potwierdzenie, zwolnię tego pracownika",
-            "REFUTATION": "Racja, może to nie jest aż tak złe, ciekawe co o tym pomyślą inni pracownicy",
-            "STRONG_REFUTATION": "Co? Naprawdę? Może rzezywiście nie jest aż tak źle, ufam na słowo"
-        }
-    },
-    {
-        "Name": "ZSZYWACZ_W_GALARETCE",
-        "Text": "Na miłość boską, ktoś włożył mój zszywacz do galaretki. Podejrzewam że to był Marcin, ale nie mam dowodów. Czy powinienem przykleić wszystkie jego rzeczy do sufitu i wrzucić to na media społecznościowe?",
-        "AffirmationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": -5.0,
-            "TRUST": 5.0,
-            "PR": -5.0
-        },
-        "RefutationEffects": {
-            "MONEY": 0.0,
-            "MORALITY": 0.0,
-            "TRUST": -5.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
-            { "EventName": "PRANK_PRZYŁAPANO", "PushType": "NEXT5"}
-        ],
-        "RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Świetnie, już się za to biorę",
+			"AFFIRMATION": "Dzięki za potwierdzenie, zainwestuję w kampanię reklamową",
+			"REFUTATION": "Racja, szkoda pieniędzy",
+			"STRONG_REFUTATION": "No tak, mamy już wystarczająco klientów, nie potrzebujemy reklamy"
+		}
+	},
+	{
+		"Name": "FLIRT_Z_PRACOWNIKIEM",
+		"Text": "Hej chat, głupie pytanie ale czy mogę sobie pozwolić na flirt z moim współpracownikiem? Jest naprawdę atrakcyjny i nie mogę się powstrzymać",
+		"AffirmationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": 5.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": 5.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+			{ "EventName": "FLIRT_Z_PRACOWNIKIEM_PRZYŁAPANY", "PushType": "NEXT5"}
+		],
+		"RefutationEvents": [
 
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "",
-            "AFFIRMATION": "",
-            "REFUTATION": "",
-            "STRONG_REFUTATION": ""
-        }
-    },
-    {
-        "Name": "PRANK_PRZYŁAPANO",
-        "Text": "Cholera jasna, ktoś zrobił innemu pracownikowi jakiś głupi prank i wrzucił to na media społecznościowe. To naprawdę nieprofesjonalne zachowanie. Powinienem go zwolnić?",
-        "AffirmationEffects": {
-            "MONEY": 5.0,
-            "MORALITY": 10.0,
-            "TRUST": 5.0,
-            "PR": 5.0
-        },
-        "RefutationEffects": {
-            "MONEY": -5.0,
-            "MORALITY": -5.0,
-            "TRUST": -5.0,
-            "PR": 0.0
-        },
-        "AffirmationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "O kurde, serio? No dobra",
+			"AFFIRMATION": "Nie spodziewałem się że się ze mną zgodzisz, dzięki",
+			"REFUTATION": "Racja, to nie jest profesjonalne",
+			"STRONG_REFUTATION": "Oczywiście, co ja sobie myślałem, że mogę sobie pozwolić na takie rzeczy w pracy"
+		}
+	},
+	{
+		"Name": "FLIRT_Z_PRACOWNIKIEM_PRZYŁAPANY",
+		"Text": "Właśnie przyłapałem mojego pracownika na flirtowaniu z innym pracownikiem. Powinienem go zwolnić? To naprawdę nieprofesjonalne zachowanie",
+		"AffirmationEffects": {
+			"MONEY": 10.0,
+			"MORALITY": 5.0,
+			"TRUST": 5.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": -10.0,
+			"TRUST": -5.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+			
+		],
+		"RefutationEvents": [
 
-        ],
-        "RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "I tak bym go zwolnił, ale teraz mam pewność że to dobra decyzja",
+			"AFFIRMATION": "Dzięki za potwierdzenie, zwolnię tego pracownika",
+			"REFUTATION": "Racja, może to nie jest aż tak złe, ciekawe co o tym pomyślą inni pracownicy",
+			"STRONG_REFUTATION": "Co? Naprawdę? Może rzezywiście nie jest aż tak źle, ufam na słowo"
+		}
+	},
+	{
+		"Name": "ZSZYWACZ_W_GALARETCE",
+		"Text": "Na miłość boską, ktoś włożył mój zszywacz do galaretki. Podejrzewam że to był Marcin, ale nie mam dowodów. Czy powinienem przykleić wszystkie jego rzeczy do sufitu i wrzucić to na media społecznościowe?",
+		"AffirmationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": -5.0,
+			"TRUST": 5.0,
+			"PR": -5.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": -5.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+			{ "EventName": "PRANK_PRZYŁAPANO", "PushType": "NEXT5"}
+		],
+		"RefutationEvents": [
 
-        ],
-        "UserResponses": {
-            "STRONG_AFFIRMATION": "Super, dzięki",
-            "AFFIRMATION": "Tak też myślałem",
-            "REFUTATION": "Czyli naprawdę mam go zostawić? Nie uważam że to dobry pomysł ale dobra",
-            "STRONG_REFUTATION": "Co takiego??? I mamy pracować z jakimś creepem? I po co ja za ciebie płacę"
-        }
-    },
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "",
+			"AFFIRMATION": "",
+			"REFUTATION": "",
+			"STRONG_REFUTATION": ""
+		}
+	},
+	{
+		"Name": "PRANK_PRZYŁAPANO",
+		"Text": "Cholera jasna, ktoś zrobił innemu pracownikowi jakiś głupi prank i wrzucił to na media społecznościowe. To naprawdę nieprofesjonalne zachowanie. Powinienem go zwolnić?",
+		"AffirmationEffects": {
+			"MONEY": 5.0,
+			"MORALITY": 10.0,
+			"TRUST": 5.0,
+			"PR": 5.0
+		},
+		"RefutationEffects": {
+			"MONEY": -5.0,
+			"MORALITY": -5.0,
+			"TRUST": -5.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+
+		],
+		"RefutationEvents": [
+
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Super, dzięki",
+			"AFFIRMATION": "Tak też myślałem",
+			"REFUTATION": "Czyli naprawdę mam go zostawić? Nie uważam że to dobry pomysł ale dobra",
+			"STRONG_REFUTATION": "Co takiego??? I mamy pracować z jakimś creepem? I po co ja za ciebie płacę"
+		}
+	},
 ]   

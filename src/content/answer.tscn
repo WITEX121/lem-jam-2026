@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://8s8kng870c58" path="res://assets/fonts/RethinkSans-Regular.ttf" id="1_whewb"]
 [ext_resource type="FontFile" uid="uid://355fbh8k4ly0" path="res://assets/fonts/RethinkSans-BoldItalic.ttf" id="2_g1mp8"]
+[ext_resource type="Script" uid="uid://cokllo144f0le" path="res://src/content/reply_label.gd" id="3_g1mp8"]
 [ext_resource type="PackedScene" uid="uid://pisowk7vke67" path="res://src/loading_animation.tscn" id="3_v47ep"]
 
 [node name="Answer" type="VBoxContainer" unique_id=972585286]
@@ -36,6 +37,7 @@ theme_override_font_sizes/font_size = 24
 text = "TO BARDZO DOBRY POMYSŁ"
 horizontal_alignment = 2
 autowrap_mode = 2
+script = ExtResource("3_g1mp8")
 
 [node name="HBoxContainer" parent="HBoxContainer" unique_id=58047409 instance=ExtResource("3_v47ep")]
 layout_mode = 2

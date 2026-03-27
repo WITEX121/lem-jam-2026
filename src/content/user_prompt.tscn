@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dft3r0hwe4j1j"]
 
+[ext_resource type="Script" uid="uid://ctavdsbdrhvxf" path="res://src/content/user_prompt.gd" id="1_br5s2"]
 [ext_resource type="FontFile" uid="uid://8s8kng870c58" path="res://assets/fonts/RethinkSans-Regular.ttf" id="1_x8imx"]
+[ext_resource type="Script" uid="uid://cbfvjjxs71bbf" path="res://src/content/question_label.gd" id="3_07ema"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgaq0"]
 bg_color = Color(0, 0.627451, 0.8627451, 1)
@@ -16,6 +18,7 @@ corner_radius_bottom_left = 12
 [node name="UserPrompt" type="PanelContainer" unique_id=2042464347]
 size_flags_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_mgaq0")
+script = ExtResource("1_br5s2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1041349336]
 layout_mode = 2
@@ -32,3 +35,4 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "MUSIMY OSZCZĘDZIĆ PIENIĄDZE CZY KUPIENIE TAŃSZEGO PAPIERU BĘDZIE DOBRYM POMYSŁEM?"
 autowrap_mode = 2
+script = ExtResource("3_07ema")
