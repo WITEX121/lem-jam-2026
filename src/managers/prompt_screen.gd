@@ -11,7 +11,7 @@ func _ready() -> void:
 
 	GameManager.game_start()
 
-func on_event_started(event: Event):
+func on_event_started(event: PromptEvent):
 	user_prompt.text = event.text
 	sentence_begin.select(-1)
 	sentence_fill.select(-1)

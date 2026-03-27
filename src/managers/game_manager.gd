@@ -10,5 +10,5 @@ var EVENTS: Array:
 	get: return _events
 
 func game_start():
-	events_manager.push_event(EVENTS[Event.EventId.START])
+	events_manager.push_event(EVENTS[PromptEvent.EventId.START])
 	events_manager.pop_back_to_current()

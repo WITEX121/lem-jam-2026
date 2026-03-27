@@ -1,11 +1,11 @@
 class_name EventManager extends Node
 
-signal event_started(event: Event)
+signal event_started(event: PromptEvent)
 
-var current_event: Event = null
-var events_stack: Array[Event] = []
+var current_event: PromptEvent = null
+var events_stack: Array[PromptEvent] = []
 
-func push_event(event: Event):
+func push_event(event: PromptEvent):
 	events_stack.push_back(event)
 
 func pop_back_to_current():
@@ -13,12 +13,12 @@ func pop_back_to_current():
 		_handle_event_ending(current_event)
 
 	if events_stack.is_empty():
-		push_event(GameManager.EVENTS[Event.EventId.NO_EVENTS_EVENT])
+		push_event(GameManager.EVENTS[PromptEvent.EventId.NO_EVENTS_EVENT])
 
 	current_event = events_stack.pop_back()
 	event_started.emit(current_event)
 
-func _handle_event_ending(event: Event):
+func _handle_event_ending(event: PromptEvent):
 	var score = evaluate_score()
 
 	var unlocked_events = []
@@ -38,7 +38,7 @@ func _handle_event_ending(event: Event):
 func evaluate_score() -> float:
 	return 0
 
-func unlock_events(events: Array[Event]):
-	for event: Event in events:
+func unlock_events(events: Array[PromptEvent]):
+	for event: PromptEvent in events:
 		push_event(event)
 	events_stack.shuffle()
