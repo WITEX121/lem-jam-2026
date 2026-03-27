@@ -6,4 +6,8 @@ class_name ReplyList
 @export var ends: Array[ReplyElement]
 
 func random_reply() -> PromptReply:
-    return PromptReply.new(starts.pick_random(), fillers.pick_random(), ends.pick_random())
+    var reply = PromptReply.new()
+    reply.start = starts.pick_random()
+    reply.filler = fillers.pick_random()
+    reply.end = ends.pick_random()
+    return reply
