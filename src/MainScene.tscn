@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="6_tlhjj"]
 [ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="7_5a7yu"]
 [ext_resource type="PackedScene" uid="uid://ccaosf5jnio3h" path="res://src/content/WelcomeScreen.tscn" id="8_r8lft"]
-[ext_resource type="PackedScene" path="res://src/ui/status_bar_employees.tscn" id="8_tlhjj"]
+[ext_resource type="PackedScene" uid="uid://bh80hcirp2ryy" path="res://src/ui/status_bar_employees.tscn" id="8_tlhjj"]
 [ext_resource type="PackedScene" uid="uid://cy6pcmevxj0by" path="res://src/content/loading_screen.tscn" id="11_d0nsw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
@@ -87,6 +87,7 @@ custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status1" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1611621822 instance=ExtResource("2_h5dix")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Kapitał"
@@ -97,6 +98,7 @@ custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status2" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=114805630 instance=ExtResource("2_h5dix")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Moralność"
@@ -107,6 +109,7 @@ custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status3" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1316453743 instance=ExtResource("2_h5dix")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "PR"
@@ -117,6 +120,7 @@ custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
 [node name="Status4" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1715507513 instance=ExtResource("2_h5dix")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Zaufanie"
