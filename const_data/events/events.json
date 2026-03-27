@@ -29,28 +29,30 @@
     },
     {
         "Name": "NO_EVENTS",
-        "Text": "Testowy",
+        "Text": "W firmie są suuuuuuuper nudy. Zrobić sobie przerwę na kawę?",
         "AffirmationEffects": {
             "MONEY": 0.0,
-            "MORALITY": 0.0,
+            "MORALITY": 10.0,
             "TRUST": 0.0,
             "PR": 0.0
         },
         "RefutationEffects": {
             "MONEY": 0.0,
-            "MORALITY": 0.0,
+            "MORALITY": -10.0,
             "TRUST": 0.0,
             "PR": 0.0
         },
         "AffirmationEvents": [
+            { "EventName": "*ADD_BASE_EVENTS" }
         ],
         "RefutationEvents": [
+            { "EventName": "*ADD_BASE_EVENTS" }
         ],
         "UserResponses": {
-            "STRONG_AFFIRMATION": "",
-            "AFFIRMATION": "",
-            "REFUTATION": "",
-            "STRONG_REFUTATION": ""
+            "STRONG_AFFIRMATION": "Mmmmmm, tak, kawusia to to, czego potrzebuje",
+            "AFFIRMATION": "Mmmmmm, tak, kawusia to to, czego potrzebuje",
+            "REFUTATION": "Produktywność. Praca.",
+            "STRONG_REFUTATION": "Racja. Szef moim panem, a ja niewolnikiem"
         }
     },
     {
