@@ -1,9 +1,6 @@
 extends Node
 
 signal next_question
-signal new_question(question: String)
-signal start_answer()
-signal reload_prompt()
 signal end_game
 
 signal answer_provided(answer: String)
@@ -40,7 +37,6 @@ var EVENTS:
 	get: return _events
 
 func _ready() -> void:
-	next_question.connect(func(): new_question.emit(EventManager.current_event.text))
 	ratings.ratings_changed.connect(_on_ratings_changed)
 	employee_count_changed.connect(_on_employee_count_changed)
 

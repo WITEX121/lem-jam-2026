@@ -2,7 +2,7 @@ extends Node
 
 signal event_started(event: PromptEvent)
 
-var current_event: PromptEvent = GameManager.EVENTS["PAPIER_DO_KIBLA"]
+var current_event: PromptEvent = null
 var events_stack: Array[PromptEvent] = []
 
 func push_event(event: PromptEvent, push_type: PromptEvent.PushType = PromptEvent.PushType.RANDOM):
@@ -38,13 +38,11 @@ func pop_back_to_current():
 
 func _handle_event_ending(event: PromptEvent):
 	var score = evaluate_score()
-	print("TESTOWY: ", score)
 
 	var unlocked_events = []
 	var affected_ratings = []
 
 	var opinion := Ratings.evaluate_score(score)
-	print("OPINION: ", opinion)
 	if opinion == Ratings.Opinion.AFFIRMATION:
 		unlocked_events = event.affirmation_events
 		affected_ratings = event.affirmation_effects
@@ -74,7 +72,6 @@ func unlock_events(events: Array[EventRunInfo]):
 		)
 
 func unlock_events_shuffle(events: Array[String]):
-	print(events)
 	for event_name in events:
 		events_stack.push_back(GameManager.EVENTS[event_name])
 	events_stack.shuffle()

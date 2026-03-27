@@ -12,10 +12,7 @@ func _ready() -> void:
 	reply_completed.connect(_handle_change)
 
 func _handle_change(_e):
-	var score = _e.get_weight()
-	GameManager.answer_provided.emit(EventManager.current_event.get_user_response(score))
 	EventManager.pop_back_to_current()
-
 
 var _reply := PromptReply.new()
 
@@ -31,7 +28,6 @@ func load_element(element: ReplyElement):
 		new_answers_ready.emit(_get_ends())
 	else:
 		_reply.end = element
-		print("Reply completed: " + _reply.get_text())
 		reply_completed.emit(_reply)
 
 	text_on_change.emit(_reply.get_text())

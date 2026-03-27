@@ -91,7 +91,6 @@ func _on_new_answers_ready(_possible_replies: Array[ReplyElement]):
 	_animate_out()
 
 func _on_prompt_finished(_empty):
-	print("Haha")
 	_disable_button()
 	_animate_out()
 	# _animate_out()

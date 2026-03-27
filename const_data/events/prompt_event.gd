@@ -32,7 +32,7 @@ func _to_string() -> String:
 
 func _to_type(weight: int) -> ResponseType:
 	if weight <= -15: return ResponseType.STRONG_REFUTATION
-	elif  -15 < weight and weight <= 0: return ResponseType.REFUTATION
-	elif  0 < weight and weight <= 15: return ResponseType.AFFIRMATION
+	elif weight < 0: return ResponseType.REFUTATION
+	elif  weight <= 15: return ResponseType.AFFIRMATION
 	else: return ResponseType.STRONG_AFFIRMATION
 

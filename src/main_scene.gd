@@ -12,9 +12,6 @@ extends CanvasLayer
 var game_screen_scene: PackedScene = preload("res://src/content/game_screen.tscn")
 
 func _ready() -> void:
-	EventManager.unlock_events_shuffle(Consts.BASE_EVENTS)
-	EventManager.pop_back_to_current()
-
 	start_button.pressed.connect(start_game)
 	GameManager.ratings.ratings_changed.connect(_rating_changed)
 	GameManager.end_game.connect(end_game)
@@ -35,8 +32,9 @@ func start_game():
 	welcome_screen.queue_free()
 	var game_screen = game_screen_scene.instantiate()
 	main_layout.add_child(game_screen)
-	await get_tree().create_timer(2.0).timeout
-	GameManager.new_question.emit(EventManager.current_event.text)
+
+	# Funkcja zaczecia kolejnego pytania
+	GameManager.next_question.emit()
 
 func _rating_changed():
 	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust]
@@ -49,7 +47,6 @@ func _rating_changed():
 
 	for i in range(len(values)):
 		status_bars[i].set_status_bar(values[i])
-		print(values[i])
 
 func end_game():
 	self.get_tree().change_scene_to_file("res://src/content/game_over_scene.tscn")

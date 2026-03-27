@@ -3,7 +3,7 @@ class_name UserPrompt extends PanelContainer
 @onready var contents: Label = %Contents
 
 func _ready():
-	GameManager.new_question.connect(_on_new_question)
+	GameManager.next_question.connect(_on_next_question)
 
 var _add_buffer: String = ""
 var _elapsed := 0.0
@@ -22,6 +22,6 @@ func set_text(text: String):
 	contents.text = ""
 	_add_buffer = text
 
-func _on_new_question(question: String):
-	contents.text = question
-	GameManager.start_answer.emit()
+func _on_next_question():
+	var question = EventManager.current_event.text
+	set_text(question)
