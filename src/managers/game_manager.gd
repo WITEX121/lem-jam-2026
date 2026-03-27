@@ -5,8 +5,6 @@ extends Node
 var cursor_arrow = preload("res://assets/icons/pointer_a.png")
 var cursor_button = preload("res://assets/icons/hand_point.png")
 
-var replies_manager := ReplyManager.new()
-
 # test only
 var selected: int = 0
 
