@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dpdtukqsqt1wy"]
+
+[ext_resource type="Script" uid="uid://cm8pkfgubk2tr" path="res://src/content/game_over_scene.gd" id="1_ic66t"]
+[ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_nnqlg"]
+
+[node name="GameOverScene" type="Control" unique_id=1012053250]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ic66t")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1653909289]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19215687, 0.2, 0.20784314, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=574297085]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_right = 300
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=822170320]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1513857846]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nnqlg")
+theme_override_font_sizes/font_size = 128
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=2101944409]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Description" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1291055223]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_nnqlg")
+theme_override_font_sizes/font_size = 68
+text = "GAME OVER"
+horizontal_alignment = 1
+autowrap_mode = 2
