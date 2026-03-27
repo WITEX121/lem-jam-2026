@@ -32,7 +32,7 @@ func start_game():
 	var game_screen = game_screen_scene.instantiate()
 	main_layout.add_child(game_screen)
 	# HERE WE ADD NEW EVENT!!! #KAROL
-	await get_tree().create_timer(2).finished
+	await get_tree().create_timer(2.0).timeout
 	GameManager.new_question.emit()
 
 func _rating_changed():
