@@ -1,9 +1,8 @@
 extends Node
 
-signal next_question
+signal next_question_started
 signal end_game
 
-signal answer_provided(answer: String)
 signal employee_count_changed(employee_count: int)
 
 enum finish_scenarios {
@@ -21,9 +20,6 @@ enum finish_scenarios {
 
 var cursor_arrow = preload("res://assets/icons/pointer_a.png")
 var cursor_button = preload("res://assets/icons/hand_point.png")
-
-# test only
-var selected: int = 0
 
 var ratings := Ratings.new(50, 50, 50, 50)
 var employee_count: int = 10

@@ -35,7 +35,7 @@ func start_game():
 	var game_screen = game_screen_scene.instantiate()
 	main_layout.add_child(game_screen)
 
-	GameManager.next_question.emit()
+	GameManager.next_question_started.emit()
 
 func _rating_changed():
 	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust]

@@ -6,7 +6,7 @@ class_name UserAnswer extends PanelContainer
 func _ready():
 	# JAK NOWE PYTANIE TO POKAZUJEMY JE #KAROL
 	ReplyManager.reply_completed.connect(_on_answer_provided)
-	GameManager.next_question.connect(_on_next_question)
+	GameManager.next_question_started.connect(_on_next_question_started)
 
 var _add_buffer: String = ""
 var _elapsed := 0.0
@@ -30,6 +30,5 @@ func _on_answer_provided(ready_reply: PromptReply):
 	set_text(answer)
 	visible = true
 
-
-func _on_next_question():
+func _on_next_question_started():
 	visible = false
