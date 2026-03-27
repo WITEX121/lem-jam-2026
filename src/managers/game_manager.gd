@@ -32,6 +32,7 @@ var EVENTS:
 
 func _ready() -> void:
 	ratings.ratings_changed.connect(_on_ratings_changed)
+	next_question_started.connect(EventManager.pop_back_to_current)
 	# employee_count_changed.connect(_on_employee_count_changed)
 
 func _process(_delta: float) -> void:

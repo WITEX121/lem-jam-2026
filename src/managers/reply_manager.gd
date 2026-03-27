@@ -11,8 +11,8 @@ func _ready() -> void:
 	reply_selected.connect(load_element)
 	reply_completed.connect(_handle_change)
 
-func _handle_change(_e):
-	EventManager.pop_back_to_current()
+func _handle_change(__):
+	EventManager.handle_current_event_ending()
 
 var _reply := PromptReply.new()
 

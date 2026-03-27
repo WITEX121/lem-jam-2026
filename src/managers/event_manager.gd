@@ -27,16 +27,16 @@ func _push_event_random_next_n(n: int, event: PromptEvent):
 	events_stack.insert(push_idx, event)
 
 func pop_back_to_current():
-	if current_event != null:
-		_handle_event_ending(current_event)
-
 	if events_stack.is_empty():
 		push_event(GameManager.EVENTS["NO_EVENTS"], PromptEvent.PushType.NEXT1)
 
 	current_event = events_stack.pop_back()
 	event_started.emit(current_event)
 
-func _handle_event_ending(event: PromptEvent):
+func handle_current_event_ending():
+	if current_event == null:
+		return
+
 	var score = evaluate_score()
 
 	var unlocked_events = []
@@ -44,11 +44,11 @@ func _handle_event_ending(event: PromptEvent):
 
 	var opinion := Ratings.evaluate_score(score)
 	if opinion == Ratings.Opinion.AFFIRMATION:
-		unlocked_events = event.affirmation_events
-		affected_ratings = event.affirmation_effects
+		unlocked_events = current_event.affirmation_events
+		affected_ratings = current_event.affirmation_effects
 	else:
-		unlocked_events = event.refutation_events
-		affected_ratings = event.refutation_effects
+		unlocked_events = current_event.refutation_events
+		affected_ratings = current_event.refutation_effects
 
 	unlock_events(unlocked_events)
 	GameManager.ratings.add_ratings(affected_ratings)
