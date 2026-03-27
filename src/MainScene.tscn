@@ -1,5 +1,27 @@
 [gd_scene format=3 uid="uid://dif881of408xm"]
 
+[ext_resource type="StyleBox" uid="uid://bi86v4p2gk5w7" path="res://assets/styles/top_panel_round_corners.tres" id="1_46oc7"]
+[ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]
+[ext_resource type="PackedScene" uid="uid://dh2wsy656djec" path="res://src/ui/StatusBar.tscn" id="2_h5dix"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
+bg_color = Color(0, 0.46666667, 0.70980394, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq6ju"]
+bg_color = Color(0.5, 0.5, 0.5, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [node name="Control" type="CanvasLayer" unique_id=530775206]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2044388649]
@@ -11,6 +33,7 @@ grow_vertical = 2
 color = Color(0.14509805, 0.14901961, 0.15294118, 1)
 
 [node name="MainLayout" type="VBoxContainer" parent="." unique_id=1993072305]
+clip_contents = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,56 +42,124 @@ grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MainLayout" unique_id=902372574]
 layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Header" type="VBoxContainer" parent="MainLayout/MarginContainer" unique_id=1960043265]
+layout_mode = 2
+
+[node name="Tabs" type="PanelContainer" parent="MainLayout/MarginContainer/Header" unique_id=1538971452]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/Tabs" unique_id=1390238151]
+layout_mode = 2
+
+[node name="AppTab" type="PanelContainer" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1765255062]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hux8c")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer/AppTab" unique_id=2102955085]
+layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Header" type="VBoxContainer" parent="MainLayout/MarginContainer" unique_id=1960043265]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer/AppTab/MarginContainer" unique_id=19383837]
 layout_mode = 2
 
-[node name="TabsRow" type="HBoxContainer" parent="MainLayout/MarginContainer/Header" unique_id=187391540]
+[node name="Label" type="Label" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer/AppTab/MarginContainer/HBoxContainer" unique_id=2096461631]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_tq6ju")
+theme_override_font_sizes/font_size = 35
+text = "CorpAI"
+
+[node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1669026999]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
-[node name="AppTab" type="MarginContainer" parent="MainLayout/MarginContainer/Header/TabsRow" unique_id=1216020617]
-custom_minimum_size = Vector2(200, 75)
+[node name="Status1" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1611621822 instance=ExtResource("2_h5dix")]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="MainLayout/MarginContainer/Header/TabsRow/AppTab" unique_id=970661971]
-layout_mode = 2
-color = Color(0, 0.46666667, 0.70980394, 1)
-
-[node name="Label" type="Label" parent="MainLayout/MarginContainer/Header/TabsRow/AppTab" unique_id=196480782]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 40
-text = "Corp AI"
-
-[node name="NavBar" type="HBoxContainer" parent="MainLayout/MarginContainer/Header" unique_id=1251079371]
+[node name="Spacer2" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=848565961]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 
-[node name="Controls" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/NavBar" unique_id=1643817699]
+[node name="Status2" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=114805630 instance=ExtResource("2_h5dix")]
 layout_mode = 2
 
-[node name="BackButton" type="Button" parent="MainLayout/MarginContainer/Header/NavBar/Controls" unique_id=946355522]
+[node name="Spacer3" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1686073260]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Status3" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1316453743 instance=ExtResource("2_h5dix")]
+layout_mode = 2
+
+[node name="Spacer4" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=856206409]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Status4" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1715507513 instance=ExtResource("2_h5dix")]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header" unique_id=966978601]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="NavBar" type="PanelContainer" parent="MainLayout/MarginContainer/Header" unique_id=2021540028]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tq6ju")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainLayout/MarginContainer/Header/NavBar" unique_id=643132525]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer" unique_id=1251079371]
+layout_mode = 2
+
+[node name="Controls" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer" unique_id=1643817699]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=946355522]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("1_46oc7")
 text = "<"
 
-[node name="ForwardButton" type="Button" parent="MainLayout/MarginContainer/Header/NavBar/Controls" unique_id=1433970855]
+[node name="Spacer1" type="Control" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=1812552487]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="ForwardButton" type="Button" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=1433970855]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("1_46oc7")
 text = ">"
 
-[node name="ThirdButton" type="Button" parent="MainLayout/MarginContainer/Header/NavBar/Controls" unique_id=1425505979]
+[node name="Spacer2" type="Control" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=20279257]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="ThirdButton" type="Button" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=1425505979]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("1_46oc7")
 text = "O"
 
-[node name="SearchBar" type="LineEdit" parent="MainLayout/MarginContainer/Header/NavBar" unique_id=1258369728]
+[node name="Spacer3" type="Control" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer/Controls" unique_id=1895428051]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="SearchBar" type="LineEdit" parent="MainLayout/MarginContainer/Header/NavBar/MarginContainer/HBoxContainer" unique_id=1258369728]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 25
