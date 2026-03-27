@@ -13,7 +13,7 @@ config_version=5
 config/name="Chinese noodle"
 run/main_scene="uid://dif881of408xm"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icons/icon.svg"
 
 [autoload]
 

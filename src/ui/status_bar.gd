@@ -5,27 +5,39 @@ extends PanelContainer
 @onready var label = $MarginContainer/HBoxContainer/Label
 
 @export var label_text: String = ""
+var value: float
+var tween: Tween
 
 func _ready() -> void:
 	label.text = label_text
 
 func _process(delta: float) -> void:
 	if Input.is_key_pressed(KEY_0):
-		progress_bar.value = randf_range(0, 100)
+		set_progress_bar(randf_range(0, 100))
 
 func _on_progress_bar_value_changed(value: float) -> void:
+	progress_bar_stylebox.bg_color = get_progress_color(value)
+	progress_bar.add_theme_stylebox_override("fill", progress_bar_stylebox)
+
+func set_progress_bar(target_value: float, duration: float = 0.5):
+	if tween and tween.is_running():
+		tween.kill()
+		
+	tween = create_tween()
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.set_ease(Tween.EASE_OUT)
+	
+	tween.tween_property(progress_bar, "value", target_value, duration)
+
+func get_progress_color(value: float) -> Color:
 	var red = Color("E3170A")
 	var yellow = Color("E3DC0A")
 	var green = Color("39E30A")
-	var target = Color("FFFFFF")
 
 	value = clamp(value, 0.0, 100.0)
 	if value <= 50.0:
 		var weight = value / 50.0
-		target = red.lerp(yellow, weight)
+		return red.lerp(yellow, weight)
 	else:
 		var weight = (value - 50.0) / 50.0
-		target = yellow.lerp(green, weight)
-
-	progress_bar_stylebox.bg_color = target
-	progress_bar.add_theme_stylebox_override("fill", progress_bar_stylebox)
+		return yellow.lerp(green, weight)
