@@ -56,6 +56,7 @@ func _modulate_positively() -> void:
 	modulate_tween.set_ease(Tween.EASE_OUT)
 	modulate_tween.tween_property(self , "modulate", POSITIVE_MODULATE, 0.08)
 	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.16)
+	_modulate_neutrally()
 
 func _modulate_negatively() -> void:
 	if modulate_tween and modulate_tween.is_running():
@@ -66,6 +67,7 @@ func _modulate_negatively() -> void:
 	modulate_tween.set_ease(Tween.EASE_OUT)
 	modulate_tween.tween_property(self , "modulate", NEGATIVE_MODULATE, 0.08)
 	modulate_tween.tween_property(self , "modulate", BASE_MODULATE, 0.16)
+	_modulate_positively()
 
 func _modulate_neutrally() -> void:
 	if modulate_tween and modulate_tween.is_running():
