@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://ccaosf5jnio3h"]
+
+[ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_6cnli"]
+[ext_resource type="FontFile" uid="uid://buj3nx7kp6iqm" path="res://assets/fonts/RethinkSans-Bold.ttf" id="2_ec6hk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ec6hk"]
+bg_color = Color(0, 0.46666667, 0.70980394, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3ur8"]
+bg_color = Color(0, 0.627451, 0.8627451, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="WelcomeScreen" type="MarginContainer" unique_id=60675619]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 9.0
+offset_right = 5.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 350
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 350
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=530296771]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1985077353]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_6cnli")
+theme_override_font_sizes/font_size = 64
+text = "Zastanawiałeś się kiedyś \"Jak myśli AI?\""
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=1877273838]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=757695631]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ec6hk")
+theme_override_font_sizes/font_size = 32
+text = "Wielkie korporacje coraz bardziej polegają na sztucznej ingeligencji aby podejmowac kluczowe decyzje
+
+Odpowiedzom daje się ogromne zaufanie, ale mogą one negatywnie wpłynąć na działanie firmy, a nawet doprowadzić do jej upadku
+
+Teraz to ty będziesz tym AI
+
+Twoim celem jest zbankrutować firmę, która z ciebie korzysta
+
+Powodzenia"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Control2" type="Control" parent="VBoxContainer" unique_id=1283577690]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="BeginButton" type="Button" parent="VBoxContainer" unique_id=1169730521]
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_6cnli")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_ec6hk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_g3ur8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ec6hk")
+text = "START"
