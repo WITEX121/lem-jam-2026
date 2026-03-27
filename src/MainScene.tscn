@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dif881of408xm"]
 
+[ext_resource type="StyleBoxFlat" uid="uid://bi86v4p2gk5w7" path="res://assets/styles/top_panel_round_corners.tres" id="1_46oc7"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_tq6ju"]
 [ext_resource type="PackedScene" uid="uid://dh2wsy656djec" path="res://src/ui/StatusBar.tscn" id="2_h5dix"]
+[ext_resource type="PackedScene" uid="uid://cljk2qx5y2njw" path="res://src/answer_button/answer_button.tscn" id="4_40oso"]
 [ext_resource type="Script" uid="uid://dvg270cgbj43p" path="res://src/label.gd" id="4_h5dix"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hux8c"]
@@ -14,6 +16,13 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tq6ju"]
+bg_color = Color(0, 0.46666667, 0.70980394, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Control" type="CanvasLayer" unique_id=530775206]
 
