@@ -1,7 +1,7 @@
 extends TextureRect
 
 @onready var pointer_rotation_point: Control = %Pivot
-var tween: Tween = null
+var tween_rotation: Tween = null
 
 func _ready() -> void:
 	GameManager.next_question_started.connect(show_animation)
@@ -14,16 +14,13 @@ func _input(event: InputEvent) -> void:
 		reset_physics_interpolation()
 
 func _exit_tree() -> void:
-	tween.kill()
+	tween_rotation.kill()
 
 func show_animation():
-	if tween and tween.is_running():
-		tween.kill()
-
 	visible = true
 
 	modulate.a = 0.0
-	tween = get_tree().create_tween()
+	var tween = get_tree().create_tween()
 	tween.tween_property(self, "modulate:a", 1.0, 1.0)
 
 	# Run only once on start
@@ -42,12 +39,12 @@ func handle_rotation(__):
 func set_target_rotation(target_rotation: float, 
 						 trans: Tween.TransitionType = Tween.TRANS_ELASTIC,
 						 time: float = 0.75):
-	if tween and tween.is_running():
-		tween.kill()
+	if tween_rotation and tween_rotation.is_running():
+		tween_rotation.kill()
 
-	tween = get_tree().create_tween()
-	tween.set_trans(trans)
-	tween.tween_property(pointer_rotation_point, "rotation", target_rotation, time)
+	tween_rotation = get_tree().create_tween()
+	tween_rotation.set_trans(trans)
+	tween_rotation.tween_property(pointer_rotation_point, "rotation", target_rotation, time)
 
 # func _physics_process(_delta: float) -> void:
 	#pointer_rotation_point.rotation = lerp_angle(pointer_rotation_point.rotation, target_rotation, 0.1)
