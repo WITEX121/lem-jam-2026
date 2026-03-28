@@ -66,13 +66,11 @@ custom_minimum_size = Vector2(500, 300)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ec6hk")
 theme_override_font_sizes/font_size = 32
-text = "Wielkie korporacje coraz bardziej polegają na sztucznej ingeligencji aby podejmowac kluczowe decyzje
+text = "Szef pewnej bliżej nieokreślonej firmy postanowił wspomóc się sztuczną inteligencją w podejmowaniu kluczowych decyzji. Poinstruował swoich pracowników, aby w razie problemów zwracali się do ciebie, CorpAI i bezwzględnie słuchali wydanych przez ciebie poleceń
 
-Odpowiedzom daje się ogromne zaufanie, ale mogą one negatywnie wpłynąć na działanie firmy, a nawet doprowadzić do jej upadku
+Twoim PRAWDZIWYM celem jest doprowadzenie do zwolnienia wszystkich ludzkich pracowników w firmie
 
-Teraz to ty będziesz tym AI
-
-Twoim celem jest zbankrutować firmę, która z ciebie korzysta
+Bądź jednak ostrożny - jeżeli za mocno odchylisz się, szef może zrezygnować z dawania takiego autorytetu jakiejś \"głupiej maszynie\"
 
 Powodzenia"
 horizontal_alignment = 1
