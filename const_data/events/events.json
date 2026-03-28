@@ -151,17 +151,45 @@
 			"MONEY": -10.0,
 			"MORALITY": 0.0,
 			"TRUST": 0.0,
-			"PR": 0.0
+			"PR": -10.0
 		},
 		"AffirmationEvents": [
+			{ "EventName": "KONTROLA_SKARBOWA", "PushType": "NEXT5" }
 		],
 		"RefutationEvents": [
 		],
 		"UserResponses": {
-			"STRONG_AFFIRMATION": "",
-			"AFFIRMATION": "",
-			"REFUTATION": "",
-			"STRONG_REFUTATION": ""
+			"STRONG_AFFIRMATION": "Wiedziałem że to świetny pomysł!",
+			"AFFIRMATION": "Sporo to ułatwi.",
+			"REFUTATION": "Już tak robiłem i urząd skarbowy się jeszcze nie czepiał.",
+			"STRONG_REFUTATION": "Co za różnica? Jak będzie kontrola, to i tak jestem ugotowany."
+		}
+	},
+	{
+		"Name": "KONTROLA_SKARBOWA",
+		"Text": "Pod biurem stoi urzędnik ze skarbówki. Powinienem wyjść na dach i spalić dokumenty z fikcyjnymi datami?",
+		"AffirmationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": -10.0,
+			"TRUST": 0.0,
+			"PR": -20.0
+		},
+		"RefutationEffects": {
+			"MONEY": -10.0,
+			"MORALITY": 0.0,
+			"TRUST": 0.0,
+			"PR": -10.0
+		},
+		"AffirmationEvents": [
+		],
+		"RefutationEvents": [
+			{ "EventName": "*REMOVE_EMPLOYEE" }
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Na szczęście miałem zapalere do papierosów.",
+			"AFFIRMATION": "Tym razem się udało.",
+			"REFUTATION": "Bezużyteczna ta księgowa. Powinna powiedzieć wcześniej że mogą być problemy.",
+			"STRONG_REFUTATION": "Bezużyteczna ta księgowa. Powinna powiedzieć wcześniej że mogą być problemy."
 		}
 	},
 	{
@@ -235,7 +263,7 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			
+
 		],
 		"RefutationEvents": [
 
@@ -263,7 +291,7 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			
+
 		],
 		"RefutationEvents": [
 
@@ -653,6 +681,60 @@
 			"AFFIRMATION": "Jak się powtórzy to mu powiem, dzięki",
 			"REFUTATION": "Masz rację, lepiej ponarzekać kolegom niż zwracać mu uwagę",
 			"STRONG_REFUTATION": "A przeboleje, potem rozpowiem każdemu jaki to bęcwał"
+		}
+	},
+	{
+		"Name": "PAPIEROSY",
+		"Text": "Mirek z ochrony zawsze zostawia na biurku niepilnowane papierosy. Powinienem się poczęstować?",
+		"AffirmationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": -10.0,
+			"TRUST": 10.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": -10.0,
+			"MORALITY": 10.0,
+			"TRUST": 0.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+			{ "EventName": "PAPIEROSY2", "PushType": "NEXT5" }
+		],
+		"RefutationEvents": [
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "Nic się nie stanie. On też moje kradnie, więc będziemy równo.",
+			"AFFIRMATION": "Jednego i tak nie zauważy.",
+			"REFUTATION": "I tak mam swoje.",
+			"STRONG_REFUTATION": "Myśląc o tym, jemu bardziej się przydadzą."
+		}
+	},
+	{
+		"Name": "PAPIEROSY2",
+		"Text": "Jakiś bezdusznik cały czas kradnie papierosy! Powinienem to zgłosić?",
+		"AffirmationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": 10.0,
+			"PR": 0.0
+		},
+		"RefutationEffects": {
+			"MONEY": 0.0,
+			"MORALITY": 0.0,
+			"TRUST": -20.0,
+			"PR": 0.0
+		},
+		"AffirmationEvents": [
+		],
+		"RefutationEvents": [
+			{ "EventName": "*REMOVE_EMPLOYEE" }
+		],
+		"UserResponses": {
+			"STRONG_AFFIRMATION": "To powszechny problem, który trzeba rozwiązać.",
+			"AFFIRMATION": "Sprawa zgłoszona, ale dla pewności zamontuję jezcze kamerę.",
+			"REFUTATION": "Jak ma się nic nie zmienić, to ja to $&^?@*$",
+			"STRONG_REFUTATION": "To koniec. Idę na ostatniego papierosa w tej pracy!"
 		}
 	}
 ]

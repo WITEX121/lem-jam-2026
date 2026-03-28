@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dif881of408xm"]
+[gd_scene load_steps=14 format=3 uid="uid://dif881of408xm"]
 
 [ext_resource type="Script" uid="uid://b3ki08jl1jgjt" path="res://src/main_scene.gd" id="1_qxycx"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="2_yhqkm"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://4s8c7p4l0udj" path="res://assets/icons/person-button-svgrepo-com.svg" id="5_pauua"]
 [ext_resource type="Texture2D" uid="uid://deecktsgefmat" path="res://assets/icons/star-svgrepo-com.svg" id="6_84lwj"]
 [ext_resource type="Texture2D" uid="uid://d3hd4jrm0obva" path="res://assets/icons/robot-svgrepo-com.svg" id="7_xmwvb"]
-[ext_resource type="PackedScene" uid="uid://bh80hcirp2ryy" path="res://src/ui/status_bar_employees.tscn" id="8_qpdi6"]
+[ext_resource type="PackedScene" uid="uid://c6lbmy0aa254v" path="res://src/ui/status_bar_employees.tscn" id="8_qpdi6"]
 [ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="9_363k2"]
 [ext_resource type="PackedScene" uid="uid://ccaosf5jnio3h" path="res://src/content/welcome_screen.tscn" id="10_x5mkc"]
 [ext_resource type="PackedScene" uid="uid://cy6pcmevxj0by" path="res://src/content/loading_screen.tscn" id="11_5mjx5"]
@@ -26,10 +26,10 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Control" type="CanvasLayer" unique_id=530775206]
+[node name="Control" type="CanvasLayer"]
 script = ExtResource("1_qxycx")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2044388649]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -38,7 +38,7 @@ grow_vertical = 2
 color = Color(0.14509805, 0.14901961, 0.15294118, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="MainLayout" type="VBoxContainer" parent="." unique_id=1993072305]
+[node name="MainLayout" type="VBoxContainer" parent="."]
 unique_name_in_owner = true
 clip_contents = true
 anchors_preset = 15
@@ -49,105 +49,105 @@ grow_vertical = 2
 theme_override_constants/separation = 0
 metadata/_edit_lock_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="MainLayout" unique_id=902372574]
+[node name="MarginContainer" type="MarginContainer" parent="MainLayout"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Header" type="VBoxContainer" parent="MainLayout/MarginContainer" unique_id=1960043265]
+[node name="Header" type="VBoxContainer" parent="MainLayout/MarginContainer"]
 layout_mode = 2
 
-[node name="Tabs" type="PanelContainer" parent="MainLayout/MarginContainer/Header" unique_id=1538971452]
+[node name="Tabs" type="PanelContainer" parent="MainLayout/MarginContainer/Header"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_d0nsw")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/Tabs" unique_id=1390238151]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/Tabs"]
 layout_mode = 2
 
-[node name="AppTab" type="PanelContainer" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1765255062]
+[node name="AppTab" type="PanelContainer" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_hux8c")
 
-[node name="MarginContainer" type="MarginContainer" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer/AppTab" unique_id=2102955085]
+[node name="MarginContainer" type="MarginContainer" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer/AppTab"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer/AppTab/MarginContainer" unique_id=19383837]
+[node name="HBoxContainer" type="HBoxContainer" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer/AppTab/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer/AppTab/MarginContainer/HBoxContainer" unique_id=2096461631]
+[node name="Label" type="Label" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer/AppTab/MarginContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_yhqkm")
 theme_override_font_sizes/font_size = 35
 text = "CorpAI"
 
-[node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1669026999]
+[node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status1" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1611621822 instance=ExtResource("3_pc0jr")]
+[node name="Status1" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" instance=ExtResource("3_pc0jr")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Kapitał"
 icon_texture = ExtResource("4_iahc8")
 
-[node name="Spacer2" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=848565961]
+[node name="Spacer2" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status2" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=114805630 instance=ExtResource("3_pc0jr")]
+[node name="Status2" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" instance=ExtResource("3_pc0jr")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Moralność"
 icon_texture = ExtResource("5_pauua")
 
-[node name="Spacer3" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1686073260]
+[node name="Spacer3" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status3" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1316453743 instance=ExtResource("3_pc0jr")]
+[node name="Status3" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" instance=ExtResource("3_pc0jr")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "PR"
 icon_texture = ExtResource("6_84lwj")
 
-[node name="Spacer4" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=856206409]
+[node name="Spacer4" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status4" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1715507513 instance=ExtResource("3_pc0jr")]
+[node name="Status4" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" instance=ExtResource("3_pc0jr")]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 label_text = "Zaufanie"
 icon_texture = ExtResource("7_xmwvb")
 
-[node name="Spacer5" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=1844688589]
+[node name="Spacer5" type="Control" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 
-[node name="Status5" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" unique_id=3741114 instance=ExtResource("8_qpdi6")]
+[node name="Status5" parent="MainLayout/MarginContainer/Header/Tabs/HBoxContainer" instance=ExtResource("8_qpdi6")]
 visible = false
 layout_mode = 2
 
-[node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header" unique_id=966978601]
+[node name="Spacer" type="Control" parent="MainLayout/MarginContainer/Header"]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
-[node name="NavBar" parent="MainLayout/MarginContainer/Header" unique_id=326819366 instance=ExtResource("9_363k2")]
+[node name="NavBar" parent="MainLayout/MarginContainer/Header" instance=ExtResource("9_363k2")]
 layout_mode = 2
 
-[node name="WelcomeScreen" parent="MainLayout" unique_id=60675619 instance=ExtResource("10_x5mkc")]
+[node name="WelcomeScreen" parent="MainLayout" instance=ExtResource("10_x5mkc")]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="LoadingScreen" parent="." unique_id=1169293969 instance=ExtResource("11_5mjx5")]
+[node name="LoadingScreen" parent="." instance=ExtResource("11_5mjx5")]
