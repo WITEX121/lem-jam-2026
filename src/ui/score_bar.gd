@@ -1,43 +1,53 @@
 extends TextureRect
 
 @onready var pointer_rotation_point: Control = %Pivot
+var tween: Tween = null
 
 func _ready() -> void:
-    GameManager.next_question_started.connect(show_animation)
-    GameManager.next_question_started.connect(reset_rotation)
+	GameManager.next_question_started.connect(show_animation)
+	GameManager.next_question_started.connect(reset_rotation)
 
-    ReplyManager.text_on_change.connect(handle_rotation)
+	ReplyManager.text_on_change.connect(handle_rotation)
 
 func _input(event: InputEvent) -> void:
-    if event.is_action_pressed("ui_accept"):
-        reset_physics_interpolation()
+	if event.is_action_pressed("ui_accept"):
+		reset_physics_interpolation()
+
+func _exit_tree() -> void:
+	tween.kill()
 
 func show_animation():
-    visible = true
+	if tween and tween.is_running():
+		tween.kill()
 
-    modulate.a = 0.0
-    var tween = get_tree().create_tween()
-    tween.tween_property(self, "modulate:a", 1.0, 1.0)
+	visible = true
 
-    # Run only once on start
-    GameManager.next_question_started.disconnect(show_animation)
+	modulate.a = 0.0
+	tween = get_tree().create_tween()
+	tween.tween_property(self, "modulate:a", 1.0, 1.0)
+
+	# Run only once on start
+	GameManager.next_question_started.disconnect(show_animation)
 
 func reset_rotation():
-    set_target_rotation(0.0, Tween.TransitionType.TRANS_EXPO, 0.5)
+	set_target_rotation(0.0, Tween.TransitionType.TRANS_EXPO, 0.5)
 
 func handle_rotation(__):
-    var reply = ReplyManager._reply
-    var normalised = reply.get_weight() / Consts.ANIMATION_WEIGHT_NORMALISE_THRESHOLD
-    normalised = clamp(normalised, -1.0, 1.0)
+	var reply = ReplyManager._reply
+	var normalised = reply.get_weight() / Consts.ANIMATION_WEIGHT_NORMALISE_THRESHOLD
+	normalised = clamp(normalised, -1.0, 1.0)
 
-    set_target_rotation(normalised * PI/2.0)
+	set_target_rotation(normalised * PI/2.0)
 
 func set_target_rotation(target_rotation: float, 
-                         trans: Tween.TransitionType = Tween.TRANS_ELASTIC,
-                         time: float = 0.75):
-    var tween = get_tree().create_tween()
-    tween.set_trans(trans)
-    tween.tween_property(pointer_rotation_point, "rotation", target_rotation, time)
+						 trans: Tween.TransitionType = Tween.TRANS_ELASTIC,
+						 time: float = 0.75):
+	if tween and tween.is_running():
+		tween.kill()
+
+	tween = get_tree().create_tween()
+	tween.set_trans(trans)
+	tween.tween_property(pointer_rotation_point, "rotation", target_rotation, time)
 
 # func _physics_process(_delta: float) -> void:
-    #pointer_rotation_point.rotation = lerp_angle(pointer_rotation_point.rotation, target_rotation, 0.1)
+	#pointer_rotation_point.rotation = lerp_angle(pointer_rotation_point.rotation, target_rotation, 0.1)

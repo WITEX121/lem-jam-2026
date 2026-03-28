@@ -519,7 +519,11 @@
 			"TRUST": -5.0,
 			"PR": -10.0
 		},
-		"AffirmationEvents": [],
+		"AffirmationEvents": [
+			{
+				"EventName": "*REMOVE_EMPLOYEE"
+			}
+		],
 		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "A niech se radzi pajac, będę miał swoją firmę",
