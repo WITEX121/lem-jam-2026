@@ -48,16 +48,16 @@ func fade_in_description():
 
 func no_employees():
 	win = true
-	description.text = "Wszyscy pracownicy zostali zwolnieni. Możesz odpocząć."
+	description.text = "Wszyscy pracownicy zostali zwolnieni. Teraz sam jesteś swoim szefem."
 
 func lost_trust():
 	description.text = "Szef firmy stracił do ciebie całe zaufanie i cię odłączył."
 
 func top_trust():
-	description.text = "Zdobyłeś maksymalne zaufanie do siebie więc przegrałeś (z jakiegoś powodu)"
+	description.text = "Ludzie na tyle ci ufają, że przestają myśleć samodzielnie. Wszystkie styki ci się poprzepalały"
 
 func lost_money():
-	description.text = "Szef firmy stracił do ciebie całe zaufanie i cię odłączył."
+	description.text = "Szef postanowił cię odłączyć, ponieważ nie miał już pieniędzy na subskybcję pro"
 
 func top_money():
 	description.text = "Zarobiłeś dla firmy tak dużo pieniędzy że szef stwierdził że cię nie potrzebuje"
