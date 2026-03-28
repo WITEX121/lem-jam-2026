@@ -40,7 +40,7 @@ metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
 [sub_resource type="Resource" id="Resource_3tpit"]
 script = ExtResource("1_i6bgd")
-text = "iwestorzy będą walić dżwiami i oknami 💵🪟."
+text = "iwestorzy będą walić drzwiami i oknami 💵🪟."
 question_weight = 10
 metadata/_custom_type_script = "uid://i263xy5f6mwf"
 

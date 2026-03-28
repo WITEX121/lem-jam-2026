@@ -312,7 +312,7 @@
 		"Name": "KAMPANIA_REKLAMOWA",
 		"Text": "Dział reklam twierdzi że prosta reklama w internecie może przynieść dużo klientów. Czy powinienem zainwestować w kampanię reklamową?",
 		"AffirmationEffects": {
-			"MONEY": 10.0,
+			"MONEY": -10.0,
 			"MORALITY": 0.0,
 			"TRUST": 5.0,
 			"PR": 10.0

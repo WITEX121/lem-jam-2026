@@ -4,6 +4,7 @@ extends PanelContainer
 
 func _ready() -> void:
 	GameManager.employee_count_changed.connect(_on_employee_count_changed)
+	_on_employee_count_changed(GameManager.employee_count)
 
 func set_status_bar(_target_value: float, _duration: float = 0.5):
 	# dummy so i dont have to change logic in main scene
