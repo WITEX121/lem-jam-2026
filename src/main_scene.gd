@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var welcome_screen = $MainLayout/WelcomeScreen
+@onready var welcome_screen = %WelcomeScreen
 @onready var start_button = $MainLayout/WelcomeScreen/VBoxContainer/BeginButton
 @onready var status_bar_money = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status1
 @onready var status_bar_morality = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status2
@@ -8,6 +8,8 @@ extends CanvasLayer
 @onready var status_bar_trust = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status4
 @onready var status_bar_employee_count = $MainLayout/MarginContainer/Header/Tabs/HBoxContainer/Status5
 @onready var main_layout: VBoxContainer = %MainLayout
+
+@onready var loading_screen := %LoadingScreen
 
 var pracownik_wyjebaned_efekt_scene: PackedScene = preload("res://src/misc/pracownik_wyjebaaaned.tscn")
 var game_screen_scene: PackedScene = preload("res://src/content/game_screen.tscn")
@@ -17,6 +19,8 @@ func _ready() -> void:
 	GameManager.ratings.ratings_changed.connect(_rating_changed)
 	GameManager.end_game.connect(end_game)
 	GameManager.employee_count_changed.connect(_employee_count_changed)
+
+	loading_screen.loading_finished.connect(welcome_screen.show_animation)
 
 func start_game():
 	SoundManager.play_sound(SoundManager.select)

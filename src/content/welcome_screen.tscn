@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ccaosf5jnio3h"]
 
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_6cnli"]
+[ext_resource type="Script" uid="uid://cqvfo0cyhnnlf" path="res://src/content/welcome_screen.gd" id="1_djosp"]
 [ext_resource type="FontFile" uid="uid://buj3nx7kp6iqm" path="res://assets/fonts/RethinkSans-Bold.ttf" id="2_ec6hk"]
 [ext_resource type="Script" uid="uid://bmndo7gqjmf0c" path="res://src/misc/button_hover.gd" id="3_g3ur8"]
 
@@ -42,6 +43,7 @@ theme_override_constants/margin_left = 350
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 350
 theme_override_constants/margin_bottom = 0
+script = ExtResource("1_djosp")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=530296771]
 layout_mode = 2

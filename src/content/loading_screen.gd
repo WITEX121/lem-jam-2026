@@ -1,5 +1,7 @@
 extends Control
 
+signal loading_finished
+
 @onready var progress_bar = $CenterContainer/VBoxContainer/ProgressBar
 
 func _ready() -> void:
@@ -16,4 +18,5 @@ func simulate_loading():
 	tween.finished.connect(go_to_main_menu)
 
 func go_to_main_menu():
+	loading_finished.emit()
 	self.queue_free()

@@ -148,10 +148,12 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="WelcomeScreen" parent="MainLayout" unique_id=1969493401 instance=ExtResource("10_x5mkc")]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="LoadingScreen" parent="." unique_id=1553615165 instance=ExtResource("11_5mjx5")]
+unique_name_in_owner = true
 
 [node name="ScoreBar" parent="." unique_id=938171611 instance=ExtResource("13_iahc8")]
 visible = false
