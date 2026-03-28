@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ReplyList" load_steps=31 format=3 uid="uid://cjj7hij4viq8s"]
+[gd_resource type="Resource" script_class="ReplyList" format=3 uid="uid://cjj7hij4viq8s"]
 
 [ext_resource type="Script" uid="uid://i263xy5f6mwf" path="res://src/prompt_reply/reply_element.gd" id="1_i6bgd"]
 [ext_resource type="Script" uid="uid://ce51s05rvoqqn" path="res://const_data/prompt_reply/reply_list.gd" id="2_6ifpq"]

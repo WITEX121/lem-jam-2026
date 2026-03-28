@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Sound" load_steps=3 format=3 uid="uid://brbjfeap1eokf"]
+[gd_resource type="Resource" script_class="Sound" format=3 uid="uid://brbjfeap1eokf"]
 
 [ext_resource type="Script" uid="uid://dcm8xkgp0yjk5" path="res://src/misc/sound.gd" id="1_gqs1c"]
 [ext_resource type="AudioStream" uid="uid://c474lf3j57oi8" path="res://assets/music/elevator.mp3" id="1_haum5"]
