@@ -22,15 +22,15 @@ func _ready() -> void:
 	modulate = BASE_MODULATE
 	modulate_tween.stop()
 
-func _on_progress_bar_value_changed(value: float) -> void:
-	progress_bar_stylebox.bg_color = get_progress_color(value)
+func _on_progress_bar_value_changed(val: float) -> void:
+	progress_bar_stylebox.bg_color = get_progress_color(val)
 	progress_bar.add_theme_stylebox_override("fill", progress_bar_stylebox)
 	if !modulate_tween.is_running():
-		if value > old_value:
+		if val > old_value:
 			_modulate_positively()
-		elif value < old_value:
+		elif val < old_value:
 			_modulate_negatively()
-	old_value = value
+	old_value = val
 
 func set_status_bar(target_value: float, duration: float = 0.5):
 	if tween and tween.is_running():
