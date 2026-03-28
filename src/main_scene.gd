@@ -13,6 +13,7 @@ extends CanvasLayer
 
 var pracownik_wyjebaned_efekt_scene: PackedScene = preload("res://src/misc/pracownik_wyjebaaaned.tscn")
 var game_screen_scene: PackedScene = preload("res://src/content/game_screen.tscn")
+var game_over_scene: PackedScene = preload("res://src/content/game_over_scene.tscn")
 
 func _ready() -> void:
 	start_button.pressed.connect(start_game)
@@ -21,6 +22,10 @@ func _ready() -> void:
 	GameManager.employee_count_changed.connect(_employee_count_changed)
 
 	loading_screen.loading_finished.connect(welcome_screen.show_animation)
+
+func _process(delta: float) -> void:
+	if Input.is_key_pressed(KEY_0):
+		GameManager.fire_employee()
 
 func start_game():
 	SoundManager.play_sound(SoundManager.select)
@@ -59,4 +64,5 @@ func _employee_count_changed(_count: int):
 	add_child(pracownik_wyjebaned)
 
 func end_game():
-	self.get_tree().change_scene_to_file("res://src/content/game_over_scene.tscn")
+	var child_node = game_over_scene.instantiate()
+	self.add_child(child_node)
