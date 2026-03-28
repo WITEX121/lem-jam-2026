@@ -22,7 +22,7 @@ var cursor_arrow = preload("res://assets/icons/pointer_a.png")
 var cursor_button = preload("res://assets/icons/hand_point.png")
 
 var ratings := Ratings.new(50, 50, 50, 50)
-var employee_count: int = 1
+var employee_count: int = 5
 var finish_scenario := finish_scenarios.NOT_FINISHED
 
 # Constants
