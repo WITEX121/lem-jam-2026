@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Sound" format=3 uid="uid://bnq7mnfa2vjmj"]
+[gd_resource type="Resource" script_class="Sound" load_steps=3 format=3 uid="uid://bnq7mnfa2vjmj"]
 
 [ext_resource type="AudioStream" uid="uid://wx02owc5nxcv" path="res://assets/sounds/maximize_005.ogg" id="1_5hlou"]
 [ext_resource type="Script" uid="uid://dcm8xkgp0yjk5" path="res://src/misc/sound.gd" id="1_5p16p"]

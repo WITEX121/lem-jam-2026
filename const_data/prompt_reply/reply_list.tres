@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ReplyList" format=3 uid="uid://cjj7hij4viq8s"]
+[gd_resource type="Resource" script_class="ReplyList" load_steps=31 format=3 uid="uid://cjj7hij4viq8s"]
 
 [ext_resource type="Script" uid="uid://i263xy5f6mwf" path="res://src/prompt_reply/reply_element.gd" id="1_i6bgd"]
 [ext_resource type="Script" uid="uid://ce51s05rvoqqn" path="res://const_data/prompt_reply/reply_list.gd" id="2_6ifpq"]
@@ -32,9 +32,45 @@ text = "to oszczędność, która generuje dodatkowe koszty 💸🤡"
 question_weight = -7
 metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
+[sub_resource type="Resource" id="Resource_8okre"]
+script = ExtResource("1_i6bgd")
+text = "osiągniemy stabilny wzrost przychodów 📈"
+question_weight = 8
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_3tpit"]
+script = ExtResource("1_i6bgd")
+text = "iwestorzy będą walić dżwiami i oknami 💵🪟."
+question_weight = 10
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_5xojq"]
+script = ExtResource("1_i6bgd")
+text = "utracimy zaufanie naszych partnerów 🤝❌"
+question_weight = -8
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_ccdmp"]
+script = ExtResource("1_i6bgd")
+text = "koszty operacyjne drastycznie spadną 📉✅"
+question_weight = 6
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_xxh74"]
+script = ExtResource("1_i6bgd")
+text = "tak ✅"
+question_weight = 5
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_0xvaf"]
+script = ExtResource("1_i6bgd")
+text = "nie ❌."
+question_weight = -5
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
 [sub_resource type="Resource" id="Resource_413p0"]
 script = ExtResource("1_i6bgd")
-text = "zacznijmy od zdefiniowania głównego wąskiego gardła"
+text = "uwzględniając główne wąskie gardło rozwiązania - "
 question_weight = -4
 metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
@@ -45,18 +81,18 @@ metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
 [sub_resource type="Resource" id="Resource_utju4"]
 script = ExtResource("1_i6bgd")
-text = "przeanalizujmy dlaczego takie rozwiązanie zadziała."
-question_weight = 8
+text = "zakładając że takie rozwiązanie zadziała -"
+question_weight = 4
 metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
 [sub_resource type="Resource" id="Resource_1kv6c"]
 script = ExtResource("1_i6bgd")
-text = "zważając na plusy i minusy każdego rozwiązania dochodzę do jednego wniosku"
+text = "zważając na plusy i minusy rozwiązania dochodzę do  wniosku, że"
 metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
 [sub_resource type="Resource" id="Resource_xrxtc"]
 script = ExtResource("1_i6bgd")
-text = "złota zasada brzmi -"
+text = "kierując się złotą zasadą uważame, że"
 question_weight = 2
 metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
@@ -72,7 +108,7 @@ metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
 [sub_resource type="Resource" id="Resource_i6bgd"]
 script = ExtResource("1_i6bgd")
-text = "Bardzo dobre pytanie"
+text = "Bardzo dobre pytanie."
 question_weight = 2
 metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
@@ -84,7 +120,7 @@ metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
 [sub_resource type="Resource" id="Resource_fosai"]
 script = ExtResource("1_i6bgd")
-text = "Najpierw zastanówmy się dlaczego to ważne"
+text = "Najpierw zastanówmy się dlaczego to ważne."
 metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
 [sub_resource type="Resource" id="Resource_cwc2n"]
@@ -105,9 +141,33 @@ text = "To niestety nie zadziała."
 question_weight = -7
 metadata/_custom_type_script = "uid://i263xy5f6mwf"
 
+[sub_resource type="Resource" id="Resource_r4xj4"]
+script = ExtResource("1_i6bgd")
+text = "Patrząc na to czysto pragmatycznie,"
+question_weight = 1
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_ar75j"]
+script = ExtResource("1_i6bgd")
+text = "Wymaga to głębszej refleksji, ale"
+question_weight = -1
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_cqw6x"]
+script = ExtResource("1_i6bgd")
+text = "To dość kontrowersyjne zagadnienie, jednak"
+question_weight = -3
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
+[sub_resource type="Resource" id="Resource_nb6od"]
+script = ExtResource("1_i6bgd")
+text = "Analizując ten konkretny przypadek, widzimy, że"
+question_weight = 2
+metadata/_custom_type_script = "uid://i263xy5f6mwf"
+
 [resource]
 script = ExtResource("2_6ifpq")
-starts = Array[ExtResource("1_i6bgd")]([SubResource("Resource_i6bgd"), SubResource("Resource_6ifpq"), SubResource("Resource_fosai"), SubResource("Resource_cwc2n"), SubResource("Resource_01ayd"), SubResource("Resource_xam3q")])
+starts = Array[ExtResource("1_i6bgd")]([SubResource("Resource_i6bgd"), SubResource("Resource_6ifpq"), SubResource("Resource_fosai"), SubResource("Resource_cwc2n"), SubResource("Resource_01ayd"), SubResource("Resource_xam3q"), SubResource("Resource_r4xj4"), SubResource("Resource_ar75j"), SubResource("Resource_cqw6x"), SubResource("Resource_nb6od")])
 fillers = Array[ExtResource("1_i6bgd")]([SubResource("Resource_413p0"), SubResource("Resource_61cy1"), SubResource("Resource_utju4"), SubResource("Resource_1kv6c"), SubResource("Resource_xrxtc"), SubResource("Resource_owo7h"), SubResource("Resource_41ipd")])
-ends = Array[ExtResource("1_i6bgd")]([SubResource("Resource_lxp5y"), SubResource("Resource_6mn2q"), SubResource("Resource_rj1k4"), SubResource("Resource_ikp2p"), SubResource("Resource_qphno")])
+ends = Array[ExtResource("1_i6bgd")]([SubResource("Resource_lxp5y"), SubResource("Resource_6mn2q"), SubResource("Resource_rj1k4"), SubResource("Resource_ikp2p"), SubResource("Resource_qphno"), SubResource("Resource_8okre"), SubResource("Resource_3tpit"), SubResource("Resource_5xojq"), SubResource("Resource_ccdmp"), SubResource("Resource_xxh74"), SubResource("Resource_0xvaf")])
 metadata/_custom_type_script = "uid://ce51s05rvoqqn"
