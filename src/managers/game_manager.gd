@@ -32,16 +32,14 @@ var EVENTS:
 
 func _ready() -> void:
 	ratings.ratings_changed.connect(_on_ratings_changed)
+
+	# Setup EventManager
 	next_question_started.connect(EventManager.pop_back_to_current)
-	# employee_count_changed.connect(_on_employee_count_changed)
+	ReplyManager.reply_completed.connect(func(__): EventManager.handle_current_event_ending())
 
 func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_0):
 		fire_employee()
-
-# func _on_employee_count_changed(_count: int):
-# 	var pracownik_wyjebaned = pracownik_wyjebaned_efekt_scene.instantiate()
-# 	add_child(pracownik_wyjebaned)
 
 func fire_employee():
 	employee_count -= 1
