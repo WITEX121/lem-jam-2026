@@ -8,9 +8,6 @@ var user_answer_button_scene: PackedScene = preload("res://src/dialogue/user_ans
 var next_question_button: NextQuestionButton
 
 func _ready():
-	EventManager.unlock_events_shuffle(Consts.BASE_EVENTS)
-	EventManager.pop_back_to_current()
-
 	ReplyManager.reply_completed.connect(_on_reply_completed)
 	GameManager.next_question_started.connect(_on_next_question_started)
 

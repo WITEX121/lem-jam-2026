@@ -35,6 +35,7 @@ func start_game():
 	var game_screen = game_screen_scene.instantiate()
 	main_layout.add_child(game_screen)
 
+	EventManager.unlock_events_shuffle(Consts.BASE_EVENTS)
 	GameManager.next_question_started.emit()
 
 func _rating_changed():
