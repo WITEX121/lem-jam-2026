@@ -607,7 +607,7 @@
 	},
 	{
 		"Name": "RANDKA2",
-		"Text": "to co moze zacznijmy od pytania czy kochalabys mnie gdyby byl rybka?",
+		"Text": "to co moze zacznijmy randeczke od pytania - czy kochalabys mnie gdybym byl rybka?",
 		"AffirmationEffects": {
 			"MONEY": -5.0,
 			"MORALITY": -10.0,
