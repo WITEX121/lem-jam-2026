@@ -23,10 +23,6 @@ func _ready() -> void:
 
 	loading_screen.loading_finished.connect(welcome_screen.show_animation)
 
-func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_0):
-		GameManager.fire_employee()
-
 func start_game():
 	SoundManager.play_sound(SoundManager.select)
 	var status_bars = [status_bar_money, status_bar_morality, status_bar_pr, status_bar_trust, status_bar_employee_count]
