@@ -412,10 +412,10 @@
 		],
 		"RefutationEvents": [],
 		"UserResponses": {
-			"STRONG_AFFIRMATION": "",
-			"AFFIRMATION": "",
-			"REFUTATION": "",
-			"STRONG_REFUTATION": ""
+			"STRONG_AFFIRMATION": "Koniec gnębienia Marcinku, zobaczymy kto się będzie śmiał odklejąc swoje biurko od sufitu!",
+			"AFFIRMATION": "Oj tak, nie mogę się już doczekać aż wszystkie biurowe przyrządy Marcinka zawisną na suficie",
+			"REFUTATION": "Może i był to niebezpieczny pomysł, ale za to jaki szczery...",
+			"STRONG_REFUTATION": "Pieprzone roboty nigdy nie zrozumieją ludzi"
 		}
 	},
 	{
@@ -582,7 +582,7 @@
 		"AffirmationEffects": {
 			"MONEY": -5.0,
 			"MORALITY": -5.0,
-			"TRUST": 10.0,
+			"TRUST": 5.0,
 			"PR": 0.0
 		},
 		"RefutationEffects": {
@@ -611,7 +611,7 @@
 		"AffirmationEffects": {
 			"MONEY": -5.0,
 			"MORALITY": -10.0,
-			"TRUST": 10.0,
+			"TRUST": 5.0,
 			"PR": 0.0
 		},
 		"RefutationEffects": {
