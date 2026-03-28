@@ -2,6 +2,9 @@ class_name Consts
 
 const TYPE_SPEED = 1.0/90.0
 
+const ANIMATION_WEIGHT_NORMALISE_THRESHOLD = 20
+const OPINION_THRESHOLDS = [-10, 0, 10]
+
 const BASE_EVENTS: Array[String] = [
     "PAPIER_DO_KIBLA",
     "FAKTURA",

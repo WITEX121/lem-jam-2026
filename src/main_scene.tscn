@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c0ufpyvrlv0qf" path="res://src/ui/nav_bar.tscn" id="9_363k2"]
 [ext_resource type="PackedScene" uid="uid://ccaosf5jnio3h" path="res://src/content/welcome_screen.tscn" id="10_x5mkc"]
 [ext_resource type="PackedScene" uid="uid://cy6pcmevxj0by" path="res://src/content/loading_screen.tscn" id="11_5mjx5"]
+[ext_resource type="PackedScene" uid="uid://bdv8jwv778al2" path="res://src/ui/score_bar.tscn" id="13_iahc8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0nsw"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -151,3 +152,17 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="LoadingScreen" parent="." unique_id=1169293969 instance=ExtResource("11_5mjx5")]
+
+[node name="ScoreBar" parent="." unique_id=938171611 instance=ExtResource("13_iahc8")]
+visible = false
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -137.0
+offset_top = -100.0
+offset_right = 90.5
+offset_bottom = 14.0
+grow_horizontal = 0
+grow_vertical = 2

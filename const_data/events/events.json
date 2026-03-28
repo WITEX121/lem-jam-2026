@@ -15,11 +15,12 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "", "PushType": "RANDOM"}
+			{
+				"EventName": "",
+				"PushType": "RANDOM"
+			}
 		],
-		"RefutationEvents": [
-
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "",
 			"AFFIRMATION": "",
@@ -43,10 +44,14 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "*ADD_BASE_EVENTS" }
+			{
+				"EventName": "*ADD_BASE_EVENTS"
+			}
 		],
 		"RefutationEvents": [
-			{ "EventName": "*ADD_BASE_EVENTS" }
+			{
+				"EventName": "*ADD_BASE_EVENTS"
+			}
 		],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Mmmmmm, tak, kawusia to to, czego potrzebuje",
@@ -71,11 +76,12 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "GAZETOWY_PAPIER", "PushType": "RANDOM"}
+			{
+				"EventName": "GAZETOWY_PAPIER",
+				"PushType": "RANDOM"
+			}
 		],
-		"RefutationEvents": [
-
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Super! Papier z recyklingu - może troche ponarzekają, ale dla... środowiska, tak, zrobimy wszystko",
 			"AFFIRMATION": "Dziękuje panu za odpowiedź",
@@ -99,10 +105,16 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "WYLANIE_PRACOWNIKA", "PushType": "NEXT1"}
+			{
+				"EventName": "WYLANIE_PRACOWNIKA",
+				"PushType": "NEXT1"
+			}
 		],
 		"RefutationEvents": [
-			{ "EventName": "WYLANIE_PRACOWNIKA", "PushType": "NEXT5"}
+			{
+				"EventName": "WYLANIE_PRACOWNIKA",
+				"PushType": "NEXT5"
+			}
 		],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Haha, dureń sie zdziwi. Dobrze że nie pytam na firmowym koncie",
@@ -127,10 +139,11 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "*REMOVE_EMPLOYEE" }
+			{
+				"EventName": "*REMOVE_EMPLOYEE"
+			}
 		],
-		"RefutationEvents": [
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Tak myślałem. Naprawdę jesteś drugim mózgiem naszej firmy!",
 			"AFFIRMATION": "Dzięki za potwierdzenie",
@@ -153,10 +166,8 @@
 			"TRUST": 0.0,
 			"PR": 0.0
 		},
-		"AffirmationEvents": [
-		],
-		"RefutationEvents": [
-		],
+		"AffirmationEvents": [],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "",
 			"AFFIRMATION": "",
@@ -180,10 +191,11 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "*REMOVE_EMPLOYEE" }
+			{
+				"EventName": "*REMOVE_EMPLOYEE"
+			}
 		],
-		"RefutationEvents": [
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Staż w firmie to nic kiedy żeruje się na biednym szefie i jego firmie będąc kolejny raz na macierzyńskim!",
 			"AFFIRMATION": "Firmy nie utrzymują się na samej moralności, to będzie dobra decyzja",
@@ -206,12 +218,8 @@
 			"TRUST": 5.0,
 			"PR": 0.0
 		},
-		"AffirmationEvents": [
-
-		],
-		"RefutationEvents": [
-
-		],
+		"AffirmationEvents": [],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Jeśli naprawdę tak uważasz... To chyba kupię ten ekspres, chociaż szkoda kasy",
 			"AFFIRMATION": "Dzięki za potwierdzenie, kupię ten ekspres",
@@ -234,12 +242,8 @@
 			"TRUST": -5.0,
 			"PR": 0.0
 		},
-		"AffirmationEvents": [
-			
-		],
-		"RefutationEvents": [
-
-		],
+		"AffirmationEvents": [],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Znakomicie, dzwonię do hydraulika bo zaraz się zesram w gacie",
 			"AFFIRMATION": "Okej, dzwonię do hydraulika",
@@ -262,12 +266,8 @@
 			"TRUST": 0.0,
 			"PR": 0.0
 		},
-		"AffirmationEvents": [
-			
-		],
-		"RefutationEvents": [
-
-		],
+		"AffirmationEvents": [],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Super!",
 			"AFFIRMATION": "Okej, kupię ten odkurzacz",
@@ -290,12 +290,8 @@
 			"TRUST": -5.0,
 			"PR": 0.0
 		},
-		"AffirmationEvents": [
-
-		],
-		"RefutationEvents": [
-
-		],
+		"AffirmationEvents": [],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Świetnie, już się za to biorę",
 			"AFFIRMATION": "Dzięki za potwierdzenie, zainwestuję w kampanię reklamową",
@@ -319,11 +315,12 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "FLIRT_Z_PRACOWNIKIEM_PRZYŁAPANY", "PushType": "NEXT5"}
+			{
+				"EventName": "FLIRT_Z_PRACOWNIKIEM_PRZYŁAPANY",
+				"PushType": "NEXT5"
+			}
 		],
-		"RefutationEvents": [
-
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "O kurde, serio? No dobra",
 			"AFFIRMATION": "Nie spodziewałem się że się ze mną zgodzisz, dzięki",
@@ -347,11 +344,11 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "*REMOVE_EMPLOYEE" }
+			{
+				"EventName": "*REMOVE_EMPLOYEE"
+			}
 		],
-		"RefutationEvents": [
-
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "I tak bym go zwolnił, ale teraz mam pewność że to dobra decyzja",
 			"AFFIRMATION": "Dzięki za potwierdzenie, zwolnię tego pracownika",
@@ -375,11 +372,12 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "PRANK_PRZYŁAPANO", "PushType": "NEXT5"}
+			{
+				"EventName": "PRANK_PRZYŁAPANO",
+				"PushType": "NEXT5"
+			}
 		],
-		"RefutationEvents": [
-
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "",
 			"AFFIRMATION": "",
@@ -403,11 +401,11 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "*REMOVE_EMPLOYEE" }
+			{
+				"EventName": "*REMOVE_EMPLOYEE"
+			}
 		],
-		"RefutationEvents": [
-
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Super, dzięki",
 			"AFFIRMATION": "Tak też myślałem",
@@ -430,10 +428,12 @@
 			"TRUST": 30.0,
 			"PR": 0.0
 		},
-		"AffirmationEvents": [
-		],
+		"AffirmationEvents": [],
 		"RefutationEvents": [
-			{ "EventName": "UTRACONA_KASA", "PushType": "RANDOM"}
+			{
+				"EventName": "UTRACONA_KASA",
+				"PushType": "RANDOM"
+			}
 		],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "Boże co ja myślałam chcąc kraść od firmy, koniecznie muszę ją oddać",
@@ -458,10 +458,12 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "UCIETA_WYPLATA", "PushType": "NEXT5"}
+			{
+				"EventName": "UCIETA_WYPLATA",
+				"PushType": "NEXT5"
+			}
 		],
-		"RefutationEvents": [
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "DOKŁADNIE, W KOŃCU MUSZE POKAZAĆ KTO TU JEST SZEFEM",
 			"AFFIRMATION": "TAK, NIE MOGĘ PUŚCIĆ TEGO PŁAZEM",
@@ -480,14 +482,12 @@
 		},
 		"RefutationEffects": {
 			"MONEY": 0.0,
-			"MORALITY": 0,
+			"MORALITY": 0.0,
 			"TRUST": -5.0,
 			"PR": -10.0
 		},
-		"AffirmationEvents": [
-		],
-		"RefutationEvents": [
-		],
+		"AffirmationEvents": [],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "A niech se radzi pajac, będę miał swoją firmę",
 			"AFFIRMATION": "Od dawna to planowałem i tka zrobię",
@@ -510,10 +510,8 @@
 			"TRUST": -5.0,
 			"PR": 0.0
 		},
-		"AffirmationEvents": [
-		],
-		"RefutationEvents": [
-		],
+		"AffirmationEvents": [],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "to prawe i sprawiedliwe, tak",
 			"AFFIRMATION": "dobra wróce sie tam, taka wykładzina ładna aż mi jej szkoda",
@@ -536,10 +534,8 @@
 			"TRUST": -15.0,
 			"PR": 20.0
 		},
-		"AffirmationEvents": [
-		],
-		"RefutationEvents": [
-		],
+		"AffirmationEvents": [],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "A WYPITALAJ BABO SPOD MOJEGO BIURA, HA TFU",
 			"AFFIRMATION": "Poszczuć psami, mi się tu kręcić będzie głupia",
@@ -563,10 +559,12 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "RANDKA2", "PushType": "NEXT1"}
+			{
+				"EventName": "RANDKA2",
+				"PushType": "NEXT1"
+			}
 		],
-		"RefutationEvents": [
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "ale cudownie zaprszam cie dalej na intensywny flirt",
 			"AFFIRMATION": "nie moge sie doczekac",
@@ -590,10 +588,12 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "RANDKA3", "PushType": "NEXT1"}
+			{
+				"EventName": "RANDKA3",
+				"PushType": "NEXT1"
+			}
 		],
-		"RefutationEvents": [
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "tak tak tak, mow mi dalej swoje slodkie slowka",
 			"AFFIRMATION": "jestes super slodka",
@@ -617,10 +617,11 @@
 			"PR": 0.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "*REMOVE_EMPLOYEE" }
+			{
+				"EventName": "*REMOVE_EMPLOYEE"
+			}
 		],
-		"RefutationEvents": [
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "rzucamy ta przekleta firme, ale bedziemy mieli tanie wakacje jak mi nie wygasnie subskrybcja do SlopaGPT",
 			"AFFIRMATION": "wyjezdzajmy juz dzisiaj",
@@ -644,10 +645,12 @@
 			"PR": -10.0
 		},
 		"AffirmationEvents": [
-			{ "EventName": "WYLANIE_PRACOWNIKA", "PushType": "NEXT5" }
+			{
+				"EventName": "WYLANIE_PRACOWNIKA",
+				"PushType": "NEXT5"
+			}
 		],
-		"RefutationEvents": [
-		],
+		"RefutationEvents": [],
 		"UserResponses": {
 			"STRONG_AFFIRMATION": "To nie może mnie dłużej rozpraszać, idę mu zwrócić uwagę teraz!",
 			"AFFIRMATION": "Jak się powtórzy to mu powiem, dzięki",

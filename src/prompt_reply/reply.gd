@@ -16,4 +16,8 @@ func get_text():
 	])
 
 func get_weight():
-	return start.question_weight + filler.question_weight + end.question_weight
+	var weight = 0.0
+	if start: weight += start.question_weight
+	if filler: weight += filler.question_weight
+	if end: weight += end.question_weight
+	return weight

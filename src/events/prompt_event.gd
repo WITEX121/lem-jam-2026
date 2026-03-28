@@ -31,8 +31,8 @@ func _to_string() -> String:
 	return name
 
 func _to_type(weight: int) -> ResponseType:
-	if weight <= -15: return ResponseType.STRONG_REFUTATION
-	elif weight < 0: return ResponseType.REFUTATION
-	elif  weight <= 15: return ResponseType.AFFIRMATION
+	if weight <= Consts.OPINION_THRESHOLDS[0]: return ResponseType.STRONG_REFUTATION
+	elif weight < Consts.OPINION_THRESHOLDS[1]: return ResponseType.REFUTATION
+	elif  weight <= Consts.OPINION_THRESHOLDS[2]: return ResponseType.AFFIRMATION
 	else: return ResponseType.STRONG_AFFIRMATION
 
