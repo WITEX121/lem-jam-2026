@@ -2,6 +2,31 @@
 
 [ext_resource type="Script" uid="uid://cm8pkfgubk2tr" path="res://src/content/game_over_scene.gd" id="1_ic66t"]
 [ext_resource type="FontFile" uid="uid://byt8avjde6w2v" path="res://assets/fonts/RethinkSans-ExtraBold.ttf" id="1_nnqlg"]
+[ext_resource type="Script" uid="uid://bmndo7gqjmf0c" path="res://src/misc/button_hover.gd" id="3_wx0ku"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ai0o3"]
+bg_color = Color(0, 0.46666667, 0.70980394, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2dlnw"]
+bg_color = Color(0, 0.627451, 0.8627451, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="GameOverScene" type="Control" unique_id=1012053250]
 layout_mode = 3
@@ -56,3 +81,20 @@ theme_override_font_sizes/font_size = 68
 text = "GAME OVER"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=629044059]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=269311445]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_nnqlg")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_ai0o3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2dlnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ai0o3")
+text = "RESTART"
+script = ExtResource("3_wx0ku")

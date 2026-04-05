@@ -3,14 +3,17 @@ extends Control
 
 @onready var description := $%Description
 @onready var title := $%Title
+@onready var button := $%RestartButton
 
 var win := false
 
 func _ready() -> void:
 	var scenarios = GameManager.finish_scenarios
 	var finish_scenario = GameManager.finish_scenario
+	button.pressed.connect(_on_restart_button_pressed)
 	description.modulate.a = 0
 	title.modulate.a = 0
+	button.modulate.a = 0
 
 	if finish_scenario == scenarios.NO_EMPLOYEES:
 		no_employees()
@@ -33,18 +36,14 @@ func _ready() -> void:
 	else:
 		unknown_result()
 		
-	set_text_and_color()
-	fade_in_title()
+	_set_text_and_color()
+	_fade_in()
 
-func fade_in_title():
+func _fade_in():
 	var tween := create_tween()
 	tween.tween_property(title, "modulate:a", 1.0, 1.0)
-	tween.finished.connect(fade_in_description)
-
-func fade_in_description():
-	var tween := create_tween()
 	tween.tween_property(description, "modulate:a", 1.0, 1.0)
-
+	tween.tween_property(button, "modulate:a", 1.0, 1.0)
 
 func no_employees():
 	win = true
@@ -78,10 +77,19 @@ func unknown_result():
 	win = true
 	description.text = "Nie przewidzieliśmy tego scenariusza, udało ci się zepsuć grę"
 
-func set_text_and_color():
+func _set_text_and_color():
 	if win:
 		title.text = "SUKCES"
 		title.add_theme_color_override("font_color", Color("39E30A"))
 	else:
 		title.text = "PORAŻKA"
 		title.add_theme_color_override("font_color", Color("E3170A"))
+
+
+func _on_restart_button_pressed() -> void:
+	var children := self.get_children()
+	for child in children:
+		child.queue_free()
+	var main_game := preload("res://src/main_scene.tscn").instantiate()
+	self.replace_by(main_game)
+	self.queue_free()
